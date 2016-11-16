@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.1](https://github.com/Travix-International/theme-builder/tree/v0.2.1) (2016-11-16)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.0...v0.2.1)
+
+**Merged pull requests:**
+
+- Update eslint to the latest version 🚀 [\#21](https://github.com/Travix-International/theme-builder/pull/21) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
 ## [v0.2.0](https://github.com/Travix-International/theme-builder/tree/v0.2.0) (2016-11-15)
 **Merged pull requests:**
 
