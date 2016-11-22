@@ -20,25 +20,56 @@ generic:
       font-family: "Handlee"
       generic-family: "cursive"
   color:
-    text-dark: &text-dark               "#414141"
-    text: &text                         "#757575"
-    text-light: &text-light             "#7890A1"
-    text-lighter: &text-lighter         "#BDBDBD"
+    accent-border: &accent-border         "#F04C2A"
+    accent-bottom: &accent-bottom         "#F04C2A"
+    accent-darker: &accent-darker         "#FF7F00"
+    accent-light: &accent-light           "#FFAD5B"
+    accent-lighter: &accent-lighter       "#FFAD5B"
+    accent-top: &accent-top               "#F04C2A"
+    accent: &accent                       "#FF7F00"
 
-    active: &active                     "#00B0FF"
-    positive: &positive                 "#92BE14"
-    negative: &negative                 "#D2373F"
-    negative-light: &negative-light     "#F4CDCF"
+    primary-darker: &primary-darker       "#007CC3"
+    primary-dark: &primary-dark           "#007CC3"
+    primary: &primary                     "#007CC3"
+    primary-light: &primary-light         "#0185D1"
+    primary-lighter: &primary-lighter     "#1A91DA"
+    primary-overlay: &primary-overlay     "#F4F1F7"
 
-    shadow: &shadow                     "#000000"
-    shadow-alt: &shadow-alt             "#00196F"
-    blank: &blank                       "#FFFFFF"
-
-    facebook: &facebook                 "#45619D"
-    facebook-border: &facebook-border   "#324A87"
-    twitter: &twitter                   "#08ACEE"
-    twitter-border: &twitter-border     "#1871C0"
-    google: &google                     "#B30303"
-    google-border: &google-border       "#670E00"
-    mail: &mail                         "#006CD2"
-    mail-border: &mail-border           "#0A50A3"
+    secondary-darkest: &secondary-darkest "#62BBEE"
+    secondary-darker: &secondary-darker   "#B3DFF9"
+    secondary-dark: &secondary-dark       "#D9EFFC"
+    secondary: &secondary                 "#EFEEE5"
+    secondary-light: &secondary-light     "#F7F8F1"
+    secondary-lighter: &secondary-lighter "#F9FBF6"
+    active: &active                       "#00B0FF"
+    blank: &blank                         "#FFFFFF"
+  size:
+    border-radius-small: &border-radius-small "6px"
+button:
+  color:
+    bg-top: *accent
+    bg-bottom: *accent
+    text: *blank
+    border: *accent-border
+    shadow: "transparent"
+    disabled:
+      bg-top: *secondary-dark
+      bg-bottom: *secondary-dark
+      text: *secondary-darker
+      border: "transparent"
+      border-bottom: *secondary-darkest
+  size:
+    border-radius: *border-radius-small
+  shadow:
+    inner:
+      params: "0 3px inset"
+      color: *accent
+    outer:
+      params: "0 3px"
+      color: *blank
+spinner:
+  color:
+    light: "#F3FAFF"
+    lighter: "#AADDF9"
+    dark:  *active
+    darker: *primary-lighter
