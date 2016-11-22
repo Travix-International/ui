@@ -1,0 +1,23 @@
+/** Colors palette */
+$accent-darker:     #9ACA0F !default; //?
+$accent:            #9ACA0F !default;
+$accent-lighter:    #C1E35E !default;
+$accent-top:        #49A345 !default; //?
+$accent-bottom:     #49A345 !default; //?
+$accent-border:     #49A345 !default;
+$accent-light:      #C1E35E !default;
+
+$primary-darker:    #72368D !default; //?
+$primary-dark:      #72368D !default; //?
+$primary:           #72368D !default;
+$primary-light:     #7B4397 !default;
+$primary-lighter:   #894EA3 !default;
+$primary-overlay:   #9574B2 !default;
+
+$secondary-darkest: #B69CC6 !default;
+$secondary-darker:  #DACCE2 !default;
+$secondary-dark:    #F4F1F7 !default;
+$secondary:         #EFEEE5 !default;
+$secondary-light:   #F7F8F1 !default;
+$secondary-lighter: #F9FBF6 !default;
+
