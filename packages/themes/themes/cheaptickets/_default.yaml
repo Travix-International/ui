@@ -1,60 +1,65 @@
-/** Colors palette */
-$accent-darker:     #DAAB00 !default;
-$accent:            #F6E41F !default;
-$accent-lighter:    #FAF18F !default;
-$accent-top:        #F6E500 !default;
-$accent-bottom:     #F7DE00 !default;
-$accent-border:     #E6BB00 !default;
+generic:
+  font:
+    primary:
+      weight:
+        heavy: "800"
+      font-family: "Linotte"
+    alternative:
+      font-family: "Linotte"
+  color:
+    accent-darker: &accent-darker "#DAAB00"
+    accent: &accent "#F6E41F"
+    accent-lighter: &accent-lighter "#FAF18F"
+    accent-top: &accent-top "#F6E500"
+    accent-bottom: &accent-bottom "#F7DE00"
+    accent-border: &accent-border "#E6BB00"
 
-$primary-darker:    #003F7F !default;
-$primary-dark:      #004B94 !default;
-$primary:           #0056A9 !default;
-$primary-light:     #005FBB !default;
-$primary-lighter:   #006CD2 !default;
-$primary-overlay:   #4A7BA9 !default;
+    primary-darker: &primary-darker "#003F7F"
+    primary-dark: &primary-dark "#004B94"
+    primary: &primary "#0056A9"
+    primary-light: &primary-light "#005FBB"
+    primary-lighter: &primary-lighter "#006CD2"
+    primary-overlay: &primary-overlay "#4A7BA9"
 
-$secondary-darkest: #7EA6D4 !default;
-$secondary-darker:  #ADC9EA !default;
-$secondary-dark:    #BDD8F1 !default;
-$secondary:         #D5E8F8 !default;
-$secondary-light:   #EBF5FD !default;
-$secondary-lighter: #F7FBFE !default;
+    secondary-darkest: &secondary-darkest "#7EA6D4"
+    secondary-darker: &secondary-darker "#ADC9EA"
+    secondary-dark: &secondary-dark "#BDD8F1"
+    secondary: &secondary "#D5E8F8"
+    secondary-light: &secondary-light "#EBF5FD"
+    secondary-lighter: &secondary-lighter "#F7FBFE"
 
-$text-darker:       #2B4352 !default;
-$text-dark:         #29425B !default;
-$text:              #597385 !default;
-$text-light:        #78909F !default;
-$text-shadow:       #7890A1 !default;
-$text-lighter:      #9DB1C0 !default;
+    text-darker: &text-darker "#2B4352"
+    text-dark: &text-dark "#29425B"
+    text: &text "#597385"
+    text-light: &text-light "#78909F"
+    text-shadow: &text-shadow "#7890A1"
+    text-lighter: &text-lighter "#9DB1C0"
 
-$active:            #00B0FF !default;
-$positive-dark:     #3CB761 !default;
-$positive:          #17D478 !default;
-$positive-light:    #9EDB97 !default;
-$negative:          #D2373F !default;
-$negative-light:    #F4CDCF !default;
-$disabled:          #C5DCF6 !default;
+    active: &active "#00B0FF"
+    positive-dark: &positive-dark "#3CB761"
+    positive: &positive "#17D478"
+    positive-light: &positive-light "#9EDB97"
+    negative: &negative "#D2373F"
+    negative-light: &negative-light "#F4CDCF"
+    disabled: &disabled "#C5DCF6"
 
-$shadow:            #000000 !default;
-$shadow-bottom:     #BCD8F2 !default;
-$shadow-alt:        #00196F !default;
-$blank:             #FFFFFF !default;
+    shadow: &shadow "#000000"
+    shadow-bottom: &shadow-bottom "#BCD8F2"
+    shadow-alt: &shadow-alt "#00196F"
+    blank: &blank "#FFFFFF"
 
-$facebook:          #45619D !default;
-$facebook-border:   #324A87 !default;
-$twitter:           #08ACEE !default;
-$twitter-border:    #1871C0 !default;
-$google:            #B30303 !default;
-$google-border:     #670E00 !default;
-$instagram-top:     #D9375C !default;
-$instagram-bottom:  #f05c34 !default;
-$instagram-border:  #C32E15 !default;
-$mail:              #006CD2 !default;
-$mail-border:       #0A50A3 !default;
+    facebook: &facebook "#45619D"
+    facebook-border: &facebook-border "#324A87"
+    twitter: &twitter "#08ACEE"
+    twitter-border: &twitter-border "#1871C0"
+    google: &google "#B30303"
+    google-border: &google-border "#670E00"
+    instagram-top: &instagram-top "#D9375C"
+    instagram-bottom: &instagram-bottom "#f05c34"
+    instagram-border: &instagram-border "#C32E15"
+    mail: &mail "#006CD2"
+    mail-border: &mail-border "#0A50A3"
 
-$sticky-tabs-link:  #00B0FF !default;
-$trust-pilot-stars: #F6E41F !default;
+    sticky-tabs-link: &sticky-tabs-link "#00B0FF"
+    trust-pilot-stars: &trust-pilot-stars "#F6E41F"
 
-$base-shadowed-color: rgba($shadow, 0.18) !default;
-$base-overlay-color: rgba($primary-dark, .65) !default;
-$base-overlay-color-light: rgba($primary-dark, .35) !default;

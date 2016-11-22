@@ -7,27 +7,4 @@ generic:
     alternative:
       font-family: "Linotte"
   color:
-    accent-darker: &accent-darker         "#FF7F00"
-    accent: &accent                       "#FF7F00"
-    accent-lighter: &accent-lighter       "#FFAD5B"
-    accent-top: &accent-top               "#F04C2A"
-    accent-bottom: &accent-bottom         "#F04C2A"
-    accent-border: &accent-border         "#F04C2A"
-    accent-light: &accent-light           "#FFAD5B"
-
-    primary-darker: &primary-darker       "#007CC3"
-    primary-dark: &primary-dark           "#007CC3"
-    primary: &primary                     "#007CC3"
-    primary-light: &primary-light         "#0185D1"
-    primary-lighter: &primary-lighter     "#1A91DA"
-    primary-overlay: &primary-overlay     "#F4F1F7"
-
-    secondary-darkest: &secondary-darkest "#62BBEE"
-    secondary-darker: &secondary-darker   "#B3DFF9"
-    secondary-dark: &secondary-dark       "#D9EFFC"
-    secondary: &secondary                 "#EFEEE5"
-    secondary-light: &secondary-light     "#F7F8F1"
-    secondary-lighter: &secondary-lighter "#F9FBF6"
-button:
-  color:
-    bg: *text-dark
+    blank: &blank "#ffffff"
