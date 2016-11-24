@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.2.2](https://github.com/Travix-International/theme-builder/tree/v0.2.2) (2016-11-24)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.1...v0.2.2)
+
+**Merged pull requests:**
+
+- Update babel-loader to the latest version 🚀 [\#25](https://github.com/Travix-International/theme-builder/pull/25) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update babel-eslint to the latest version 🚀 [\#24](https://github.com/Travix-International/theme-builder/pull/24) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update eslint-plugin-babel to the latest version 🚀 [\#23](https://github.com/Travix-International/theme-builder/pull/23) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update jest to the latest version 🚀 [\#22](https://github.com/Travix-International/theme-builder/pull/22) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
 ## [v0.2.1](https://github.com/Travix-International/theme-builder/tree/v0.2.1) (2016-11-16)
 [Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.0...v0.2.1)
 
