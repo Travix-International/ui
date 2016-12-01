@@ -81,6 +81,7 @@ function mergeRoots(tree) {
   return merge.apply(null, roots);
 }
 
+
 function getThemeFile(brand, lang, country) {
   return yaml.dump(
     mergeRoots(
@@ -96,5 +97,11 @@ function getThemeFile(brand, lang, country) {
     )
   ).replace(/'/g, '');
 }
-
+/**
+ * Get theme file content in YAML format
+ * @param  {String} brand
+ * @param  {String} lang
+ * @param  {String} country
+ * @return {String}
+ */
 module.exports = getThemeFile;
