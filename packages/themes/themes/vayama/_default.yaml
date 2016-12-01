@@ -8,3 +8,8 @@ generic:
       font-family: "Linotte"
   color:
     blank: &blank "#ffffff"
+button:
+  shadow:
+    text:
+      params: "0 2px 0"
+      color: *accent-border
