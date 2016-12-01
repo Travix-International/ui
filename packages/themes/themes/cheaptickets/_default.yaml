@@ -1,31 +1,30 @@
 generic:
   font:
     primary:
-      weight:
-        heavy: "800"
-      font-family: "Linotte"
+      font-family: "Khand"
     alternative:
-      font-family: "Linotte"
+      font-family: "Handlee"
   color:
-    accent-darker: &accent-darker "#DAAB00"
-    accent: &accent "#F6E41F"
+    accent-border: &accent-border   "#E6BB00"
+    accent-bottom: &accent-bottom   "#F7DE00"
+    accent-darker: &accent-darker   "#DAAB00"
+    accent-light: &accent-light     "#FAF18F"
     accent-lighter: &accent-lighter "#FAF18F"
-    accent-top: &accent-top "#F6E500"
-    accent-bottom: &accent-bottom "#F7DE00"
-    accent-border: &accent-border "#E6BB00"
+    accent-top: &accent-top         "#F6E500"
+    accent: &accent                 "#F6E41F"
 
-    primary-darker: &primary-darker "#003F7F"
-    primary-dark: &primary-dark "#004B94"
-    primary: &primary "#0056A9"
-    primary-light: &primary-light "#005FBB"
+    primary-darker: &primary-darker   "#003F7F"
+    primary-dark: &primary-dark       "#004B94"
+    primary: &primary                 "#0056A9"
+    primary-light: &primary-light     "#005FBB"
     primary-lighter: &primary-lighter "#006CD2"
     primary-overlay: &primary-overlay "#4A7BA9"
 
     secondary-darkest: &secondary-darkest "#7EA6D4"
-    secondary-darker: &secondary-darker "#ADC9EA"
-    secondary-dark: &secondary-dark "#BDD8F1"
-    secondary: &secondary "#D5E8F8"
-    secondary-light: &secondary-light "#EBF5FD"
+    secondary-darker: &secondary-darker   "#ADC9EA"
+    secondary-dark: &secondary-dark       "#BDD8F1"
+    secondary: &secondary                 "#D5E8F8"
+    secondary-light: &secondary-light     "#EBF5FD"
     secondary-lighter: &secondary-lighter "#F7FBFE"
 
     text-darker: &text-darker "#2B4352"
@@ -62,4 +61,10 @@ generic:
 
     sticky-tabs-link: &sticky-tabs-link "#00B0FF"
     trust-pilot-stars: &trust-pilot-stars "#F6E41F"
-
+button:
+  color:
+    text: *primary-darker
+  shadow:
+    outer:
+      params: "-5px 7px" 
+      color: "rgba(0,0,0,.15)"
