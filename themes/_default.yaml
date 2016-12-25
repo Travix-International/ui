@@ -20,27 +20,27 @@ generic:
       font-family: "Handlee"
       generic-family: "cursive"
   color:
-    accent-border: &accent-border         "#F04C2A"
-    accent-bottom: &accent-bottom         "#F04C2A"
-    accent-darker: &accent-darker         "#FF7F00"
-    accent-light: &accent-light           "#FFAD5B"
-    accent-lighter: &accent-lighter       "#FFAD5B"
-    accent-top: &accent-top               "#F04C2A"
-    accent: &accent                       "#FF7F00"
+    accent-border: &accent-border   "#E6BB00"
+    accent-bottom: &accent-bottom   "#F7DE00"
+    accent-darker: &accent-darker   "#DAAB00"
+    accent-light: &accent-light     "#FAF18F"
+    accent-lighter: &accent-lighter "#FAF18F"
+    accent-top: &accent-top         "#F6E500"
+    accent: &accent                 "#F6E41F"
 
-    primary-darker: &primary-darker       "#007CC3"
-    primary-dark: &primary-dark           "#007CC3"
-    primary: &primary                     "#007CC3"
-    primary-light: &primary-light         "#0185D1"
-    primary-lighter: &primary-lighter     "#1A91DA"
-    primary-overlay: &primary-overlay     "#F4F1F7"
+    primary-darker: &primary-darker   "#003F7F"
+    primary-dark: &primary-dark       "#004B94"
+    primary: &primary                 "#0056A9"
+    primary-light: &primary-light     "#005FBB"
+    primary-lighter: &primary-lighter "#006CD2"
+    primary-overlay: &primary-overlay "#4A7BA9"
 
-    secondary-darkest: &secondary-darkest "#62BBEE"
-    secondary-darker: &secondary-darker   "#B3DFF9"
-    secondary-dark: &secondary-dark       "#D9EFFC"
-    secondary: &secondary                 "#EFEEE5"
-    secondary-light: &secondary-light     "#F7F8F1"
-    secondary-lighter: &secondary-lighter "#F9FBF6"
+    secondary-darkest: &secondary-darkest "#7EA6D4"
+    secondary-darker: &secondary-darker   "#ADC9EA"
+    secondary-dark: &secondary-dark       "#BDD8F1"
+    secondary: &secondary                 "#D5E8F8"
+    secondary-light: &secondary-light     "#EBF5FD"
+    secondary-lighter: &secondary-lighter "#F7FBFE"
     active: &active                       "#00B0FF"
     blank: &blank                         "#FFFFFF"
   size:
@@ -62,11 +62,13 @@ button:
     border-radius: *border-radius-small
   shadow:
     inner:
-      params: "0 3px inset"
-      color: *accent
-    outer:
       params: "0 3px"
-      color: *blank
+      color: *accent-border
+    outer:
+      params: "0 0"
+      color: "transparent"
+      hover:
+        params: "0 0"
 spinner:
   color:
     light: "#F3FAFF"
