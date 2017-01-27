@@ -8,7 +8,7 @@ function buildJsonTree(ast) {
   if (!ast) {
     throw new Error('No AST found, please contact developer');
   }
-  
+
   if (ast.errors && ast.errors.length) {
     ast.errors.map((err) => {
       console.log(err.reason);
@@ -49,7 +49,6 @@ function getPathes(brand, lang = '', country = '') {
     path.join(__dirname, `/themes/${brand}/${country.toUpperCase()}.yaml`)
   ];
 }
-
 
 function getFilesContent(fileNames) {
     return fileNames.map(fileName => {
