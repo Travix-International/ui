@@ -1,21 +1,34 @@
-accent-darker: &accent-darker           "#F24D67"
-accent: &accent                         "#F24D67"
-accent-lighter: &accent-lighter         "#F4778B"
-accent-top: &accent-top                 "#F55B70"
-accent-bottom: &accent-bottom           "#F55B70"
-accent-border: &accent-border           "#BF1435"
-accent-light: &accent-light             "#F4778B"
+generic:
+  font:
+    primary:
+      weight:
+        heavy: "800"
+      font-family: "Linotte"
+    alternative:
+      font-family: "Linotte"
+  color:
+    accent-border: &accent-border         "#49A345"
+    accent-bottom: &accent-bottom         "#49A345"
+    accent-darker: &accent-darker         "#9ACA0F"
+    accent-light: &accent-light           "#C1E35E"
+    accent-lighter: &accent-lighter       "#C1E35E"
+    accent-top: &accent-top               "#49A345"
+    accent: &accent                       "#9ACA0F"
 
-primary-darker: &primary-darker         "#34439F"
-primary-dark: &primary-dark             "#34439F"
-primary: &primary                       "#34439F"
-primary-light: &primary-light           "#3848AA"
-primary-lighter: &primary-lighter       "#4757B9"
-primary-overlay: &primary-overlay       "#6C7DBE"
+    primary-darker: &primary-darker       "#72368D"
+    primary-dark: &primary-dark           "#72368D"
+    primary: &primary                     "#72368D"
+    primary-light: &primary-light         "#7B4397"
+    primary-lighter: &primary-lighter     "#894EA3"
+    primary-overlay: &primary-overlay     "#9574B2"
 
-secondary-darkest: &secondary-darkest   "#93A4D7"
-secondary-darker: &secondary-darker     "#BDC4E4"
-secondary-dark: &secondary-dark         "#D4DBEE"
-secondary: &secondary                   "#F6EBE1"
-secondary-light: &secondary-light       "#EAEEF8"
-secondary-lighter: &secondary-lighter   "#FCF8F4"
+    secondary-darkest: &secondary-darkest "#B69CC6"
+    secondary-darker: &secondary-darker   "#DACCE2"
+    secondary-dark: &secondary-dark       "#F4F1F7"
+    secondary: &secondary                 "#EFEEE5"
+    secondary-light: &secondary-light     "#F7F8F1"
+    secondary-lighter: &secondary-lighter "#F9FBF6"
+
+    text-dark: &text-dark                 "#29425B"
+    text: &text                           "#597385"
+    text-light: &text-light               "#9DB1C0"
