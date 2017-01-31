@@ -1,11 +1,4 @@
 generic:
-  font:
-    primary:
-      weight:
-        heavy: "800"
-      font-family: "Linotte"
-    alternative:
-      font-family: "Linotte"
   color:
     accent-border: &accent-border         "#49A345"
     accent-bottom: &accent-bottom         "#49A345"
