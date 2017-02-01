@@ -46,7 +46,7 @@ function getPathes(brand, lang = '', country = '') {
   return [
     path.join(__dirname, '/themes/_default.yaml'),
     path.join(__dirname, `/themes/${brand}/_default.yaml`),
-    path.join(__dirname, `/themes/${brand}/${country.toUpperCase()}.yaml`)
+    path.join(__dirname, `/themes/${brand}/${country.toUpperCase()}/_default.yaml`)
   ];
 }
 
