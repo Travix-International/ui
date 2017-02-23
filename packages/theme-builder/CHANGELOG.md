@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.2.3](https://github.com/Travix-International/theme-builder/tree/v0.2.3) (2017-02-23)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.2...v0.2.3)
+
+**Merged pull requests:**
+
+- chore\(package\): update jest to version 19.0.1 [\#33](https://github.com/Travix-International/theme-builder/pull/33) ([mAiNiNfEcTiOn](https://github.com/mAiNiNfEcTiOn))
+- Update babel-jest to the latest version 🚀 [\#32](https://github.com/Travix-International/theme-builder/pull/32) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update babel-jest to the latest version 🚀 [\#28](https://github.com/Travix-International/theme-builder/pull/28) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Adds '^' to all packages to lock them on the major [\#27](https://github.com/Travix-International/theme-builder/pull/27) ([mAiNiNfEcTiOn](https://github.com/mAiNiNfEcTiOn))
+- Update eslint to the latest version 🚀 [\#26](https://github.com/Travix-International/theme-builder/pull/26) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
 ## [v0.2.2](https://github.com/Travix-International/theme-builder/tree/v0.2.2) (2016-11-24)
 [Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.1...v0.2.2)
 
