@@ -96,3 +96,6 @@ spinner:
     lighter: "#AADDF9"
     dark:  *active
     darker: *primary-lighter
+list:
+  bullets:
+    color: *active
