@@ -1,34 +1,66 @@
-/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-const deepExtend = require('deep-extend');
-const yaml = require('js-yaml');
+const jsYaml = require('js-yaml');
+const yamlUtils = require('./yamlUtils');
 const js = require('./processors/js');
 const scss = require('./processors/scss');
+const fs = require('fs');
 
-const defaultProcessors = {
-  js,
-  scss
+const defaultConfig = {
+  processors: {
+    js,
+    scss
+  },
+  prefix: '',
+  format: 'scss'
 };
 
-module.exports = function app(themeYaml, format, config = {}) {
-  const processors = Object.assign({}, config.processors || {}, defaultProcessors);
+module.exports = function themeBuilder(config) {
+  const builderConfig = Object.assign({}, defaultConfig, config);
+  const { processors, prefix, format } = builderConfig;
 
-  if (!processors[format]) {
-    throw new Error(`Missing processors for "${format}" format`);
+  const processor = processors[format];
+
+  if (!processor) {
+    throw new Error(`Missing processor for "${format}" format`);
   }
 
-  try {
-    let jsonTheme = yaml.safeLoad(themeYaml);
+  return {
+    merge(yamlFiles) {
+      return yamlUtils.readFiles(yamlFiles)
+        .then(yamlUtils.concatYamlData)
+        .then(yamlUtils.parseYaml)
+        .then(yamlUtils.buildYamlJson)
+        .then(yamlUtils.compileJsonToYaml);
+    },
+    build(yamlFiles) {
+      let promise;
+      if (typeof yamlFiles === 'string') {
+        promise = this.merge([yamlFiles]);
+      } else {
+        promise = this.merge(yamlFiles);
+      }
 
-    if (config.defaultThemeYaml) {
-      const defaultJsonTheme = yaml.safeLoad(config.defaultThemeYaml);
-      jsonTheme = deepExtend({}, defaultJsonTheme, jsonTheme);
+      return promise
+        .then(themeYaml => processor.compile(jsYaml.safeLoad(themeYaml), prefix));
+    },
+    watch(files, callback) {
+      if (typeof callback !== 'function') {
+        throw new Error('callback is required!');
+      }
+      if (typeof files === 'string') {
+        files = [files];
+      }
+
+      files.map((yamlFile) => {
+        return fs.watchFile(yamlFile, (curr, prev) => {
+          console.log(`[theme-builder] Detected changes on ${yamlFile}`); // eslint-disable-line
+          console.log(`[theme-builder] rebuilding start`); // eslint-disable-line
+          this.build(files)
+            .then((content) => {
+              console.log(`[theme-builder] rebuilding end`); // eslint-disable-line
+              callback(content, curr, prev);
+            });
+        });
+      });
     }
-
-    return processors[format].compile(jsonTheme, config.prefix ? config.prefix : '');
-  } catch (error) {
-    console.warn(`Failed to process theme with ${format} format. Reason:`);
-    console.warn(error);
-  }
-
-  return null;
+  };
 };
