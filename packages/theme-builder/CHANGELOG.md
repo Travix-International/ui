@@ -1,5 +1,22 @@
 # Change Log
 
+## [v0.4.0](https://github.com/Travix-International/theme-builder/tree/v0.4.0) (2017-03-31)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.3.1...v0.4.0)
+
+**Merged pull requests:**
+
+- Added ability to merge yaml files and override default theme [\#36](https://github.com/Travix-International/theme-builder/pull/36) ([EduardTrutsyk](https://github.com/EduardTrutsyk))
+
+## [v0.3.1](https://github.com/Travix-International/theme-builder/tree/v0.3.1) (2017-03-16)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.3.0...v0.3.1)
+
+## [v0.3.0](https://github.com/Travix-International/theme-builder/tree/v0.3.0) (2017-03-14)
+[Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.3...v0.3.0)
+
+**Merged pull requests:**
+
+- Add deep extend with default theme if provided [\#34](https://github.com/Travix-International/theme-builder/pull/34) ([asci](https://github.com/asci))
+
 ## [v0.2.3](https://github.com/Travix-International/theme-builder/tree/v0.2.3) (2017-02-23)
 [Full Changelog](https://github.com/Travix-International/theme-builder/compare/v0.2.2...v0.2.3)
 
