@@ -63,6 +63,8 @@ generic:
 
     sticky-tabs-link: &sticky-tabs-link "#00B0FF"
     trust-pilot-stars: &trust-pilot-stars "#F6E41F"
+  separator:
+    style: &separator-style dashed
   size:
     border-radius-small: &border-radius-small "5px"
 button:
