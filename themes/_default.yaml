@@ -69,6 +69,8 @@ generic:
   size:
     border-radius-small: &border-radius-small "6px"
 button:
+  color:
+    border: *accent-border
   shadow:
     inner:
       color: *accent-border
