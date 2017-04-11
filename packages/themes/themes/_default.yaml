@@ -68,6 +68,12 @@ generic:
     style: &separator-style dotted
   size:
     border-radius-small: &border-radius-small "6px"
+button:
+  color:
+    border: *accent-border
+  shadow:
+    inner:
+      color: *accent-border
 spinner:
   color:
     light: "#F3FAFF"
