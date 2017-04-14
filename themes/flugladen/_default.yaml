@@ -34,5 +34,5 @@ generic:
     text-light: &text-light               "#9DB1C0"
 spinner:
   color:
-    dark: *secondary-darker
+    dark: *secondary-darkest
     lighter: *secondary-darker
