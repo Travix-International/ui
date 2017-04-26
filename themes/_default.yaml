@@ -82,4 +82,4 @@ list:
   color: *text-dark
   bullets:
     color: *active
-  line-height: '38px'
+  line-height: "38px"
