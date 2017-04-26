@@ -78,3 +78,8 @@ spinner:
   color:
     light: "#F3FAFF"
     lighter: "#AADDF9"
+list:
+  color: *text-dark
+  bullets:
+    color: *active
+  line-height: '38px'
