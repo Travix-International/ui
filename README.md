@@ -1,11 +1,15 @@
 # CSS variables for themes polyfill
 
-**Warning:** It is not a full featured polyfill for CSS variables. It is just cover the case of flat variables (no nesting).
+**Warning:** It is not a full featured polyfill for CSS variables. It is just cover the case of flat variables (no nesting) for Travix.
 
 Moreover, the name of global object with map for CSS variables is hardcoded.
 
 ## How to install
-- `npm i css-themes-polyfill -S` install as a dependency
+- `npm i travix-css-themes-polyfill -S` install as a dependency
+
+**or** use it via CDN
+
+- `<script src="path-to-CDN-goes-here"></script>`
 
 ## How it works
 **Requirement:** The polyfill expect to have global object with a name `TravixTheme` with values for variables.
@@ -21,9 +25,6 @@ Add it to your main bundle before any dynamically styles tags added.
 
 Preferably add this code only for target platforms: IE11, Edge 14 and Android 4.x
 
-
-
-
 ## Development
 
 #### Testing
@@ -33,3 +34,6 @@ Preferably add this code only for target platforms: IE11, Edge 14 and Android 4.
 
 #### Requirements
 Since there is no transpiling step your code must be compatible with IE11
+
+#### Publishing
+To publish this package run `Makefile`
