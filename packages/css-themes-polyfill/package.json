@@ -1,9 +1,10 @@
 {
-  "name": "css-themes-polyfill",
+  "name": "travix-css-themes-polyfill",
   "version": "0.1.0",
   "description": "Travix CSS variables for themes polyfill",
   "main": "src/index.js",
   "scripts": {
+    "build": "uglifyjs --compress --mangle --output lib/index.js src/index.js",
     "test": "node test/index.spec.js",
     "lint": "eslint --color src/index.js"
   },
@@ -30,6 +31,7 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-travix": "^2.3.2",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "uglify-js": "^2.8.22"
   }
 }
