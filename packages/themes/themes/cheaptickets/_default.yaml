@@ -70,9 +70,5 @@ generic:
 button:
   color:
     text: *primary-darker
-  shadow:
-    outer:
-      params: "-5px 7px"
-      color: "rgba(0, 0, 0, .15)"
-      hover:
-        params: "-5px 9px"
+  shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px rgba(0, 0, 0, .15)"
+  shadow-hover: "0 5px var(--tx-generic-color-accent-border), -5px 9px rgba(0, 0, 0, .15)"
