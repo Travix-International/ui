@@ -71,9 +71,6 @@ generic:
 button:
   color:
     border: *accent-border
-  shadow:
-    inner:
-      color: *accent-border
 spinner:
   color:
     light: "#F3FAFF"
