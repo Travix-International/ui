@@ -32,6 +32,22 @@ generic:
     text-dark: &text-dark                 "#29425B"
     text: &text                           "#597385"
     text-light: &text-light               "#9DB1C0"
+badge:
+  after:
+    border:
+      color: *accent-border
+  border:
+    bottom:
+      width: 0px
+    radius:
+      start: 5px
+      end: 15px
+  color:
+    text: "#FFF"
+  font-size: 13px
+  padding:
+    right-left: 10px
+    top-bottom: 5px
 spinner:
   color:
     dark: *secondary-darkest
