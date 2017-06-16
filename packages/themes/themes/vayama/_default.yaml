@@ -32,5 +32,21 @@ generic:
     blank: &blank                         "#FFFFFF"
   size:
     border-radius-small: &border-radius-small "6px"
+badge:
+  after:
+    border:
+      color: *accent-border
+  border:
+    bottom:
+      width: 0px
+    radius:
+      start: 5px
+      end: 15px
+  color:
+    text: *blank
+  font-size: 13px
+  padding:
+    right-left: 10px
+    top-bottom: 5px
 button:
   shadow: "0 3px var(--tx-generic-color-accent-border), none"

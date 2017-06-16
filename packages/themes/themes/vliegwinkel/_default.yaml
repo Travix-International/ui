@@ -38,3 +38,15 @@ generic:
 
     active: &active                       "#40CAFF"
     active-lighter: &active-lighter       "#81DAFF"
+badge:
+  after:
+    border:
+      color: *accent-border
+  border:
+    bottom:
+      width: 0px
+  color:
+    text: *blank
+  padding:
+    right-left: 8px
+    top-bottom: 3px
