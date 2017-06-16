@@ -46,7 +46,7 @@ badge:
     bottom:
       width: 0px
   color:
-    text: "#FFF"
+    text: *blank
   padding:
     right-left: 8px
     top-bottom: 3px

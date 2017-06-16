@@ -43,7 +43,7 @@ badge:
       start: 5px
       end: 15px
   color:
-    text: "#FFF"
+    text: *blank
   font-size: 13px
   padding:
     right-left: 10px
