@@ -72,3 +72,12 @@ button:
     text: *primary-darker
   shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px rgba(0, 0, 0, .15)"
   shadow-hover: "0 5px var(--tx-generic-color-accent-border), -5px 9px rgba(0, 0, 0, .15)"
+  ghost:
+    background: "transparent"
+    color: "var(--tx-generic-color-primary-darker)"
+    border-color: "var(--tx-generic-color-secondary-darker)"
+    border: "3px solid var(--tx-button-ghost-border-color)"
+    border-radius: 3px
+    font-family: "var(--tx-generic-font-primary-font-family)"
+    hover-color: "var(--tx-generic-color-active)"
+    hover-border-color: "var(--tx-generic-color-active)"
