@@ -69,9 +69,21 @@ generic:
     border-radius-small: &border-radius-small "5px"
 button:
   color:
+    bg-top: *accent
+    bg-bottom: *accent
     text: *primary-darker
+    border: *accent-dark
+    shadow: "transparent"
+    disabled:
+      bg-top: *secondary-dark
+      bg-bottom: *secondary-dark
+      text: *secondary-darker
+      border: "transparent"
+      border-bottom: *secondary-darkest
   shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px rgba(0, 0, 0, .15)"
   shadow-hover: "0 5px var(--tx-generic-color-accent-border), -5px 9px rgba(0, 0, 0, .15)"
+  size:
+    border-radius: *border-radius-small
   ghost:
     background: "transparent"
     color: "var(--tx-generic-color-primary-darker)"
