@@ -6,7 +6,6 @@ const path = require('path');
  * @param  {Object} options
  * @param  {string} options.brand - cheaptickets
  * @param  {string} options.affiliate - NL
- * @param  {string} options.lang - nl
  * @return {String}
  */
 function getThemeFiles({ brand, affiliate }) {
