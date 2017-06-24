@@ -39,6 +39,7 @@ generic:
     secondary-darker: &secondary-darker   "#ADC9EA"
     secondary-dark: &secondary-dark       "#BDD8F1"
     secondary: &secondary                 "#D5E8F8"
+    secondary-rgb: &secondary-rgb         "213,232,248"
     secondary-light: &secondary-light     "#EBF5FD"
     secondary-lighter: &secondary-lighter "#F7FBFE"
 
@@ -48,12 +49,15 @@ generic:
     negative-light: &negative-light       "#F4CDCF"
 
     shadow: &shadow                       "#000000"
+    shadow-rgb: &shadow-rgb "0,0,0"
     shadow-alt:                           "#00196F"
     blank: &blank                         "#FFFFFF"
 
     text-dark: &text-dark                 "#29425B"
     text: &text                           "#597385"
     text-light: &text-light               "#9DB1C0"
+    text-lighter: &text-lighter           "#998"
+    text-lighter-rgb: &text-lighter-rgb   "153,153,136"
 
     facebook: &facebook                   "#45619D"
     facebook-border: &facebook-border     "#324A87"
@@ -70,13 +74,13 @@ generic:
     border-radius-small: &border-radius-small "6px"
 button:
   color:
-    border: *accent-border
+    border: "var(--tx-generic-color-accent-border)"
 spinner:
   color:
     light: "#F3FAFF"
     lighter: "#AADDF9"
 list:
-  color: *text-dark
+  color: "var(--tx-generic-color-text-dark)"
   bullets:
-    color: *active
+    color: "var(--tx-generic-color-active)"
   line-height: "38px"
