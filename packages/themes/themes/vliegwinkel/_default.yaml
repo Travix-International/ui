@@ -29,6 +29,7 @@ generic:
     secondary-darker: &secondary-darker   "#BDC4E4"
     secondary-dark: &secondary-dark       "#D4DBEE"
     secondary: &secondary                 "#F6EBE1"
+    secondary-rgb: &secondary-rgb         "246,235,225"
     secondary-light: &secondary-light     "#EAEEF8"
     secondary-lighter: &secondary-lighter "#FCF8F4"
 
@@ -41,12 +42,12 @@ generic:
 badge:
   after:
     border:
-      color: *accent-border
+      color: "var(--tx-generic-color-accent-border)"
   border:
     bottom:
       width: 0px
   color:
-    text: *blank
+    text: "var(--tx-generic-color-blank)"
   padding:
     right-left: 8px
     top-bottom: 3px

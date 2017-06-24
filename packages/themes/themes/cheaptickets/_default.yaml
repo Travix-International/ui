@@ -26,6 +26,7 @@ generic:
     secondary-darker: &secondary-darker   "#ADC9EA"
     secondary-dark: &secondary-dark       "#BDD8F1"
     secondary: &secondary                 "#D5E8F8"
+    secondary-rgb: &secondary-rgb         "213,232,248"
     secondary-light: &secondary-light     "#EBF5FD"
     secondary-lighter: &secondary-lighter "#F7FBFE"
 
@@ -69,17 +70,17 @@ generic:
     border-radius-small: &border-radius-small "5px"
 button:
   color:
-    bg-top: *accent
-    bg-bottom: *accent
-    text: *primary-darker
-    border: *accent-dark
+    bg-top: "var(--tx-generic-color-accent)"
+    bg-bottom: "var(--tx-generic-color-accent)"
+    text: "var(--tx-generic-color-primary-darker)"
+    border: "var(--tx-generic-color-accent-darker)"
     shadow: "transparent"
     disabled:
-      bg-top: *secondary-dark
-      bg-bottom: *secondary-dark
-      text: *secondary-darker
+      bg-top: "var(--tx-generic-color-secondary-dark)"
+      bg-bottom: "var(--tx-generic-color-secondary-dark)"
+      text: "var(--tx-generic-color-secondary-darker)"
       border: "transparent"
-      border-bottom: *secondary-darkest
+      border-bottom: "var(--tx-generic-color-secondary-darkest)"
   shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px rgba(0, 0, 0, .15)"
   shadow-hover: "0 5px var(--tx-generic-color-accent-border), -5px 9px rgba(0, 0, 0, .15)"
   size:
