@@ -49,3 +49,11 @@ badge:
   padding:
     right-left: 10px
     top-bottom: 5px
+button:
+  ghost:
+    background: "white"
+    color: *primary-darker
+    border-color: *secondary-darker
+    border-radius: "5px"
+    hover-color: "#00B0FF"
+    hover-border-color: "#01B0FF"
