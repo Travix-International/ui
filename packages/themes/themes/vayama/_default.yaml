@@ -51,3 +51,10 @@ badge:
     top-bottom: 5px
 button:
   shadow: "0 3px var(--tx-generic-color-accent-border), none"
+  ghost:
+    background: "white"
+    color: *primary-darker
+    border-color: *secondary-darker
+    border-radius: "5px"
+    hover-color: "#1AD7FD"
+    hover-border-color: "#1AD7FD"
