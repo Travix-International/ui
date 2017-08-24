@@ -22,6 +22,9 @@ generic:
     primary-lighter: &primary-lighter     "#1A91DA"
     primary-overlay: &primary-overlay     "#F4F1F7"
 
+    positive: &positive                   "#92BE14"
+    positive-lighter: &positive-lighter   "#ADCE4F"
+
     secondary-darkest: &secondary-darkest "#62BBEE"
     secondary-darker: &secondary-darker   "#B3DFF9"
     secondary-dark: &secondary-dark       "#D9EFFC"
