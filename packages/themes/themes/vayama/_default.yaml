@@ -61,3 +61,8 @@ button:
     border-radius: "5px"
     hover-color: "#1AD7FD"
     hover-border-color: "#1AD7FD"
+price:
+  height:
+    underline: 0px
+  margin-top:
+    underline: 0px
