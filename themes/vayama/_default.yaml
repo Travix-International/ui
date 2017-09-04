@@ -54,7 +54,7 @@ badge:
     top-bottom: 5px
 button:
   shadow: "0 3px var(--tx-generic-color-accent-border)"
-  shadow-inner-color: ""var(--tx-generic-color-accent-border)""
+  shadow-inner-color: "var(--tx-generic-color-accent-border)"
   shadow-outer:
     color: "transparent"
     hover-params: "-5px 9px"
