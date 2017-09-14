@@ -54,6 +54,7 @@ generic:
     shadow-alt:                           "#00196F"
     blank: &blank                         "#FFFFFF"
 
+    text-darker: &text-darker             "#2B4352"
     text-dark: &text-dark                 "#29425B"
     text: &text                           "#597385"
     text-light: &text-light               "#9DB1C0"
