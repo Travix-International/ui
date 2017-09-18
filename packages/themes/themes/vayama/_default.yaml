@@ -53,7 +53,7 @@ badge:
     right-left: 10px
     top-bottom: 5px
 button:
-  shadow: "0 3px var(--tx-generic-color-accent-border)"
+  shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px transparent"
   shadow-inner-color: "var(--tx-generic-color-accent-border)"
   shadow-outer:
     color: "transparent"
