@@ -53,9 +53,9 @@ badge:
     top-bottom: 3px
 button:
   ghost:
-    background: "white"
+    background: "transparent"
     color: *primary-darker
     border-color: *secondary-darker
-    border-radius: "5px"
+    border-radius: 5px
     hover-color: "#1AD7FD"
     hover-border-color: "#1AD7FD"
