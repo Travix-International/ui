@@ -53,3 +53,11 @@ spinner:
   color:
     dark: "var(--tx-generic-color-secondary-darkest)"
     lighter: "var(--tx-generic-color-secondary-darker)"
+button:
+  ghost:
+    background: "transparent"
+    color: *primary-darker
+    border-color: *secondary-darker
+    border-radius: 5px
+    hover-color: "#00B0FF"
+    hover-border-color: "#01B0FF"
