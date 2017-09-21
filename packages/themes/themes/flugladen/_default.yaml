@@ -54,7 +54,8 @@ spinner:
     dark: "var(--tx-generic-color-secondary-darkest)"
     lighter: "var(--tx-generic-color-secondary-darker)"
 button:
-  border-radius: 5px
+  size:
+    border-radius: 5px
   ghost:
     background: "transparent"
     color: *primary-darker
