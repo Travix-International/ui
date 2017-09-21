@@ -50,6 +50,7 @@ badge:
     right-left: 10px
     top-bottom: 5px
 button:
+  border-radius: 5px
   ghost:
     background: "transparent"
     color: *primary-darker
