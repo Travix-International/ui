@@ -61,6 +61,8 @@ generic:
     text-lighter: &text-lighter           "#998"
     text-lighter-rgb: &text-lighter-rgb   "153,153,136"
 
+    premium: &premium                     "#00B34A"
+
     facebook: &facebook                   "#45619D"
     facebook-border: &facebook-border     "#324A87"
     twitter: &twitter                     "#08ACEE"
