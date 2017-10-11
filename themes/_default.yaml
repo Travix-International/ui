@@ -50,9 +50,10 @@ generic:
     negative-light: &negative-light       "#F4CDCF"
 
     shadow: &shadow                       "#000000"
-    shadow-rgb: &shadow-rgb "0,0,0"
+    shadow-rgb: &shadow-rgb               "0,0,0"
     shadow-alt:                           "#00196F"
     blank: &blank                         "#FFFFFF"
+    blank-rgb: &blank-rgb                 "255,255,255"
 
     text-darker: &text-darker             "#2B4352"
     text-dark: &text-dark                 "#29425B"
