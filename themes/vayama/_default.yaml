@@ -34,6 +34,8 @@ generic:
     secondary-lighter: &secondary-lighter "#F9FBF6"
     active: &active                       "#00B0FF"
     blank: &blank                         "#FFFFFF"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-darker)"
   size:
     border-radius-small: &border-radius-small "6px"
 badge:
