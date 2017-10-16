@@ -33,6 +33,8 @@ generic:
     text-dark: &text-dark                 "#29425B"
     text: &text                           "#597385"
     text-light: &text-light               "#9DB1C0"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-darker)"
 badge:
   after:
     border:
