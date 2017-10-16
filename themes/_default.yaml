@@ -90,3 +90,30 @@ list:
   bullets:
     color: "var(--tx-generic-color-active)"
   line-height: "38px"
+header-offer:
+  big-caption:
+    font-weight: "var(--tx-generic-font-primary-weight-bold)"
+    text-shadow: "var(--tx-header-offer-text-shadow)"
+  disclimer:
+    small:
+      position: "initial"
+  info-icon-wrapper:
+    small:
+      margin-right: "10px"
+    top: "3px"
+  price:
+    display: "inline"
+    font-size: "34px"
+    font-weight: "var(--tx-generic-font-primary-weight-bold)"
+    small:
+      asterisk:
+        position: "absolute"
+        top: "-5px"
+      color: "var(--tx-generic-color-accent-top)"
+      currency:
+        font-size: "30px"
+      from:
+        font-size: "20px"
+        padding-bottom: "0"
+      text-shadow: "inherit"
+  text-shadow: "0px 2px 3px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
