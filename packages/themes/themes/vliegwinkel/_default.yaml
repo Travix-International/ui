@@ -39,6 +39,8 @@ generic:
 
     active: &active                       "#40CAFF"
     active-lighter: &active-lighter       "#81DAFF"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-dark)"
 badge:
   after:
     border:
