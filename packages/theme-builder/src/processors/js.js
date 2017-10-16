@@ -1,6 +1,14 @@
 const template = require('lodash.template');
 const helpers = require('../helpers');
 
+function throwDescriptiveError({ err, key, value }) {
+  if (err instanceof ReferenceError) {
+    throw new Error(`Failed to parse value of ${key}: '${value}'. Use double quotes inside interpolated strings`);
+  }
+
+  throw err;
+}
+
 /**
  * Simple check if passed argument is object or array
  *
@@ -31,7 +39,11 @@ function parseExpressions(obj, proto) {
   Object.keys(obj).forEach((key) => {
     const value = obj[key];
     const fn = isObject(value) ? parseExpressions : applyTransforms;
-    parsedObj[key] = fn(value, parsedObj);
+    try {
+      parsedObj[key] = fn(value, parsedObj);
+    } catch (err) {
+      throwDescriptiveError({ err, key, value });
+    }
   });
 
   return parsedObj;
