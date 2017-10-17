@@ -26,7 +26,6 @@ generic:
     secondary-darker: &secondary-darker   "#ADC9EA"
     secondary-dark: &secondary-dark       "#BDD8F1"
     secondary: &secondary                 "#D5E8F8"
-    secondary-rgb: &secondary-rgb         ${rgb(secondary)}
     secondary-light: &secondary-light     "#EBF5FD"
     secondary-lighter: &secondary-lighter "#F7FBFE"
 
