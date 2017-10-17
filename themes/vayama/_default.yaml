@@ -72,3 +72,26 @@ price:
     underline: 0px
   margin-top:
     underline: 0px
+header-offer:
+  airline-logo-container:
+    margin-top: "14px"
+  big-caption:
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    text-shadow: "0px 5px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+  group-2:
+    min-height: "0"
+  container:
+    height: "225px"
+  price:
+    display: "inline-block"
+    font-size: "34px"
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    small:
+      color: "var(--tx-generic-color-primary)"
+      currency:
+        font-size: "17px"
+      from:
+        font-size: "17px"
+        padding-bottom: "5px"
+      text-shadow: "none"
+  text-shadow: "0px 3px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"

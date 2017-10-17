@@ -59,3 +59,15 @@ button:
     border-radius: 5px
     hover-color: "#1AD7FD"
     hover-border-color: "#1AD7FD"
+header-offer:
+  group-2:
+    margin-bottom: "20px"
+    min-height: "60px"
+  info-icon-wrapper:
+    top: "6px"
+  price:
+    font-size: "36px"
+    from:
+      font-size: "24px"
+    small:
+      color: "var(--tx-generic-color-primary)"
