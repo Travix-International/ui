@@ -19,7 +19,7 @@ generic:
     secondary-darker: &secondary-darker   "#DACCE2"
     secondary-dark: &secondary-dark       "#F4F1F7"
     secondary: &secondary                 "#EFEEE5"
-    secondary-rgb: &secondary-rgb         "239,238,229"
+    secondary-rgb: &secondary-rgb         ${rgb(secondary)}
     secondary-light: &secondary-light     "#F7F8F1"
     secondary-lighter: &secondary-lighter "#F9FBF6"
 
