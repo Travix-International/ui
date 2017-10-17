@@ -29,11 +29,12 @@ generic:
     secondary-darker: &secondary-darker   "#B3DFF9"
     secondary-dark: &secondary-dark       "#D9EFFC"
     secondary: &secondary                 "#EFEEE5"
-    secondary-rgb: &secondary-rgb         "239,238,229"
     secondary-light: &secondary-light     "#F7F8F1"
     secondary-lighter: &secondary-lighter "#F9FBF6"
     active: &active                       "#00B0FF"
     blank: &blank                         "#FFFFFF"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-darker)"
   size:
     border-radius-small: &border-radius-small "6px"
 badge:

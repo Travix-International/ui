@@ -29,7 +29,6 @@ generic:
     secondary-darker: &secondary-darker   "#BDC4E4"
     secondary-dark: &secondary-dark       "#D4DBEE"
     secondary: &secondary                 "#F6EBE1"
-    secondary-rgb: &secondary-rgb         "246,235,225"
     secondary-light: &secondary-light     "#EAEEF8"
     secondary-lighter: &secondary-lighter "#FCF8F4"
 
@@ -39,6 +38,8 @@ generic:
 
     active: &active                       "#40CAFF"
     active-lighter: &active-lighter       "#81DAFF"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-dark)"
 badge:
   after:
     border:
