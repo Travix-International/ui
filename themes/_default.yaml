@@ -99,7 +99,7 @@ header-offer:
     text-shadow: "var(--tx-header-offer-text-shadow)"
   container:
     height: "290px"
-  disclimer:
+  disclaimer:
     small:
       position: "initial"
   group-2:

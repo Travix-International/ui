@@ -69,7 +69,7 @@ header-offer:
   big-caption:
     font-weight: "var(--tx-generic-font-primary-weight-heavy)"
     text-shadow: "0px 5px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
-  disclimer:
+  disclaimer:
     small:
       position: "relative"
   info-icon-wrapper:
