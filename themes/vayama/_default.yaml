@@ -24,6 +24,7 @@ generic:
 
     positive: &positive                   "#92BE14"
     positive-lighter: &positive-lighter   "#ADCE4F"
+    positive-rgb: &positive-rgb           "146,190,20"
 
     secondary-darkest: &secondary-darkest "#62BBEE"
     secondary-darker: &secondary-darker   "#B3DFF9"
