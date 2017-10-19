@@ -65,3 +65,31 @@ button:
     border-radius: 5px
     hover-color: "#00B0FF"
     hover-border-color: "#01B0FF"
+header-offer:
+  big-caption:
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    text-shadow: "0px 5px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+  disclaimer:
+    small:
+      position: "relative"
+  info-icon-wrapper:
+    small:
+      margin-right: "0"
+    top: "6px"
+  price:
+    display: "inline-block"
+    font-size: "34px"
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    small:
+      asterisk:
+        position: "relative"
+        top: "-12px"
+      color: "var(--tx-generic-color-primary)"
+      currency:
+        font-size: "17px"
+      font-size: "38px"
+      from:
+        font-size: "17px"
+        padding-bottom: "5px"
+      text-shadow: "none"
+  text-shadow: "0px 3px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
