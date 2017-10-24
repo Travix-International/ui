@@ -10,34 +10,36 @@ generic:
     alternative:
       font-family: "Handlee"
   color:
-    accent-darker: &accent-darker         "#F55B70"
-    accent: &accent                       "#F55B70"
-    accent-lighter: &accent-lighter       "#F4778B"
-    accent-top: &accent-top               "#BF1435"
-    accent-bottom: &accent-bottom         "#BF1435"
-    accent-border: &accent-border         "#BF1435"
-    accent-light: &accent-light           "#F4778B"
+    accent-darker: &accent-darker                 "#F55B70"
+    accent: &accent                               "#F55B70"
+    accent-lighter: &accent-lighter               "#F4778B"
+    accent-top: &accent-top                       "#BF1435"
+    accent-bottom: &accent-bottom                 "#BF1435"
+    accent-border: &accent-border                 "#BF1435"
+    accent-light: &accent-light                   "#F4778B"
 
-    primary-darker: &primary-darker       "#34439F"
-    primary-dark: &primary-dark           "#34439F"
-    primary: &primary                     "#34439F"
-    primary-light: &primary-light         "#3848AA"
-    primary-lighter: &primary-lighter     "#4757B9"
-    primary-overlay: &primary-overlay     "#F4F1F7"
+    primary-darker: &primary-darker               "#34439F"
+    primary-dark: &primary-dark                   "#34439F"
+    primary: &primary                             "#34439F"
+    primary-light: &primary-light                 "#3848AA"
+    primary-lighter: &primary-lighter             "#4757B9"
+    primary-overlay: &primary-overlay             "#F4F1F7"
 
-    secondary-darkest: &secondary-darkest "#93A4D7"
-    secondary-darker: &secondary-darker   "#BDC4E4"
-    secondary-dark: &secondary-dark       "#D4DBEE"
-    secondary: &secondary                 "#F6EBE1"
-    secondary-light: &secondary-light     "#EAEEF8"
-    secondary-lighter: &secondary-lighter "#FCF8F4"
+    secondary-darkest: &secondary-darkest         "#93A4D7"
+    secondary-darker: &secondary-darker           "#BDC4E4"
+    secondary-dark: &secondary-dark               "#D4DBEE"
+    secondary: &secondary                         "#F6EBE1"
+    secondary-light: &secondary-light             "#EAEEF8"
+    secondary-lighter: &secondary-lighter         "#FCF8F4"
 
-    text-dark: &text-dark                 "#414141"
-    text: &text                           "#757575"
-    text-lighter: &text-lighter           "#BDBDBD"
+    text-dark: &text-dark                         "#414141"
+    text: &text                                   "#757575"
+    text-lighter: &text-lighter                   "#BDBDBD"
 
-    active: &active                       "#40CAFF"
-    active-lighter: &active-lighter       "#81DAFF"
+    active: &active                               "#40CAFF"
+    active-lighter: &active-lighter               "#81DAFF"
+
+    searchbox-tabs-border: &searchbox-tabs-border "#212C7C"
   separator:
     color: &separator-color "var(--tx-generic-color-secondary-dark)"
 badge:
@@ -60,3 +62,19 @@ button:
     border-radius: 5px
     hover-color: "#1AD7FD"
     hover-border-color: "#1AD7FD"
+header-offer:
+  group-2:
+    margin-bottom: "20px"
+    min-height: "60px"
+  info-icon-wrapper:
+    top: "6px"
+  price:
+    font-size: "36px"
+    from:
+      font-size: "24px"
+    small:
+      color: "var(--tx-generic-color-primary)"
+searchbox-tabs:
+  border-color: "var(--tx-generic-color-searchbox-tabs-border)"
+  hover:
+    background-color: "var(--tx-generic-color-primary-lighter)"
