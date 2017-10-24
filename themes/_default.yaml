@@ -78,6 +78,7 @@ generic:
     style: &separator-style dotted
     color: &separator-color "var(--tx-generic-color-secondary)"
   size:
+    border-radius: &border-radius             "8px"
     border-radius-small: &border-radius-small "6px"
 button:
   color:
@@ -128,3 +129,14 @@ header-offer:
         padding-bottom: "0"
       text-shadow: "inherit"
   text-shadow: "0px 2px 3px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+searchbox-tabs:
+  border: "none"
+  border-color: "var(--tx-generic-color-primary-darker)"
+  hover:
+    background-color: "var(--tx-generic-color-primary-light)"
+  icon:
+    hover:
+      color: "var(--tx-generic-color-active)"
+  label:
+    hover:
+      color: "var(--tx-generic-color-blank)"
