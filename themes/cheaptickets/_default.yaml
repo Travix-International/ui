@@ -7,66 +7,89 @@ generic:
     alternative:
       font-family: "Handlee"
   color:
-    accent-border: &accent-border   "#E6BB00"
-    accent-bottom: &accent-bottom   "#F7DE00"
-    accent-darker: &accent-darker   "#DAAB00"
-    accent-light: &accent-light     "#FAF18F"
-    accent-lighter: &accent-lighter "#FAF18F"
-    accent-top: &accent-top         "#F6E500"
-    accent: &accent                 "#F6E41F"
+    accent-border: &accent-border             "#E6BB00"
+    accent-border-hover: &accent-border-hover "#F7CB00"
+    accent-bottom: &accent-bottom             "#F7DE00"
+    accent-dark: &accent-dark                 "#FFF23E"
+    accent-darker: &accent-darker             "#DAAB00"
+    accent-light: &accent-light               "#FAF18F"
+    accent-lighter: &accent-lighter           "#FAF18F"
+    accent-top: &accent-top                   "#F6E500"
+    accent: &accent                           "#F6E500"
 
-    primary-darker: &primary-darker   "#003F7F"
-    primary-dark: &primary-dark       "#004B94"
-    primary: &primary                 "#0056A9"
-    primary-light: &primary-light     "#005FBB"
-    primary-lighter: &primary-lighter "#006CD2"
-    primary-overlay: &primary-overlay "#4A7BA9"
+    primary-darker: &primary-darker           "#00407F"
+    primary-dark: &primary-dark               "#004B94"
+    primary: &primary                         "#0056A9"
+    primary-light: &primary-light             "#005FBB"
+    primary-lighter: &primary-lighter         "#006CD2"
+    primary-overlay: &primary-overlay         "#4A7BA9"
 
-    secondary-darkest: &secondary-darkest "#7EA6D4"
-    secondary-darker: &secondary-darker   "#ADC9EA"
-    secondary-dark: &secondary-dark       "#BDD8F1"
-    secondary: &secondary                 "#D5E8F8"
-    secondary-light: &secondary-light     "#EBF5FD"
-    secondary-lighter: &secondary-lighter "#F7FBFE"
+    secondary-darkest: &secondary-darkest     "#7EA6D4"
+    secondary-darker: &secondary-darker       "#ADC9EA"
+    secondary-dark: &secondary-dark           "#BDD8F1"
+    secondary: &secondary                     "#D5E8F8"
+    secondary-light: &secondary-light         "#EBF5FD"
+    secondary-lighter: &secondary-lighter     "#F7FBFE"
 
-    text-darker: &text-darker "#2B4352"
-    text-dark: &text-dark "#29425B"
-    text: &text "#597385"
-    text-light: &text-light "#78909F"
-    text-shadow: &text-shadow "#7890A1"
-    text-lighter: &text-lighter "#9DB1C0"
+    text-darker: &text-darker                 "#2B4352"
+    text-dark: &text-dark                     "#29425B"
+    text: &text                               "#597385"
+    text-light: &text-light                   "#78909F"
+    text-shadow: &text-shadow                 "#7890A1"
+    text-lighter: &text-lighter               "#9DB1C0"
 
-    active: &active "#00B0FF"
-    positive-dark: &positive-dark "#3CB761"
-    positive: &positive "#17D478"
-    positive-light: &positive-light "#9EDB97"
-    negative: &negative "#D2373F"
-    negative-light: &negative-light "#F4CDCF"
-    disabled: &disabled "#C5DCF6"
+    active: &active                           "#00B0FF"
+    positive-dark: &positive-dark             "#3CB761"
+    positive: &positive                       "#17D478"
+    positive-light: &positive-light           "#9EDB97"
+    negative: &negative                       "#D2373F"
+    negative-light: &negative-light           "#F4CDCF"
+    disabled: &disabled                       "#C5DCF6"
 
-    shadow: &shadow "#000000"
-    shadow-bottom: &shadow-bottom "#BCD8F2"
-    shadow-alt: &shadow-alt "#00196F"
-    blank: &blank "#FFFFFF"
+    shadow: &shadow                           "#000000"
+    shadow-bottom: &shadow-bottom             "#BCD8F2"
+    shadow-alt: &shadow-alt                   "#00196F"
+    blank: &blank                             "#FFFFFF"
 
-    facebook: &facebook "#45619D"
-    facebook-border: &facebook-border "#324A87"
-    twitter: &twitter "#08ACEE"
-    twitter-border: &twitter-border "#1871C0"
-    google: &google "#B30303"
-    google-border: &google-border "#670E00"
-    instagram-top: &instagram-top "#D9375C"
-    instagram-bottom: &instagram-bottom "#f05c34"
-    instagram-border: &instagram-border "#C32E15"
-    mail: &mail "#006CD2"
-    mail-border: &mail-border "#0A50A3"
+    facebook: &facebook                       "#45619D"
+    facebook-border: &facebook-border         "#324A87"
+    twitter: &twitter                         "#08ACEE"
+    twitter-border: &twitter-border           "#1871C0"
+    google: &google                           "#B30303"
+    google-border: &google-border             "#670E00"
+    instagram-top: &instagram-top             "#D9375C"
+    instagram-bottom: &instagram-bottom       "#f05c34"
+    instagram-border: &instagram-border       "#C32E15"
+    mail: &mail                               "#006CD2"
+    mail-border: &mail-border                 "#0A50A3"
 
-    sticky-tabs-link: &sticky-tabs-link "#00B0FF"
-    trust-pilot-stars: &trust-pilot-stars "#F6E41F"
+    sticky-tabs-link: &sticky-tabs-link       "#00B0FF"
+    trust-pilot-stars: &trust-pilot-stars     "#F6E41F"
   separator:
     style: &separator-style dashed
   size:
     border-radius-small: &border-radius-small "5px"
+ui-button:
+  default:
+    normal:
+      bg-top: *accent-top
+      bg-bottom: *accent-bottom
+      border-radius: 5px
+      shadow: "0 3px var(--tx-generic-color-accent-border), -5px 8px rgba(0, 0, 0, .15)"
+      text: *primary-darker
+      text-shadow: none
+    hover:
+      top: -2px
+      shadow: "0 5px var(--tx-generic-color-accent-border), -5px 10px rgba(0, 0, 0, .15)"
+    active:
+      shadow: "0 3px var(--tx-generic-color-accent-border)"
+  ghost:
+    normal:
+      background: "transparent"
+      border-radius: 4px
+    inverted:
+      color: *blank
+# “button” section is deprecated. Please use values from “ui-button” section instead.
 button:
   color:
     bg-top: "var(--tx-generic-color-accent)"

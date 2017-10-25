@@ -20,29 +20,31 @@ generic:
       font-family: "Handlee"
       generic-family: "cursive"
   color:
-    accent-border: &accent-border            "#E6BB00"
-    accent-bottom: &accent-bottom            "#F7DE00"
-    accent-darker: &accent-darker            "#DAAB00"
-    accent-light: &accent-light              "#FAF18F"
-    accent-lighter: &accent-lighter          "#FAF18F"
-    accent-top: &accent-top                  "#F6E500"
-    accent: &accent                          "#F6E41F"
+    accent-border: &accent-border             "#E6BB00"
+    accent-border-hover: &accent-border-hover "#F7CB00"
+    accent-bottom: &accent-bottom             "#F7DE00"
+    accent-dark: &accent-dark                 "#FFF23E"
+    accent-darker: &accent-darker             "#DAAB00"
+    accent-light: &accent-light               "#FAF18F"
+    accent-lighter: &accent-lighter           "#FAF18F"
+    accent-top: &accent-top                   "#F6E500"
+    accent: &accent                           "#F6E41F"
 
-    primary-darker: &primary-darker          "#003F7F"
-    primary-dark: &primary-dark              "#004B94"
-    primary: &primary                        "#0056A9"
-    primary-light: &primary-light            "#005FBB"
-    primary-lighter: &primary-lighter        "#006CD2"
-    primary-overlay: &primary-overlay        "#4A7BA9"
+    primary-darker: &primary-darker           "#003F7F"
+    primary-dark: &primary-dark               "#004B94"
+    primary: &primary                         "#0056A9"
+    primary-light: &primary-light             "#005FBB"
+    primary-lighter: &primary-lighter         "#006CD2"
+    primary-overlay: &primary-overlay         "#4A7BA9"
 
-    secondary-darkest: &secondary-darkest    "#7EA6D4"
-    secondary-darker: &secondary-darker      "#ADC9EA"
-    secondary-dark: &secondary-dark          "#BDD8F1"
-    secondary-dark-rgb: &secondary-dark-rgb  ${rgb(color["secondary-dark"])}
-    secondary: &secondary                    "#D5E8F8"
-    secondary-rgb: &secondary-rgb            ${rgb(secondary)}
-    secondary-light: &secondary-light        "#EBF5FD"
-    secondary-lighter: &secondary-lighter    "#F7FBFE"
+    secondary-darkest: &secondary-darkest     "#7EA6D4"
+    secondary-darker: &secondary-darker       "#ADC9EA"
+    secondary-dark: &secondary-dark           "#BDD8F1"
+    secondary-dark-rgb: &secondary-dark-rgb   ${rgb(color["secondary-dark"])}
+    secondary: &secondary                     "#D5E8F8"
+    secondary-rgb: &secondary-rgb             ${rgb(secondary)}
+    secondary-light: &secondary-light         "#EBF5FD"
+    secondary-lighter: &secondary-lighter     "#F7FBFE"
 
     active: &active                          "#00B0FF"
     positive: &positive                      "#17D478"
@@ -51,29 +53,29 @@ generic:
     negative: &negative                      "#D2373F"
     negative-light: &negative-light          "#F4CDCF"
 
-    shadow: &shadow                          "#000000"
-    shadow-rgb: &shadow-rgb                  ${rgb(shadow)}
-    shadow-alt:                              "#00196F"
-    blank: &blank                            "#FFFFFF"
-    blank-rgb: &blank-rgb                    ${rgb(blank)}
+    shadow: &shadow                           "#000000"
+    shadow-rgb: &shadow-rgb                   ${rgb(shadow)}
+    shadow-alt:                               "#00196F"
+    blank: &blank                             "#FFFFFF"
+    blank-rgb: &blank-rgb                     ${rgb(blank)}
 
-    text-darker: &text-darker                "#2B4352"
-    text-dark: &text-dark                    "#29425B"
-    text: &text                              "#597385"
-    text-light: &text-light                  "#9DB1C0"
-    text-lighter: &text-lighter              "#998"
-    text-lighter-rgb: &text-lighter-rgb      ${rgb(color["text-lighter"])}
+    text-darker: &text-darker                 "#2B4352"
+    text-dark: &text-dark                     "#29425B"
+    text: &text                               "#597385"
+    text-light: &text-light                   "#9DB1C0"
+    text-lighter: &text-lighter               "#998"
+    text-lighter-rgb: &text-lighter-rgb       ${rgb(color["text-lighter"])}
 
-    premium: &premium                        "#00B34A"
+    premium: &premium                         "#00B34A"
 
-    facebook: &facebook                      "#45619D"
-    facebook-border: &facebook-border        "#324A87"
-    twitter: &twitter                        "#08ACEE"
-    twitter-border: &twitter-border          "#1871C0"
-    google: &google                          "#B30303"
-    google-border: &google-border            "#670E00"
-    mail: &mail                              "#006CD2"
-    mail-border: &mail-border                "#0A50A3"
+    facebook: &facebook                       "#45619D"
+    facebook-border: &facebook-border         "#324A87"
+    twitter: &twitter                         "#08ACEE"
+    twitter-border: &twitter-border           "#1871C0"
+    google: &google                           "#B30303"
+    google-border: &google-border             "#670E00"
+    mail: &mail                               "#006CD2"
+    mail-border: &mail-border                 "#0A50A3"
   separator:
     width: &separator-width 2px
     style: &separator-style dotted
@@ -81,6 +83,13 @@ generic:
   size:
     border-radius: &border-radius             "8px"
     border-radius-small: &border-radius-small "6px"
+ui-button:
+  default:
+    normal:
+      border-radius: 6px
+  ghost:
+    normal:
+      border-radius: 5px
 button:
   color:
     border: "var(--tx-generic-color-accent-border)"
