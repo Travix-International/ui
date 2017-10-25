@@ -8,14 +8,18 @@ generic:
       font-family: "Linotte"
   color:
     accent-border: &accent-border                 "#49A345"
+    accent-border-hover: &accent-border-hover     "#49AE44"
     accent-bottom: &accent-bottom                 "#49A345"
+    accent-dark: &accent-dark                     "#A1D50A"
     accent-darker: &accent-darker                 "#9ACA0F"
     accent-light: &accent-light                   "#C1E35E"
     accent-lighter: &accent-lighter               "#C1E35E"
     accent-top: &accent-top                       "#49A345"
     accent: &accent                               "#9ACA0F"
 
-    primary-darker: &primary-darker               "#72368D"
+    active: &active                               "#01B0FF"
+
+    primary-darker: &primary-darker               "#72358C"
     primary-dark: &primary-dark                   "#72368D"
     primary: &primary                             "#72368D"
     primary-light: &primary-light                 "#7B4397"
@@ -52,6 +56,7 @@ badge:
   padding:
     right-left: 10px
     top-bottom: 5px
+# “button” section is deprecated. Please use values from “ui-button” section instead.
 button:
   size:
     border-radius: 5px
