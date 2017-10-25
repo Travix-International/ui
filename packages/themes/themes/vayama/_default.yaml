@@ -8,12 +8,16 @@ generic:
       font-family: "Linotte"
   color:
     accent-border: &accent-border                 "#F04C2A"
+    accent-border-hover: &accent-border-hover     "#F85D2E"
     accent-bottom: &accent-bottom                 "#F04C2A"
+    accent-dark: &accent-dark                     "#FF9000"
     accent-darker: &accent-darker                 "#FF7F00"
     accent-light: &accent-light                   "#FFAD5B"
     accent-lighter: &accent-lighter               "#FFAD5B"
     accent-top: &accent-top                       "#F04C2A"
     accent: &accent                               "#FF7F00"
+
+    active: &active                               "#19D7FD"
 
     primary-darker: &primary-darker               "#007CC3"
     primary-dark: &primary-dark                   "#007CC3"
@@ -32,7 +36,6 @@ generic:
     secondary: &secondary                         "#EFEEE5"
     secondary-light: &secondary-light             "#F7F8F1"
     secondary-lighter: &secondary-lighter         "#F9FBF6"
-    active: &active                               "#00B0FF"
     blank: &blank                                 "#FFFFFF"
 
     searchbox-tabs-border: &searchbox-tabs-border "#005A99"
@@ -56,6 +59,7 @@ badge:
   padding:
     right-left: 10px
     top-bottom: 5px
+# “button” section is deprecated. Please use values from “ui-button” section instead.
 button:
   shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px transparent"
   shadow-inner-color: "var(--tx-generic-color-accent-border)"
