@@ -14,7 +14,7 @@
   };
 
   /**
-   * Process all <link> tags with specific data attribute
+   * Load and parse external Link tags
    */
   function parseExternalLink(elem) {
     var path = elem.href;
@@ -32,16 +32,13 @@
     rawFile.send(null);
   }
 
+  /**
+   * Process all <link> tags with specific data attribute
+   */
   function processCssVars() {
-    [].forEach.call(document.querySelectorAll('[data-cssvars]'), function cb(elem) {
-      if (elem.getAttribute('data-parsed')) {
-        return;
-      }
-      parseExternalLink(elem);
-    });
+    [].forEach.call(document.querySelectorAll('[data-cssvars]:not([data-parsed])'), parseExternalLink);
   }
   processCssVars();
-
 
   /**
    * Add listener to monitor new <style> tag added to the <head> and process them
