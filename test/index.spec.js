@@ -7,7 +7,10 @@ global.window = {
 
 global.document = {
   querySelectorAll() {
-    return [{ href: 'test.js' }];
+    return [{
+      href: 'test.js',
+      setAttribute: () => {},
+    }];
   },
   createElement(name) {
     return { name: name };
@@ -31,6 +34,11 @@ function HTMLStyleElement() {
       color: var(--text);
     }
   `;
+};
+
+function HTMLHeadElement() {
+  this.href = 'fake.js';
+  this.setAttribute = () => {};
 };
 
 function testEventHandler() {
@@ -80,5 +88,6 @@ XMLHttpRequest.prototype.send = function send() {
 
 global.XMLHttpRequest = XMLHttpRequest;
 global.HTMLStyleElement = HTMLStyleElement;
+global.HTMLHeadElement = HTMLHeadElement;
 
 require('../src/index.js');

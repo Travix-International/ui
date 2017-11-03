@@ -14,10 +14,11 @@
   };
 
   /**
-   * Process all <link> tags with specific data attribute
+   * Load and parse external Link tags
    */
-  [].forEach.call(document.querySelectorAll('[data-cssvars]'), function processAllFunc(elem) {
+  function parseExternalLink(elem) {
     var path = elem.href;
+    elem.setAttribute('data-parsed', true);
     var rawFile = new XMLHttpRequest();
     rawFile.open('GET', path, true);
     rawFile.onreadystatechange = function processStylesFile() {
@@ -29,12 +30,23 @@
       }
     };
     rawFile.send(null);
-  });
+  }
+
+  /**
+   * Process all <link> tags with specific data attribute
+   */
+  function processCssVars() {
+    [].forEach.call(document.querySelectorAll('[data-cssvars]:not([data-parsed])'), parseExternalLink);
+  }
+  processCssVars();
 
   /**
    * Add listener to monitor new <style> tag added to the <head> and process them
    */
   document.head.addEventListener('DOMSubtreeModified', function onNewStyleTagAdded(e) {
+    if (e.target instanceof HTMLHeadElement) {
+      processCssVars();
+    }
     if (e.target instanceof HTMLStyleElement) {
       var styleEl = e.target;
       var containCssVars = styleEl.innerText.indexOf('var(--') !== -1;
