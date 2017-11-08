@@ -140,6 +140,17 @@ header-offer:
       text-shadow: "inherit"
   text-shadow: "0px 2px 3px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
 price:
+  asterisk:
+    xsmall:
+      line-height: normal
+    small:
+      line-height: normal
+    medium:
+      line-height: normal
+    large:
+      line-height: normal
+    xlarge:
+      line-height: normal
   currency:
     xsmall:
       line-height: normal

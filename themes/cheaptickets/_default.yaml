@@ -117,6 +117,17 @@ button:
     hover-color: "var(--tx-generic-color-active)"
     hover-border-color: "var(--tx-generic-color-active)"
 price:
+  asterisk:
+    xsmall:
+      line-height: 19px
+    small:
+      line-height: 12px
+    medium:
+      line-height: 12px
+    large:
+      line-height: 15px
+    xlarge:
+      line-height: 25px
   currency:
     xsmall:
       line-height: 12px
