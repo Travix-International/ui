@@ -154,24 +154,14 @@ price:
   currency:
     xsmall:
       line-height: normal
-      margin-right: 1px
-      margin-left: 1px
     small:
       line-height: normal
-      margin-right: 2px
-      margin-left: 2px
     medium:
       line-height: normal
-      margin-right: 2px
-      margin-left: 2px
     large:
       line-height: normal
-      margin-right: 3px
-      margin-left: 3px
     xlarge:
       line-height: normal
-      margin-right: 5px
-      margin-left: 5px
   decimals:
     xsmall:
       line-height: normal
@@ -183,15 +173,6 @@ price:
       line-height: normal
     xlarge:
       line-height: normal
-  integers:
-    small:
-      margin-right: 1px
-    medium:
-      margin-right: 1px
-    large:
-      margin-right: 2px
-    xlarge:
-      margin-right: 3px
 searchbox-tabs:
   border: "none"
   border-color: "var(--tx-generic-color-primary-darker)"
