@@ -116,6 +116,40 @@ button:
     font-family: "var(--tx-generic-font-primary-font-family)"
     hover-color: "var(--tx-generic-color-active)"
     hover-border-color: "var(--tx-generic-color-active)"
+price:
+  asterisk:
+    xsmall:
+      line-height: 19px
+    small:
+      line-height: 12px
+    medium:
+      line-height: 12px
+    large:
+      line-height: 15px
+    xlarge:
+      line-height: 25px
+  currency:
+    xsmall:
+      line-height: 12px
+    small:
+      line-height: 17px
+    medium:
+      line-height: 17px
+    large:
+      line-height: 22px
+    xlarge:
+      line-height: 37px
+  decimals:
+    xsmall:
+      line-height: 19px
+    small:
+      line-height: 12px
+    medium:
+      line-height: 12px
+    large:
+      line-height: 15px
+    xlarge:
+      line-height: 25px
 searchbox-tabs:
   border: "1px solid var(--tx-generic-color-primary-darker)"
   icon:
