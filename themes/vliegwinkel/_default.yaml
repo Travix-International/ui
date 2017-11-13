@@ -84,6 +84,32 @@ header-offer:
       font-size: "24px"
     small:
       color: "var(--tx-generic-color-primary)"
+price:
+  asterisk:
+    xsmall:
+      line-height: 20px
+    small:
+      line-height: 14px
+    medium:
+      line-height: 14px
+    large:
+      line-height: 18px
+    xlarge:
+      line-height: 30px
+  currency:
+    xsmall:
+      line-height: 12px
+  decimals:
+    xsmall:
+      line-height: 20px
+    small:
+      line-height: 14px
+    medium:
+      line-height: 14px
+    large:
+      line-height: 18px
+    xlarge:
+      line-height: 30px
 searchbox-tabs:
   border-color: "var(--tx-generic-color-searchbox-tabs-border)"
   hover:
