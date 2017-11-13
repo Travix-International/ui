@@ -10,7 +10,9 @@ generic:
       generic-family: "sans-serif"
     secondary:
       weight:
+        light: "300"
         regular: "400"
+        medium: "500"
         bold: "700"
       font-family: "Roboto"
       generic-family: "sans-serif"
