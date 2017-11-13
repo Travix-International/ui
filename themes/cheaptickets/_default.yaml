@@ -150,6 +150,22 @@ price:
       line-height: 15px
     xlarge:
       line-height: 25px
+  underline:
+    xsmall:
+      height: "3px"
+      margin-top: "2px"
+    small:
+      height: "4px"
+      margin-top: "2px"
+    medium:
+      height: "6px"
+      margin-top: "2px"
+    large:
+      height: "6px"
+      margin-top: "2px"
+    xlarge:
+      height: "8px"
+      margin-top: "2px"
 searchbox-tabs:
   border: "1px solid var(--tx-generic-color-primary-darker)"
   icon:

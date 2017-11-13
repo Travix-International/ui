@@ -75,11 +75,6 @@ button:
     hover-border-color: "#1AD7FD"
   size:
     border-radius: "var(--tx-generic-size-border-radius-small)"
-price:
-  height:
-    underline: 0px
-  margin-top:
-    underline: 0px
 header-offer:
   airline-logo-container:
     margin-top: "14px"
