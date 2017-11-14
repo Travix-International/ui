@@ -173,6 +173,22 @@ price:
       line-height: normal
     xlarge:
       line-height: normal
+  underline:
+    xsmall:
+      height: "0"
+      margin-top: "0"
+    small:
+      height: "0"
+      margin-top: "0"
+    medium:
+      height: "0"
+      margin-top: "0"
+    large:
+      height: "0"
+      margin-top: "0"
+    xlarge:
+      height: "0"
+      margin-top: "0"
 searchbox-tabs:
   border: "none"
   border-color: "var(--tx-generic-color-primary-darker)"
