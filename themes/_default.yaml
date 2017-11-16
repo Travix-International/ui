@@ -175,20 +175,24 @@ price:
       line-height: normal
     xlarge:
       line-height: normal
-  underline:
-    xsmall:
+  xsmall:
+    underline:
       height: "0"
       margin-top: "0"
-    small:
+  small:
+    underline:
       height: "0"
       margin-top: "0"
-    medium:
+  medium:
+    underline:
       height: "0"
       margin-top: "0"
-    large:
+  large:
+    underline:
       height: "0"
       margin-top: "0"
-    xlarge:
+  xlarge:
+    underline:
       height: "0"
       margin-top: "0"
 searchbox-tabs:

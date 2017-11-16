@@ -150,20 +150,24 @@ price:
       line-height: 15px
     xlarge:
       line-height: 25px
-  underline:
-    xsmall:
+  xsmall:
+    underline:
       height: "3px"
       margin-top: "2px"
-    small:
+  small:
+    underline:
       height: "4px"
       margin-top: "2px"
-    medium:
+  medium:
+    underline:
       height: "6px"
       margin-top: "2px"
-    large:
+  large:
+    underline:
       height: "6px"
       margin-top: "2px"
-    xlarge:
+  xlarge:
+    underline:
       height: "8px"
       margin-top: "2px"
 searchbox-tabs:
