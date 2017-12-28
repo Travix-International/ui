@@ -16,4 +16,34 @@ function getThemeFiles({ brand, affiliate }) {
   ].filter(fs.existsSync);
 }
 
-module.exports = getThemeFiles;
+/**
+ * Get all available sets of brand and affiliate
+ * @return {[{ brand, affiliate }]}
+ */
+function getAvailableSets() {
+  const themesPath = path.join(__dirname, '/themes');
+
+  return fs.readdirSync(themesPath)
+    .reduce((result, brand) => {
+      const brandPath = path.join(themesPath, brand);
+
+      if (!fs.statSync(brandPath).isDirectory()) {
+        return result;
+      }
+
+      result.push({ brand, affiliate: 'default' });
+
+      fs.readdirSync(brandPath)
+        .filter(affiliate => fs.statSync(path.join(brandPath, affiliate)).isDirectory())
+        .forEach(affiliate => {
+          result.push({ brand, affiliate });
+        });
+
+      return result;
+    }, []);
+}
+
+module.exports = {
+  getThemeFiles,
+  getAvailableSets,
+};
