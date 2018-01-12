@@ -1,0 +1,43 @@
+{
+  "name": "ui",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "coverage:coveralls": "lerna run coverage:coveralls",
+    "bootstrap": "lerna bootstrap --hoist",
+    "transpile": "lerna run transpile",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "prepush": "npm run test",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Travix-International/ui.git"
+  },
+  "author": {
+    "name": "Travix International",
+    "url": "http://travix.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Travix-International/ui/issues"
+  },
+  "homepage": "https://github.com/Travix-International/ui#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.11.0",
+    "eslint-config-travix": "^2.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.13.3",
+    "jest": "^19.0.1",
+    "lerna-changelog": "^0.7.0",
+    "lerna": "^2.6.0",
+    "uglify-js": "^2.8.22"
+  }
+}

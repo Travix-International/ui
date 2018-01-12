@@ -1,0 +1,31 @@
+{
+  "name": "travix-css-themes-polyfill",
+  "version": "0.1.4",
+  "description": "Travix CSS variables for themes polyfill",
+  "main": "lib/index.js",
+  "scripts": {
+    "transpile": "mkdir -p lib && uglifyjs --compress --mangle --output lib/index.js src/index.js",
+    "test": "node test/index.spec.js",
+    "lint": "eslint --color src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Travix-International/ui.git"
+  },
+  "keywords": [
+    "css variables",
+    "themes"
+  ],
+  "author": {
+    "name": "Travix International",
+    "url": "http://travix.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Travix-International/css-themes-polyfill",
+  "contributors": [
+    {
+      "name": "Artem Riasnianskyi",
+      "url": "https://github.com/asci"
+    }
+  ]
+}
