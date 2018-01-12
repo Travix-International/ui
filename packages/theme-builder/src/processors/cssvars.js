@@ -11,7 +11,7 @@ function dictionaryToCssVars(obj) {
 const CssVarsProcessor = {
   compile(obj, path) {
     return dictionaryToCssVars(jsFlat.compile(obj, path));
-  }
+  },
 };
 
 module.exports = CssVarsProcessor;

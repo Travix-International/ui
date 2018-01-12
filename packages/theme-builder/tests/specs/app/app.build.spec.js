@@ -31,7 +31,7 @@ describe('App: build', () => {
 
     builder.build([
       defaultYaml,
-      customYaml
+      customYaml,
     ])
       .then((themeScss) => {
         expect(themeScss).toMatchSnapshot();

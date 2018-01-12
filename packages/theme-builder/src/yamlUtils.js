@@ -56,5 +56,5 @@ module.exports = {
   compileJsonToYaml,
   concatYamlData,
   parseYaml,
-  readFiles
+  readFiles,
 };

@@ -52,7 +52,7 @@ function parseExpressions(obj, proto) {
 const JsProcessor = {
   compile(obj) {
     return parseExpressions(obj, helpers);
-  }
+  },
 };
 
 module.exports = JsProcessor;

@@ -9,9 +9,9 @@ describe('JS Flat object processor', () => {
         some: {
           string: 'aaa',
           num: '12px',
-          color: '#fff'
-        }
-      }
+          color: '#fff',
+        },
+      },
     };
   });
 

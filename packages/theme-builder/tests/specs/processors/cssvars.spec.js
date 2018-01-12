@@ -9,9 +9,9 @@ describe('CSS Variables processor', () => {
         some: {
           string: 'aaa',
           num: '12px',
-          color: '#fff'
-        }
-      }
+          color: '#fff',
+        },
+      },
     };
   });
 

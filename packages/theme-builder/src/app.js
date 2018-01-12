@@ -9,7 +9,7 @@ const toArray = strOrArray => [].concat(strOrArray).filter(Boolean);
 const defaultConfig = {
   processors: defaultProcessors,
   prefix: '',
-  format: 'scss'
+  format: 'scss',
 };
 
 module.exports = function themeBuilder(config) {
@@ -50,6 +50,6 @@ module.exports = function themeBuilder(config) {
           });
         });
       });
-    }
+    },
   };
 };

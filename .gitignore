@@ -1,3 +1,11 @@
+node_modules
+npm-debug.log
+lerna-debug.log
+yarn.lock
+lib
+.changelog/
+package-lock.json
+
 .idea
 # Logs
 logs
@@ -37,4 +45,5 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Prepared code for NPM
 lib

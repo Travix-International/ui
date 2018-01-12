@@ -7,7 +7,7 @@ function dictionaryToSass(obj) {
 const ScssProcessor = {
   compile(obj, path) {
     return dictionaryToSass(jsFlat.compile(obj, path));
-  }
+  },
 };
 
 module.exports = ScssProcessor;

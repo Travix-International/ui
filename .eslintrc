@@ -6,7 +6,8 @@
     "travix/base"
   ],
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "rules": {
     "no-var": ["off"],

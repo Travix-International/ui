@@ -4,7 +4,7 @@ describe('JS process', () => {
   it('should process object', () => {
     const doc = {
       another: {
-        something: 'bbb'
+        something: 'bbb',
       },
       do: {
         some: {
@@ -12,9 +12,9 @@ describe('JS process', () => {
           num: '12px',
           color: '#fff',
           // eslint-disable-next-line no-template-curly-in-string
-          template: '${color}${some.string}${another.something}'
-        }
-      }
+          template: '${color}${some.string}${another.something}',
+        },
+      },
     };
 
     const result = jsProcessor.compile(doc);

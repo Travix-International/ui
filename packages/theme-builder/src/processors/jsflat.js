@@ -17,7 +17,7 @@ const JsFlatProcessor = {
       js.compile(obj),
       path
     );
-  }
+  },
 };
 
 module.exports = JsFlatProcessor;

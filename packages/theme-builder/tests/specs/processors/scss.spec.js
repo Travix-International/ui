@@ -9,9 +9,9 @@ describe('SCSS processor', () => {
         some: {
           string: 'aaa',
           num: '12px',
-          color: '#fff'
-        }
-      }
+          color: '#fff',
+        },
+      },
     };
   });
 
