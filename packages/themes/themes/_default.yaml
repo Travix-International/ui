@@ -91,7 +91,10 @@ ui-button:
       border-radius: 6px
   ghost:
     normal:
+      background: "transparent"
       border-radius: 5px
+    inverted:
+      color: *blank
 button:
   color:
     border: "var(--tx-generic-color-accent-border)"
