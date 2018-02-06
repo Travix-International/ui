@@ -85,10 +85,7 @@ ui-button:
       shadow: "0 3px var(--tx-generic-color-accent-border)"
   ghost:
     normal:
-      background: "transparent"
       border-radius: 4px
-    inverted:
-      color: *blank
 # “button” section is deprecated. Please use values from “ui-button” section instead.
 button:
   color:
