@@ -1,7 +1,9 @@
 generic:
   color:
     accent-border: &accent-border                 "#49A345"
+    accent-border-hover: &accent-border-hover     "#49AE44"
     accent-bottom: &accent-bottom                 "#49A345"
+    accent-dark: &accent-dark                     "#A1D50A"
     accent-darker: &accent-darker                 "#9ACA0F"
     accent-light: &accent-light                   "#C1E35E"
     accent-lighter: &accent-lighter               "#C1E35E"
