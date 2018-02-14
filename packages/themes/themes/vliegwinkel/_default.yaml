@@ -10,26 +10,26 @@ generic:
     alternative:
       font-family: "Handlee"
   color:
-    accent-border: &accent-border                 "#C20D32"
+    accent-border: &accent-border                 "#BF1435"
     accent-border-hover: &accent-border-hover     "#D93656"
-    accent-bottom: &accent-bottom                 "#BF1435"
+    accent-bottom: &accent-bottom                 "#F55B70"
     accent-dark: &accent-dark                     "#FF7184"
-    accent-darker: &accent-darker                 "#F55B70"
+    accent-darker: &accent-darker                 "#F24D67"
     accent-lighter: &accent-lighter               "#F4778B"
     accent-light: &accent-light                   "#F4778B"
-    accent-top: &accent-top                       "#BF1435"
-    accent: &accent                               "#F8596E"
+    accent-top: &accent-top                       "#F55B70"
+    accent: &accent                               "#F24D67"
 
     primary-darker: &primary-darker               "#34439F"
     primary-dark: &primary-dark                   "#34439F"
     primary: &primary                             "#34439F"
     primary-light: &primary-light                 "#3848AA"
     primary-lighter: &primary-lighter             "#4757B9"
-    primary-overlay: &primary-overlay             "#F4F1F7"
+    primary-overlay: &primary-overlay             "#6C7DBE"
 
-    secondary-darkest: &secondary-darkest         "#D5DAED"
-    secondary-darker: &secondary-darker           "#D5DAED"
-    secondary-dark: &secondary-dark               "#F0F1F8"
+    secondary-darkest: &secondary-darkest         "#93A4D7"
+    secondary-darker: &secondary-darker           "#BDC4E4"
+    secondary-dark: &secondary-dark               "#D4DBEE"
     secondary: &secondary                         "#F6EBE1"
     secondary-light: &secondary-light             "#EAEEF8"
     secondary-lighter: &secondary-lighter         "#FCF8F4"
@@ -52,17 +52,26 @@ ui-button:
     normal:
       border-radius: 5px
 badge:
+  before:
+    border:
+      color: "var(--tx-generic-color-accent-border)"
   after:
     border:
       color: "var(--tx-generic-color-accent-border)"
   border:
     bottom:
       width: 0px
+    radius:
+      start: 3px
+      end-top: 3px
+      end-bottom: 12px
   color:
     text: "var(--tx-generic-color-blank)"
+  font-size: 13px
   padding:
-    right-left: 8px
-    top-bottom: 3px
+    right-left: 8px # "right-left" variable is deprecated and should not be used in future
+    top-bottom: 8px
+    corner-side: 8px
 # “button” section is deprecated. Please use values from “ui-button” section instead.
 button:
   ghost:
@@ -110,6 +119,10 @@ price:
       line-height: 18px
     xlarge:
       line-height: 30px
+spinner:
+  color:
+    light: "var(--tx-generic-color-secondary-lighter)"
+    lighter: "var(--tx-generic-color-primary-lighter)"
 searchbox-tabs:
   border-color: "var(--tx-generic-color-searchbox-tabs-border)"
   hover:

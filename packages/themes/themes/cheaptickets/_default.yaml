@@ -15,9 +15,9 @@ generic:
     accent-light: &accent-light               "#FAF18F"
     accent-lighter: &accent-lighter           "#FAF18F"
     accent-top: &accent-top                   "#F6E500"
-    accent: &accent                           "#F6E500"
+    accent: &accent                           "#F6E41F"
 
-    primary-darker: &primary-darker           "#00407F"
+    primary-darker: &primary-darker           "#003F7F"
     primary-dark: &primary-dark               "#004B94"
     primary: &primary                         "#0056A9"
     primary-light: &primary-light             "#005FBB"
@@ -69,6 +69,13 @@ generic:
     style: &separator-style dashed
   size:
     border-radius-small: &border-radius-small "5px"
+badge:
+  before:
+    border:
+      color: "var(--tx-generic-color-shadow-alt)"
+  after:
+    border:
+      color: "var(--tx-generic-color-primary-dark)"
 ui-button:
   default:
     normal:
@@ -113,6 +120,14 @@ button:
     font-family: "var(--tx-generic-font-primary-font-family)"
     hover-color: "var(--tx-generic-color-active)"
     hover-border-color: "var(--tx-generic-color-active)"
+dropdown:
+  select-option:
+    hover:
+      background-color: "var(--tx-generic-color-secondary-light)"
+  select-arrow-zone:
+    border-color-left: "var(--tx-generic-color-secondary-dark)"
+    border-style: "dashed"
+    color: "var(--tx-generic-color-primary-lighter)"
 price:
   asterisk:
     xsmall:
@@ -167,6 +182,10 @@ price:
     underline:
       height: "8px"
       margin-top: "2px"
+spinner:
+  color:
+    light: "var(--tx-generic-color-secondary-lighter)"
+    lighter: "var(--tx-generic-color-secondary-dark)"
 searchbox-tabs:
   border: "1px solid var(--tx-generic-color-primary-darker)"
   icon:
