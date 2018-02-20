@@ -1,0 +1,208 @@
+generic:
+  font:
+    primary:
+      weight:
+        regular: "400"
+        medium: "500"
+        semibold: "600"
+        bold: "700"
+      font-family: "Lato"
+      generic-family: "sans-serif"
+    secondary:
+      weight:
+        light: "300"
+        regular: "400"
+        medium: "500"
+        bold: "700"
+      font-family: "Roboto"
+      generic-family: "sans-serif"
+    alternative:
+      weight:
+        regular: "400"
+      font-family: "Handlee"
+      generic-family: "cursive"
+  color:
+    accent-border: &accent-border             "#E6BB00"
+    accent-border-hover: &accent-border-hover "#F7CB00"
+    accent-bottom: &accent-bottom             "#F7DE00"
+    accent-dark: &accent-dark                 "#FFF23E"
+    accent-darker: &accent-darker             "#DAAB00"
+    accent-light: &accent-light               "#FAF18F"
+    accent-lighter: &accent-lighter           "#FAF18F"
+    accent-top: &accent-top                   "#F6E500"
+    accent: &accent                           "#F6E41F"
+
+    primary-darker: &primary-darker           "#003F7F"
+    primary-dark: &primary-dark               "#004B94"
+    primary: &primary                         "#0056A9"
+    primary-light: &primary-light             "#005FBB"
+    primary-lighter: &primary-lighter         "#006CD2"
+    primary-overlay: &primary-overlay         "#4A7BA9"
+
+    secondary-darkest: &secondary-darkest     "#7EA6D4"
+    secondary-darker: &secondary-darker       "#ADC9EA"
+    secondary-dark: &secondary-dark           "#BDD8F1"
+    secondary-dark-rgb: &secondary-dark-rgb   ${rgb(color["secondary-dark"])}
+    secondary: &secondary                     "#D5E8F8"
+    secondary-rgb: &secondary-rgb             ${rgb(secondary)}
+    secondary-light: &secondary-light         "#EBF5FD"
+    secondary-lighter: &secondary-lighter     "#F7FBFE"
+
+    active: &active                          "#00B0FF"
+    positive: &positive                      "#17D478"
+    positive-lighter: &positive-lighter      "#e5f7ed"
+    positive-rgb: &positive-rgb              "23,212,120"
+    negative: &negative                      "#D2373F"
+    negative-light: &negative-light          "#F4CDCF"
+
+    shadow: &shadow                           "#000000"
+    shadow-rgb: &shadow-rgb                   ${rgb(shadow)}
+    shadow-alt:                               "#00196F"
+    blank: &blank                             "#FFFFFF"
+    blank-rgb: &blank-rgb                     ${rgb(blank)}
+
+    text-darker: &text-darker                 "#2B4352"
+    text-dark: &text-dark                     "#29425B"
+    text: &text                               "#597385"
+    text-light: &text-light                   "#9DB1C0"
+    text-lighter: &text-lighter               "#998"
+    text-lighter-rgb: &text-lighter-rgb       ${rgb(color["text-lighter"])}
+
+    premium: &premium                         "#00B34A"
+
+    facebook: &facebook                       "#45619D"
+    facebook-border: &facebook-border         "#324A87"
+    twitter: &twitter                         "#08ACEE"
+    twitter-border: &twitter-border           "#1871C0"
+    google: &google                           "#B30303"
+    google-border: &google-border             "#670E00"
+    mail: &mail                               "#006CD2"
+    mail-border: &mail-border                 "#0A50A3"
+  separator:
+    width: &separator-width 2px
+    style: &separator-style dotted
+    color: &separator-color "var(--tx-generic-color-secondary)"
+  size:
+    border-radius: &border-radius             "8px"
+    border-radius-small: &border-radius-small "6px"
+ui-button:
+  default:
+    normal:
+      border-radius: 6px
+  ghost:
+    normal:
+      border-radius: 5px
+button:
+  color:
+    border: "var(--tx-generic-color-accent-border)"
+spinner:
+  color:
+    light: "#F3FAFF"
+    lighter: "#AADDF9"
+list:
+  color: "var(--tx-generic-color-text-dark)"
+  bullets:
+    color: "var(--tx-generic-color-active)"
+  line-height: "38px"
+header-offer:
+  airline-logo-container:
+    margin-top: "24px"
+  big-caption:
+    font-weight: "var(--tx-generic-font-primary-weight-bold)"
+    text-shadow: "var(--tx-header-offer-text-shadow)"
+  container:
+    height: "290px"
+  disclaimer:
+    small:
+      position: "initial"
+  group-2:
+    margin-bottom: "0"
+    min-height: "42px"
+  info-icon-wrapper:
+    small:
+      margin-right: "10px"
+    top: "3px"
+  price:
+    display: "inline"
+    font-size: "34px"
+    font-weight: "var(--tx-generic-font-primary-weight-bold)"
+    from:
+      font-size: "22px"
+    small:
+      asterisk:
+        position: "absolute"
+        top: "-5px"
+      color: "var(--tx-generic-color-accent-top)"
+      currency:
+        font-size: "30px"
+      font-size: "var(--tx-header-offer-price-font-size)"
+      from:
+        font-size: "20px"
+        padding-bottom: "0"
+      text-shadow: "inherit"
+  text-shadow: "0px 2px 3px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+price:
+  asterisk:
+    xsmall:
+      line-height: normal
+    small:
+      line-height: normal
+    medium:
+      line-height: normal
+    large:
+      line-height: normal
+    xlarge:
+      line-height: normal
+  currency:
+    xsmall:
+      line-height: normal
+    small:
+      line-height: normal
+    medium:
+      line-height: normal
+    large:
+      line-height: normal
+    xlarge:
+      line-height: normal
+  decimals:
+    xsmall:
+      line-height: normal
+    small:
+      line-height: normal
+    medium:
+      line-height: normal
+    large:
+      line-height: normal
+    xlarge:
+      line-height: normal
+  xsmall:
+    underline:
+      height: "0"
+      margin-top: "0"
+  small:
+    underline:
+      height: "0"
+      margin-top: "0"
+  medium:
+    underline:
+      height: "0"
+      margin-top: "0"
+  large:
+    underline:
+      height: "0"
+      margin-top: "0"
+  xlarge:
+    underline:
+      height: "0"
+      margin-top: "0"
+searchbox-tabs:
+  border: "none"
+  border-color: "var(--tx-generic-color-primary-darker)"
+  hover:
+    background-color: "var(--tx-generic-color-primary-light)"
+  icon:
+    hover:
+      color: "var(--tx-generic-color-active)"
+  label:
+    hover:
+      color: "var(--tx-generic-color-blank)"

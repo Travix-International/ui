@@ -1,0 +1,130 @@
+generic:
+  font:
+    primary:
+      weight:
+        heavy: "800"
+      font-family: "Linotte"
+    alternative:
+      font-family: "Linotte"
+  color:
+    accent-border: &accent-border                 "#F04C2A"
+    accent-border-hover: &accent-border-hover     "#F85D2E"
+    accent-bottom: &accent-bottom                 "#F04C2A"
+    accent-dark: &accent-dark                     "#FF9000"
+    accent-darker: &accent-darker                 "#FF7F00"
+    accent-light: &accent-light                   "#FFAD5B"
+    accent-lighter: &accent-lighter               "#FFAD5B"
+    accent-top: &accent-top                       "#F04C2A"
+    accent: &accent                               "#FF7F00"
+
+    active: &active                               "#19D7FD"
+
+    primary-darker: &primary-darker               "#007CC3"
+    primary-dark: &primary-dark                   "#007CC3"
+    primary: &primary                             "#007CC3"
+    primary-light: &primary-light                 "#0185D1"
+    primary-lighter: &primary-lighter             "#1A91DA"
+    primary-overlay: &primary-overlay             "#F4F1F7"
+
+    positive: &positive                           "#92BE14"
+    positive-lighter: &positive-lighter           "#ADCE4F"
+    positive-rgb: &positive-rgb                   "146,190,20"
+
+    secondary-darkest: &secondary-darkest         "#62BBEE"
+    secondary-darker: &secondary-darker           "#B3DFF9"
+    secondary-dark: &secondary-dark               "#D9EFFC"
+    secondary: &secondary                         "#EFEEE5"
+    secondary-light: &secondary-light             "#F7F8F1"
+    secondary-lighter: &secondary-lighter         "#F9FBF6"
+    blank: &blank                                 "#FFFFFF"
+
+    searchbox-tabs-border: &searchbox-tabs-border "#005A99"
+  separator:
+    color: &separator-color "var(--tx-generic-color-secondary-darker)"
+  size:
+    border-radius-small: &border-radius-small "6px"
+badge:
+  after:
+    border:
+      color: "var(--tx-generic-color-accent-border)"
+  border:
+    bottom:
+      width: 0px
+    radius:
+      start: 5px
+      end: 15px
+  color:
+    text: "var(--tx-generic-color-blank)"
+  font-size: 13px
+  padding:
+    right-left: 10px
+    top-bottom: 5px
+# “button” section is deprecated. Please use values from “ui-button” section instead.
+button:
+  shadow: "0 3px var(--tx-generic-color-accent-border), -5px 7px transparent"
+  shadow-inner-color: "var(--tx-generic-color-accent-border)"
+  shadow-outer:
+    color: "transparent"
+    hover-params: "-5px 9px"
+  ghost:
+    background: "transparent"
+    color: *primary-darker
+    border-color: *secondary-darker
+    border-radius: 5px
+    hover-color: "#1AD7FD"
+    hover-border-color: "#1AD7FD"
+  size:
+    border-radius: "var(--tx-generic-size-border-radius-small)"
+header-offer:
+  airline-logo-container:
+    margin-top: "14px"
+  big-caption:
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    text-shadow: "0px 5px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+  group-2:
+    min-height: "0"
+  container:
+    height: "225px"
+  price:
+    display: "inline-block"
+    font-size: "34px"
+    font-weight: "var(--tx-generic-font-primary-weight-heavy)"
+    small:
+      color: "var(--tx-generic-color-primary)"
+      currency:
+        font-size: "17px"
+      from:
+        font-size: "17px"
+        padding-bottom: "5px"
+      text-shadow: "none"
+  text-shadow: "0px 3px 2px rgba(var(--tx-generic-color-shadow-rgb),0.5)"
+price:
+  asterisk:
+    xsmall:
+      line-height: 19px
+    small:
+      line-height: 12px
+    medium:
+      line-height: 12px
+    large:
+      line-height: 15px
+    xlarge:
+      line-height: 27px
+  currency:
+    xsmall:
+      line-height: 12px
+  decimals:
+    xsmall:
+      line-height: 19px
+    small:
+      line-height: 12px
+    medium:
+      line-height: 12px
+    large:
+      line-height: 15px
+    xlarge:
+      line-height: 27px
+searchbox-tabs:
+  border-color: "var(--tx-generic-color-searchbox-tabs-border)"
+  hover:
+    background-color: "var(--tx-generic-color-primary-lighter)"
