@@ -1,0 +1,43 @@
+generic:
+  color:
+    accent-border: &accent-border                 "#49A345"
+    accent-border-hover: &accent-border-hover     "#49AE44"
+    accent-bottom: &accent-bottom                 "#49A345"
+    accent-dark: &accent-dark                     "#A1D50A"
+    accent-darker: &accent-darker                 "#9ACA0F"
+    accent-light: &accent-light                   "#C1E35E"
+    accent-lighter: &accent-lighter               "#C1E35E"
+    accent-top: &accent-top                       "#49A345"
+    accent: &accent                               "#9ACA0F"
+
+    primary-darker: &primary-darker               "#72368D"
+    primary-dark: &primary-dark                   "#72368D"
+    primary: &primary                             "#72368D"
+    primary-light: &primary-light                 "#7B4397"
+    primary-lighter: &primary-lighter             "#894EA3"
+    primary-overlay: &primary-overlay             "#9574B2"
+
+    secondary-darkest: &secondary-darkest         "#B69CC6"
+    secondary-darker: &secondary-darker           "#DACCE2"
+    secondary-dark: &secondary-dark               "#F4F1F7"
+    secondary: &secondary                         "#EFEEE5"
+    secondary-light: &secondary-light             "#F7F8F1"
+    secondary-lighter: &secondary-lighter         "#F9FBF6"
+
+    text-dark: &text-dark                         "#29425B"
+    text: &text                                   "#597385"
+    text-light: &text-light                       "#9DB1C0"
+
+    searchbox-tabs-border: &searchbox-tabs-border "#51216B"
+spinner:
+  color:
+    light: "var(--tx-generic-color-blank)"
+    lighter: "var(--tx-generic-color-secondary-darker)"
+    dark: "var(--tx-generic-color-secondary-darkest)"
+searchbox-tabs:
+  border-color: "var(--tx-generic-color-searchbox-tabs-border)"
+calendar:
+  nav:
+    button:
+      background-color-end: "var(--tx-generic-color-accent-darker)"
+      background-color-start: "var(--tx-generic-color-accent-darker)"

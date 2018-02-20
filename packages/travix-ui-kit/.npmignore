@@ -1,0 +1,10 @@
+npm-debug.log
+
+.git
+coverage/
+node_modules/
+tests/
+styleguide/
+styleguide.config.js
+styleguide.html
+themes/theme.scss
