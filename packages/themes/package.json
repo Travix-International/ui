@@ -1,11 +1,22 @@
 {
-  "name": "travix-themes",
-  "version": "1.0.0",
+  "name": "ui-themes",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Travix International",
-  "license": "CC-BY-SA"
+  "author": {
+    "name": "Travix International",
+    "url": "http://travix.com"
+  },
+  "homepage": "https://github.com/Travix-International/ui",
+  "keywords": [
+    "travix-ui-themes"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Travix-International/ui.git"
+  }
 }
