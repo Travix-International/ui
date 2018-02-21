@@ -1,7 +1,7 @@
 {
-  "name": "travix-themes",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ui-themes",
+  "version": "0.1.0",
+  "description": "Travix ui themes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,16 @@
     "name": "Travix International",
     "url": "http://travix.com"
   },
-  "license": "CC-BY-SA"
+  "license": "CC-BY-SA",
+  "homepage": "https://github.com/Travix-International/ui",
+  "contributors": [
+    {
+      "name": "Artem Riasnianskyi",
+      "url": "https://github.com/asci"
+    },
+    {
+      "name": "Ivana Viranovska",
+      "url": "https://github.com/iwwwi"
+    }
+  ]
 }
