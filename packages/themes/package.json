@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Travix International",
-  "license": "private"
+  "author": {
+    "name": "Travix International",
+    "url": "http://travix.com"
+  },
+  "license": "CC-BY-SA"
 }
