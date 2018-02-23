@@ -1,5 +1,11 @@
 {
-	"devDependencies": {
-		"lerna": "^2.8.0"
-	}
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^5.0.0",
+    "js-yaml": "^3.7.0",
+    "lerna": "^2.8.0",
+    "lodash.merge": "^4.6.0",
+    "lodash.template": "^4.4.0",
+    "yaml-ast-parser": "0.0.31"
+  }
 }
