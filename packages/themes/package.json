@@ -1,7 +1,7 @@
 {
   "name": "ui-themes",
   "version": "0.1.0",
-  "description": "Travix ui themes",
+  "description": "Collection of UI Themes for Travix websites",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
