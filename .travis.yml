@@ -7,8 +7,9 @@ env:
   - TEST_DIR=packages/travix-ui-kit
 
 script:
-  - 'cd $TEST_DIR && npm run ci:lint'
-  - 'cd $TEST_DIR && npm run ci:test'
+  - cd $TEST_DIR && npm ci
+  - cd $TEST_DIR && npm run ci:lint
+  - cd $TEST_DIR && npm run ci:test
 
 notifications:
   email: false
