@@ -16,7 +16,7 @@ release:
 changelog:
 	git checkout master
 	git pull origin master
-	github_changelog_generator -t $(GITHUB_API_TOKEN) -u Travix-International -p travix-ui-kit
+	github_changelog_generator -t $(GITHUB_API_TOKEN) -u Travix-International -p ui
 
 push-changelog:
 	git checkout master
