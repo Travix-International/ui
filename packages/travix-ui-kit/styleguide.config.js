@@ -6,10 +6,12 @@ module.exports = {
   components: 'components/**/*.js',
   require: ['babel-polyfill'],
   skipComponentsWithoutExample: true,
-  styleguideDir: '../../docs/components/',
   template: {
     head: {
       scripts: [
+        {
+          src: './css-themes-polyfill.js',
+        },
         {
           src: 'https://maps.googleapis.com/maps/api/js?libraries=places,visualization&v=3.27&key=AIzaSyAqvSFBj-lPSA8BsEbSoqU7dzRlQxPUf8I',
         },
@@ -17,11 +19,11 @@ module.exports = {
       links: [
         {
           rel: 'stylesheet',
-          href: '/theme.css',
+          href: './theme.css',
         },
         {
           rel: 'stylesheet',
-          href: '/ui-bundle.css',
+          href: './ui-bundle.css',
         },
       ],
     },

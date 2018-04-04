@@ -10,7 +10,6 @@ release:
 	npm run transpile
 	npm version $(VERSION)
 	npm publish
-	git push --follow-tags
 	make publish-site
 
 changelog:
@@ -26,30 +25,21 @@ push-changelog:
 	git push origin master
 
 prepare-site:
+	rm -rf ./styleguide
 	npm run styleguide:build
-	rm -rf ./_site
-	mkdir -p _site/build
-	ls ./styleguide/
-	cp -rf ./styleguide/* ./_site/
-	ls ./_site/
-	cp ./dist/*.css ./_site/build/
-	cp ./dist/theme.js ./_site/build/
-	cp ./css-vars-polyfill.js ./_site/build/
-	sed -i.bak 's/\/theme\.css/build\/theme\.css/g' _site/index.html
-	sed -i.bak 's/\/ui\-bundle\.css/build\/ui\-bundle\.css/g' _site/index.html
-	sed -i.bak 's/\/css\-vars\-polyfill\.js/build\/css\-vars\-polyfill\.js/g' _site/index.html
-	sed -i.bak 's/\/theme\.js/build\/theme\.js/g' _site/index.html
-	rm _site/index.html.bak
-	cp .gitignore ./_site/.gitignore
+	ls -la ./styleguide/
+	# copy directly from the library
+	cp ../css-themes-polyfill/src/index.js ./styleguide/css-themes-polyfill.js
+	cp .gitignore ./styleguide/.gitignore
 
 publish-site-only:
-	(cd ./_site && git init)
-	(cd ./_site && git commit --allow-empty -m 'update site')
-	(cd ./_site && git checkout -b gh-pages)
-	(cd ./_site && touch .nojekyll)
-	(cd ./_site && git add .)
-	(cd ./_site && git commit -am 'update site')
-	(cd ./_site && git push git@github.com:Travix-International/travix-ui-kit.git gh-pages --force)
+	(cd ./styleguide && git init)
+	(cd ./styleguide && git commit --allow-empty -m 'update site')
+	(cd ./styleguide && git checkout -b gh-pages)
+	(cd ./styleguide && touch .nojekyll)
+	(cd ./styleguide && git add .)
+	(cd ./styleguide && git commit -am 'update site')
+	(cd ./styleguide && git push git@github.com:Travix-International/ui.git gh-pages --force)
 
 publish-site:
 	make prepare-site
