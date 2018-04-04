@@ -1,12 +1,32 @@
+/* eslint max-len:0 */
 const path = require('path');
 
 module.exports = {
-  title: 'Travix styleguide',
   assetsDir: 'dist',
-  template: './styleguide.html',
   components: 'components/**/*.js',
-  skipComponentsWithoutExample: true,
   require: ['babel-polyfill'],
+  skipComponentsWithoutExample: true,
+  styleguideDir: '../../docs/components/',
+  template: {
+    head: {
+      scripts: [
+        {
+          src: 'https://maps.googleapis.com/maps/api/js?libraries=places,visualization&v=3.27&key=AIzaSyAqvSFBj-lPSA8BsEbSoqU7dzRlQxPUf8I',
+        },
+      ],
+      links: [
+        {
+          rel: 'stylesheet',
+          href: '/theme.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: '/ui-bundle.css',
+        },
+      ],
+    },
+  },
+  title: 'Travix styleguide',
   webpackConfig: {
     module: {
       rules: [
