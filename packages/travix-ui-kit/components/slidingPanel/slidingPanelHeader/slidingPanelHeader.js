@@ -18,6 +18,23 @@ const renderDefaultLeftBlock = (backButtonLabel, onBackButtonClick) => (
   </button>
 );
 
+const renderRightBlock = (rightBlock) => {
+  const defaultProps = {
+    className: "ui-sliding-panel-header__close-button",
+    'data-rel': "close",
+  };
+
+  if (rightBlock) {
+    return rightBlock(defaultProps);
+  }
+
+  return (
+    <button {...defaultProps}>
+      &#215;
+    </button>
+  );
+};
+
 const SlidingPanelHeader = ({
   backButtonLabel,
   children,
@@ -38,15 +55,6 @@ const SlidingPanelHeader = ({
     ? renderDefaultLeftBlock(backButtonLabel, onBackButtonClick)
     : leftBlock;
 
-  const defaultCloseButton = (
-    <button
-      className="ui-sliding-panel-header__close-button"
-      data-rel="close"
-    >
-      &#215;
-    </button>
-  );
-
   return (
     <div
       className={headerClassName}
@@ -61,7 +69,7 @@ const SlidingPanelHeader = ({
       </h3>
 
       <div className="ui-sliding-panel-header__right-block">
-        {rightBlock || defaultCloseButton}
+        {renderRightBlock(rightBlock)}
       </div>
     </div>
   );
@@ -101,7 +109,7 @@ SlidingPanelHeader.propTypes = {
   /**
    * When defined, this custom node appears on the right part of the header
    */
-  rightBlock: PropTypes.node,
+  rightBlock: PropTypes.func,
 
   /**
    * When true, it will show the block with arrow icon and passed text (optional).
