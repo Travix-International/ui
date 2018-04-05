@@ -3,20 +3,31 @@ import React from 'react';
 import classnames from 'classnames';
 import { getDataAttributes } from '../../_helpers';
 
-const renderDefaultLeftBlock = (backButtonLabel, onBackButtonClick) => (
-  <button
-    className="ui-sliding-panel-header__left-block-back"
-    onClick={onBackButtonClick}
-  >
-    <span className="ui-sliding-panel-header__left-block-back-icon" />
+const renderLeftBlock = ({
+  backButtonLabel,
+  leftBlock,
+  onBackButtonClick,
+  useDefaultLeftBlock,
+}) => {
+  const defaultProps = {
+    className: "ui-sliding-panel-header__left-block-back",
+    onClick: onBackButtonClick,
+  };
 
-    { backButtonLabel && (
-      <span className="ui-sliding-panel-header__left-block-back-text">
-        {backButtonLabel}
-      </span>
-    ) }
-  </button>
-);
+  if (leftBlock) return leftBlock(defaultProps);
+
+  if (useDefaultLeftBlock) return (
+    <button {...defaultProps}>
+      <span className="ui-sliding-panel-header__left-block-back-icon" />
+
+      { backButtonLabel && (
+        <span className="ui-sliding-panel-header__left-block-back-text">
+          {backButtonLabel}
+        </span>
+      ) }
+    </button>
+  )
+};
 
 const renderRightBlock = (rightBlock) => {
   const defaultProps = {
@@ -24,9 +35,7 @@ const renderRightBlock = (rightBlock) => {
     'data-rel': "close",
   };
 
-  if (rightBlock) {
-    return rightBlock(defaultProps);
-  }
+  if (rightBlock) return rightBlock(defaultProps);
 
   return (
     <button {...defaultProps}>
@@ -51,17 +60,13 @@ const SlidingPanelHeader = ({
 
   const headerClassName = classnames('ui-sliding-panel-header', className);
 
-  const headerLeftBlock = useDefaultLeftBlock
-    ? renderDefaultLeftBlock(backButtonLabel, onBackButtonClick)
-    : leftBlock;
-
   return (
     <div
       className={headerClassName}
       {...getDataAttributes(dataAttrs)}
     >
       <div className="ui-sliding-panel-header__left-block">
-        {headerLeftBlock}
+        {renderLeftBlock({ backButtonLabel, onBackButtonClick, useDefaultLeftBlock, leftBlock })}
       </div>
 
       <h3 className="ui-sliding-panel-header__title">
@@ -99,7 +104,7 @@ SlidingPanelHeader.propTypes = {
   /**
    * When defined, this custom node appears on the left part of the header
    */
-  leftBlock: PropTypes.node,
+  leftBlock: PropTypes.func,
 
   /**
    * Callback for back button
