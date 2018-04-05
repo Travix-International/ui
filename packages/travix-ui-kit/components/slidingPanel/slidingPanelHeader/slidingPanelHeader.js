@@ -3,30 +3,36 @@ import React from 'react';
 import classnames from 'classnames';
 import { getDataAttributes } from '../../_helpers';
 
-const renderLeftBlock = ({
+const renderLeftBlock = (
   backButtonLabel,
   leftBlock,
   onBackButtonClick,
   useDefaultLeftBlock,
-}) => {
+) => {
   const defaultProps = {
     className: "ui-sliding-panel-header__left-block-back",
     onClick: onBackButtonClick,
   };
 
-  if (leftBlock) return leftBlock(defaultProps);
+  if (leftBlock) {
+    return leftBlock(defaultProps);
+  }
 
-  if (useDefaultLeftBlock) return (
-    <button {...defaultProps}>
-      <span className="ui-sliding-panel-header__left-block-back-icon" />
+  if (useDefaultLeftBlock) {
+    return (
+      <button {...defaultProps}>
+        <span className="ui-sliding-panel-header__left-block-back-icon" />
 
-      { backButtonLabel && (
-        <span className="ui-sliding-panel-header__left-block-back-text">
-          {backButtonLabel}
-        </span>
-      ) }
-    </button>
-  )
+        { backButtonLabel && (
+          <span className="ui-sliding-panel-header__left-block-back-text">
+            {backButtonLabel}
+          </span>
+        ) }
+      </button>
+    );
+  }
+
+  return null;
 };
 
 const renderRightBlock = (rightBlock) => {
@@ -35,7 +41,9 @@ const renderRightBlock = (rightBlock) => {
     'data-rel': "close",
   };
 
-  if (rightBlock) return rightBlock(defaultProps);
+  if (rightBlock) {
+    return rightBlock(defaultProps);
+  }
 
   return (
     <button {...defaultProps}>
@@ -66,7 +74,14 @@ const SlidingPanelHeader = ({
       {...getDataAttributes(dataAttrs)}
     >
       <div className="ui-sliding-panel-header__left-block">
-        {renderLeftBlock({ backButtonLabel, onBackButtonClick, useDefaultLeftBlock, leftBlock })}
+        {
+          renderLeftBlock(
+            backButtonLabel,
+            leftBlock,
+            onBackButtonClick,
+            useDefaultLeftBlock,
+          )
+        }
       </div>
 
       <h3 className="ui-sliding-panel-header__title">

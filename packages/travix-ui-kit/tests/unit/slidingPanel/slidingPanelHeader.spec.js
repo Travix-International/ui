@@ -37,17 +37,21 @@ describe('SlidingPanel', () => {
       const renderTree = mount(
         <SlidingPanelHeader
           leftBlock={
-            (props) => <button
-              {...props}
-              style={{ marginLeft: '15px' }}
+            props => (
+              <button
+                {...props}
+                style={{ marginLeft: '15px' }}
               > ← </button>
+            )
           }
           rightBlock={
-            (props) => <button
-              {...props}
-              data-rel="close"
-              style={{ marginRight: '15px' }}
-            > close me! </button>
+            props => (
+              <button
+                {...props}
+                data-rel="close"
+                style={{ marginRight: '15px' }}
+              > close me! </button>
+            )
           }
         >
           {title}
@@ -67,17 +71,21 @@ describe('SlidingPanel', () => {
       const renderTree = mount(
         <SlidingPanelHeader
           leftBlock={
-            (props) => <button
-              {...props}
-              style={{ marginLeft: '15px' }}
+            props => (
+              <button
+                {...props}
+                style={{ marginLeft: '15px' }}
               > ← </button>
+            )
           }
           rightBlock={
-            (props) => <button
-              {...props}
-              data-rel="close"
-              style={{ marginRight: '15px' }}
-            > close me! </button>
+            props => (
+              <button
+                {...props}
+                data-rel="close"
+                style={{ marginRight: '15px' }}
+              > close me! </button>
+            )
           }
         >
           { title }
