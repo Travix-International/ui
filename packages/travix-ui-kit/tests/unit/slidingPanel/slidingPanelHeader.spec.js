@@ -36,8 +36,19 @@ describe('SlidingPanel', () => {
       const title = 'Test Title';
       const renderTree = mount(
         <SlidingPanelHeader
-          leftBlock={<button data-rel="close" style={{ marginLeft: '15px' }}> ← </button>}
-          rightBlock={<button data-rel="close" style={{ marginRight: '15px' }}> close me! </button>}
+          leftBlock={
+            (props) => <button
+              {...props}
+              style={{ marginLeft: '15px' }}
+              > ← </button>
+          }
+          rightBlock={
+            (props) => <button
+              {...props}
+              data-rel="close"
+              style={{ marginRight: '15px' }}
+            > close me! </button>
+          }
         >
           {title}
         </SlidingPanelHeader>
@@ -55,8 +66,19 @@ describe('SlidingPanel', () => {
       const title = <span className="my-class"> my label </span>;
       const renderTree = mount(
         <SlidingPanelHeader
-          leftBlock={<button data-rel="close" style={{ marginLeft: '15px' }}> ← </button>}
-          rightBlock={<button data-rel="close" style={{ marginRight: '15px' }}> close me! </button>}
+          leftBlock={
+            (props) => <button
+              {...props}
+              style={{ marginLeft: '15px' }}
+              > ← </button>
+          }
+          rightBlock={
+            (props) => <button
+              {...props}
+              data-rel="close"
+              style={{ marginRight: '15px' }}
+            > close me! </button>
+          }
         >
           { title }
         </SlidingPanelHeader>

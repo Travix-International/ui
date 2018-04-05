@@ -37,30 +37,8 @@ exports[`SlidingPanel #render() render with children 1`] = `
 
 exports[`SlidingPanel #render() render with custom left and right blocks 1`] = `
 <SlidingPanelHeader
-  leftBlock={
-    <button
-      data-rel="close"
-      style={
-        Object {
-          "marginLeft": "15px",
-        }
-      }
-    >
-       ← 
-    </button>
-  }
-  rightBlock={
-    <button
-      data-rel="close"
-      style={
-        Object {
-          "marginRight": "15px",
-        }
-      }
-    >
-       close me! 
-    </button>
-  }
+  leftBlock={[Function]}
+  rightBlock={[Function]}
   useDefaultLeftBlock={false}
 >
   <div
@@ -70,7 +48,7 @@ exports[`SlidingPanel #render() render with custom left and right blocks 1`] = `
       className="ui-sliding-panel-header__left-block"
     >
       <button
-        data-rel="close"
+        className="ui-sliding-panel-header__left-block-back"
         style={
           Object {
             "marginLeft": "15px",
@@ -89,6 +67,7 @@ exports[`SlidingPanel #render() render with custom left and right blocks 1`] = `
       className="ui-sliding-panel-header__right-block"
     >
       <button
+        className="ui-sliding-panel-header__close-button"
         data-rel="close"
         style={
           Object {
