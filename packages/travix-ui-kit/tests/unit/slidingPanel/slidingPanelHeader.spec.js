@@ -36,7 +36,7 @@ describe('SlidingPanel', () => {
       const title = 'Test Title';
       const renderTree = mount(
         <SlidingPanelHeader
-          leftBlock={
+          renderLeftBlock={
             props => (
               <button
                 {...props}
@@ -44,7 +44,7 @@ describe('SlidingPanel', () => {
               > ← </button>
             )
           }
-          rightBlock={
+          renderRightBlock={
             props => (
               <button
                 {...props}
@@ -70,7 +70,7 @@ describe('SlidingPanel', () => {
       const title = <span className="my-class"> my label </span>;
       const renderTree = mount(
         <SlidingPanelHeader
-          leftBlock={
+          renderLeftBlock={
             props => (
               <button
                 {...props}
@@ -78,7 +78,7 @@ describe('SlidingPanel', () => {
               > ← </button>
             )
           }
-          rightBlock={
+          renderRightBlock={
             props => (
               <button
                 {...props}

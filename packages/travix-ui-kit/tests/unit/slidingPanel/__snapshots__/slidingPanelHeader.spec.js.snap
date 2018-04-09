@@ -37,8 +37,8 @@ exports[`SlidingPanel #render() render with children 1`] = `
 
 exports[`SlidingPanel #render() render with custom left and right blocks 1`] = `
 <SlidingPanelHeader
-  leftBlock={[Function]}
-  rightBlock={[Function]}
+  renderLeftBlock={[Function]}
+  renderRightBlock={[Function]}
   useDefaultLeftBlock={false}
 >
   <div
