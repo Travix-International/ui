@@ -9,16 +9,14 @@ Sliding Panel Header with custom left and right blocks:
         onClose={() => setState({ isSlidingPanelOpen: false })}
       >
         <SlidingPanelHeader
-          rightBlock={(props) => {
-            return (
-              <button
-                {...props}
-                data-gtm-id="some-id"
-                onClick={() => alert('Some additonal action')}
-              > &#215; </button>
-            );
-          }}
-          leftBlock={(props) => <button {...props} data-rel="close" data-gtm-id="some-id"> ← </button>}
+          renderRightBlock={props => (
+            <button
+              {...props}
+              data-gtm-id="some-id"
+              onClick={() => alert('Some additonal action')}
+            > &#215; </button>
+          )}
+          renderLeftBlock={(props) => <button {...props} data-rel="close" data-gtm-id="some-id"> ← </button>}
         >
           Panel title
         </SlidingPanelHeader>

@@ -3,9 +3,9 @@ import React from 'react';
 import classnames from 'classnames';
 import { getDataAttributes } from '../../_helpers';
 
-const renderLeftBlock = (
+const leftBlock = (
   backButtonLabel,
-  leftBlock,
+  renderLeftBlock,
   onBackButtonClick,
   useDefaultLeftBlock,
 ) => {
@@ -14,8 +14,8 @@ const renderLeftBlock = (
     onClick: onBackButtonClick,
   };
 
-  if (leftBlock) {
-    return leftBlock(defaultProps);
+  if (renderLeftBlock) {
+    return renderLeftBlock(defaultProps);
   }
 
   if (useDefaultLeftBlock) {
@@ -35,14 +35,14 @@ const renderLeftBlock = (
   return null;
 };
 
-const renderRightBlock = (rightBlock) => {
+const rightBlock = (renderRightBlock) => {
   const defaultProps = {
     className: "ui-sliding-panel-header__close-button",
     'data-rel': "close",
   };
 
-  if (rightBlock) {
-    return rightBlock(defaultProps);
+  if (renderRightBlock) {
+    return renderRightBlock(defaultProps);
   }
 
   return (
@@ -57,9 +57,9 @@ const SlidingPanelHeader = ({
   children,
   className,
   dataAttrs,
-  leftBlock,
+  renderLeftBlock,
   onBackButtonClick,
-  rightBlock,
+  renderRightBlock,
   useDefaultLeftBlock,
 }) => {
   if (!children) {
@@ -75,9 +75,9 @@ const SlidingPanelHeader = ({
     >
       <div className="ui-sliding-panel-header__left-block">
         {
-          renderLeftBlock(
+          leftBlock(
             backButtonLabel,
-            leftBlock,
+            renderLeftBlock,
             onBackButtonClick,
             useDefaultLeftBlock,
           )
@@ -89,7 +89,7 @@ const SlidingPanelHeader = ({
       </h3>
 
       <div className="ui-sliding-panel-header__right-block">
-        {renderRightBlock(rightBlock)}
+        {rightBlock(renderRightBlock)}
       </div>
     </div>
   );
@@ -119,7 +119,7 @@ SlidingPanelHeader.propTypes = {
   /**
    * When defined, this custom node appears on the left part of the header
    */
-  leftBlock: PropTypes.func,
+  renderLeftBlock: PropTypes.func,
 
   /**
    * Callback for back button
@@ -129,7 +129,7 @@ SlidingPanelHeader.propTypes = {
   /**
    * When defined, this custom node appears on the right part of the header
    */
-  rightBlock: PropTypes.func,
+  renderRightBlock: PropTypes.func,
 
   /**
    * When true, it will show the block with arrow icon and passed text (optional).
