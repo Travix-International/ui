@@ -117,7 +117,11 @@ SlidingPanelHeader.propTypes = {
   dataAttrs: PropTypes.object,
 
   /**
-   * When defined, this custom node appears on the left part of the header
+   * When defined, this custom component will appears on the left part of the header
+   *
+   * Props passed to component
+   * @param className {String}
+   * @param onClick {Function}
    */
   renderLeftBlock: PropTypes.func,
 
@@ -127,7 +131,11 @@ SlidingPanelHeader.propTypes = {
   onBackButtonClick: PropTypes.func,
 
   /**
-   * When defined, this custom node appears on the right part of the header
+   * When defined, this custom component will appears on the right part of the header
+   *
+   * Props passed to component
+   * @param className {String}
+   * @param 'data-rel' {String}
    */
   renderRightBlock: PropTypes.func,
 
