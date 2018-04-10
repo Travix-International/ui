@@ -102,7 +102,7 @@ Position top:
         </div>
         
         <div style={{"margin-left":"10px"}}>
-          <h3>States:</h3>
+          <h3>Size:</h3>
           <RadioButton
             checked={state.size === 'default'}
             id="default-size"
