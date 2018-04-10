@@ -120,8 +120,7 @@ Position top:
             Small
           </RadioButton>
         </div>
-      </div>
-      
+      </div>      
       <Badge
         align={state.align}
         arrow={state.isArrow}
