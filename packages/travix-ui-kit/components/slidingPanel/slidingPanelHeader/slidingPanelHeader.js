@@ -3,6 +3,21 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { getDataAttributes, warnAboutDeprecatedProp } from '../../_helpers';
 
+const renderDefaultLeftBlock = (backButtonLabel, onBackButtonClick) => (
+  <button
+    className="ui-sliding-panel-header__left-block-back"
+    onClick={onBackButtonClick}
+  >
+    <span className="ui-sliding-panel-header__left-block-back-icon" />
+
+    { backButtonLabel && (
+      <span className="ui-sliding-panel-header__left-block-back-text">
+        {backButtonLabel}
+      </span>
+    ) }
+  </button>
+);
+
 const leftBlock = (
   backButtonLabel,
   renderLeftBlock,
@@ -19,17 +34,7 @@ const leftBlock = (
   }
 
   if (useDefaultLeftBlock) {
-    return (
-      <button {...defaultProps}>
-        <span className="ui-sliding-panel-header__left-block-back-icon" />
-
-        { backButtonLabel && (
-          <span className="ui-sliding-panel-header__left-block-back-text">
-            {backButtonLabel}
-          </span>
-        ) }
-      </button>
-    );
+    return renderDefaultLeftBlock(backButtonLabel, onBackButtonClick);
   }
 
   return null;
