@@ -40,7 +40,7 @@ const Badge = (props) => {
       'arrow-right': arrow && position === 'left',
       'no-border': !border,
       [align]: true,
-      [size]: size !== 'default',
+      [size]: size !== 'm',
     };
 
     if (position && children) {
@@ -108,7 +108,7 @@ Badge.propTypes = {
   /**
    * The Badge's size
    */
-  size: PropTypes.oneOf(['default', 'small']),
+  size: PropTypes.oneOf(['m', 's']),
   /**
    * The Badge's title
    */
@@ -123,7 +123,7 @@ Badge.defaultProps = {
   arrow: false,
   border: true,
   children: null,
-  size: 'default',
+  size: 'm',
   title: '',
   visible: true,
 };

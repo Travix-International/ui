@@ -121,7 +121,7 @@ badge:
     right-left: 8px
     top-bottom: 6px
     corner-side: 12px
-  small:
+  s:
     font-size: 13px
     padding:
       left: 13px

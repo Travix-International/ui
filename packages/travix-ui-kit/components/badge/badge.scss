@@ -242,7 +242,7 @@ $ui-badge__arrow-border-fix: calc(var(--tx-badge-border-bottom-width) * var(--tx
     }
 
     &.ui-badge-badge_small {
-      padding: var(--tx-badge-small-padding-top-bottom) var(--tx-badge-small-padding-right) var(--tx-badge-small-padding-top-bottom) var(--tx-badge-small-padding-left);
+      padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-right) var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-left);
     }
   }
 
@@ -289,14 +289,14 @@ $ui-badge__arrow-border-fix: calc(var(--tx-badge-border-bottom-width) * var(--tx
       }
     }
 
-    &.ui-badge-badge_small {
-      padding: var(--tx-badge-small-padding-top-bottom) var(--tx-badge-small-padding-right) var(--tx-badge-small-padding-top-bottom) var(--tx-badge-small-padding-left);
+    &.ui-badge-badge_s {
+      padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-right) var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-left);
     }
   }
 
-  &.ui-badge-badge_small {
-    font-size: var(--tx-badge-small-font-size);
-    padding: var(--tx-badge-small-padding-top-bottom) var(--tx-badge-padding-right-left);
+  &.ui-badge-badge_s {
+    font-size: var(--tx-badge-s-font-size);
+    padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-padding-right-left);
   }
 }
 

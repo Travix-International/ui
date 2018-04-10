@@ -7,7 +7,7 @@ Position top:
       isBorder: true,
       isColorBackground: false,
       labelText: 'Label',
-      size: 'default',
+      size: 'm',
     };
 
     <div>
@@ -104,20 +104,20 @@ Position top:
         <div style={{"margin-left":"10px"}}>
           <h3>Size:</h3>
           <RadioButton
-            checked={state.size === 'default'}
-            id="default-size"
+            checked={state.size === 'm'}
+            id="m-size"
             name="default"
-            onChange={() => setState({ size: 'default' })}
+            onChange={() => setState({ size: 'm' })}
           >
-            Default
+            M size
           </RadioButton>
           <RadioButton
-            checked={state.size === 'small'}
-            id="small-size"
+            checked={state.size === 's'}
+            id="s-size"
             name="small"
-            onChange={() => setState({ size: 'small' })}
+            onChange={() => setState({ size: 's' })}
           >
-            Small
+            S size
           </RadioButton>
         </div>
       </div>      
