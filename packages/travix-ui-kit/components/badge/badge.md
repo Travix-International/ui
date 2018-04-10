@@ -6,7 +6,8 @@ Position top:
       isArrow: false,
       isBorder: true,
       isColorBackground: false,
-      labelText: 'Label'
+      labelText: 'Label',
+      size: 'default',
     };
 
     <div>
@@ -99,13 +100,34 @@ Position top:
             background
           </Checkbox>
         </div>
+        
+        <div style={{"margin-left":"10px"}}>
+          <h3>States:</h3>
+          <RadioButton
+            checked={state.size === 'default'}
+            id="default-size"
+            name="default"
+            onChange={() => setState({ size: 'default' })}
+          >
+            Default
+          </RadioButton>
+          <RadioButton
+            checked={state.size === 'small'}
+            id="small-size"
+            name="small"
+            onChange={() => setState({ size: 'small' })}
+          >
+            Small
+          </RadioButton>
+        </div>
       </div>
-
+      
       <Badge
         align={state.align}
         arrow={state.isArrow}
         border={state.isBorder}
         position={state.position}
+        size={state.size}
         title={state.labelText}
         visible={state.isVisibleTop}
       >
@@ -122,8 +144,8 @@ Position top:
           />
           <br />
           <div style={{display: 'flex', justifyContent: 'space-around'}}>
-            <Badge position="left" title="Left" arrow={state.isArrow} border={state.isBorder} />
-            <Badge position="right" title="Right" arrow={state.isArrow} border={state.isBorder} />
+            <Badge position="left" title="Left" arrow={state.isArrow} border={state.isBorder} size={state.size} />
+            <Badge position="right" title="Right" arrow={state.isArrow} border={state.isBorder} size={state.size} />
           </div>
         </div>
       </Badge>

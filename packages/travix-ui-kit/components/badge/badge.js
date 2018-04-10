@@ -18,6 +18,7 @@ const Badge = (props) => {
     dataAttrs = {},
     mods = [],
     position,
+    size,
     title,
     visible,
   } = props;
@@ -39,6 +40,7 @@ const Badge = (props) => {
       'arrow-right': arrow && position === 'left',
       'no-border': !border,
       [align]: true,
+      [size]: size !== 'default',
     };
 
     if (position && children) {
@@ -104,6 +106,10 @@ Badge.propTypes = {
    */
   position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   /**
+   * The Badge's size
+   */
+  size: PropTypes.oneOf(['small']),
+  /**
    * The Badge's title
    */
   title: PropTypes.node,
@@ -117,6 +123,7 @@ Badge.defaultProps = {
   arrow: false,
   border: true,
   children: null,
+  size: 'default',
   title: '',
   visible: true,
 };
