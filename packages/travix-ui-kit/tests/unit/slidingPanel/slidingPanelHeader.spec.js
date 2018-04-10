@@ -138,5 +138,37 @@ describe('SlidingPanel', () => {
 
       expect(renderTree).toMatchSnapshot();
     });
+
+    it('should render with deprecated rightBlock and leftBlock', () => {
+      const backButtonText = ' ← ';
+      const closeButtonText = ' close me! ';
+      const title = <span className="my-class"> my label </span>;
+      const renderTree = mount(
+        <SlidingPanelHeader
+          leftBlock={<button
+            className="back-button"
+            data-rel="close"
+            style={{ marginRight: '15px' }}
+          >{backButtonText}</button>}
+          rightBlock={<button
+            className="close-button"
+            data-rel="close"
+            style={{ marginRight: '15px' }}
+          >{closeButtonText}</button>}
+        >
+          { title }
+        </SlidingPanelHeader>
+      );
+
+      const rightBlock = renderTree.find('.close-button');
+      const leftBlock = renderTree.find('.back-button');
+
+      jest.runAllTimers();
+
+      expect(renderTree).toMatchSnapshot();
+
+      expect(rightBlock.text()).toEqual(closeButtonText);
+      expect(leftBlock.text()).toEqual(backButtonText);
+    });
   });
 });

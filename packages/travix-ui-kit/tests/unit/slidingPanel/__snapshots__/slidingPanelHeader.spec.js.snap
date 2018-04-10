@@ -170,3 +170,79 @@ exports[`SlidingPanel #render() should render with dataAttr and className 1`] = 
   </div>
 </SlidingPanelHeader>
 `;
+
+exports[`SlidingPanel #render() should render with deprecated rightBlock and leftBlock 1`] = `
+<SlidingPanelHeader
+  leftBlock={
+    <button
+      className="back-button"
+      data-rel="close"
+      style={
+        Object {
+          "marginRight": "15px",
+        }
+      }
+    >
+       ← 
+    </button>
+  }
+  rightBlock={
+    <button
+      className="close-button"
+      data-rel="close"
+      style={
+        Object {
+          "marginRight": "15px",
+        }
+      }
+    >
+       close me! 
+    </button>
+  }
+  useDefaultLeftBlock={false}
+>
+  <div
+    className="ui-sliding-panel-header"
+  >
+    <div
+      className="ui-sliding-panel-header__left-block"
+    >
+      <button
+        className="back-button"
+        data-rel="close"
+        style={
+          Object {
+            "marginRight": "15px",
+          }
+        }
+      >
+         ← 
+      </button>
+    </div>
+    <h3
+      className="ui-sliding-panel-header__title"
+    >
+      <span
+        className="my-class"
+      >
+         my label 
+      </span>
+    </h3>
+    <div
+      className="ui-sliding-panel-header__right-block"
+    >
+      <button
+        className="close-button"
+        data-rel="close"
+        style={
+          Object {
+            "marginRight": "15px",
+          }
+        }
+      >
+         close me! 
+      </button>
+    </div>
+  </div>
+</SlidingPanelHeader>
+`;
