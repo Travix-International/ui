@@ -108,7 +108,7 @@ Badge.propTypes = {
   /**
    * The Badge's size
    */
-  size: PropTypes.oneOf(['small']),
+  size: PropTypes.oneOf(['default', 'small']),
   /**
    * The Badge's title
    */
