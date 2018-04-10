@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
-import { getDataAttributes } from '../../_helpers';
+import { getDataAttributes, warnAboutDeprecatedProp } from '../../_helpers';
 
 const leftBlock = (
   backButtonLabel,
@@ -52,48 +52,63 @@ const rightBlock = (renderRightBlock) => {
   );
 };
 
-const SlidingPanelHeader = ({
-  backButtonLabel,
-  children,
-  className,
-  dataAttrs,
-  renderLeftBlock,
-  onBackButtonClick,
-  renderRightBlock,
-  useDefaultLeftBlock,
-}) => {
-  if (!children) {
-    return null;
+class SlidingPanelHeader extends Component {
+  componentWillMount() {
+    warnAboutDeprecatedProp(this.props.rightBlock, 'rightBlock', 'renderRightBlock property');
+    warnAboutDeprecatedProp(this.props.leftBlock, 'leftBlock', 'renderLeftBlock property');
   }
 
-  const headerClassName = classnames('ui-sliding-panel-header', className);
+  render() {
+    const {
+      backButtonLabel,
+      children,
+      className,
+      dataAttrs,
+      renderLeftBlock,
+      onBackButtonClick,
+      renderRightBlock,
+      useDefaultLeftBlock,
+    } = this.props;
 
-  return (
-    <div
-      className={headerClassName}
-      {...getDataAttributes(dataAttrs)}
-    >
-      <div className="ui-sliding-panel-header__left-block">
-        {
-          leftBlock(
-            backButtonLabel,
-            renderLeftBlock,
-            onBackButtonClick,
-            useDefaultLeftBlock,
-          )
-        }
+    if (!children) {
+      return null;
+    }
+
+    const headerClassName = classnames('ui-sliding-panel-header', className);
+
+    return (
+      <div
+        className={headerClassName}
+        {...getDataAttributes(dataAttrs)}
+      >
+        <div className="ui-sliding-panel-header__left-block">
+          {
+            this.props.leftBlock
+              ? this.props.leftBlock
+              : leftBlock(
+                backButtonLabel,
+                renderLeftBlock,
+                onBackButtonClick,
+                useDefaultLeftBlock,
+              )
+          }
+        </div>
+
+        <h3 className="ui-sliding-panel-header__title">
+          {children}
+        </h3>
+
+        <div className="ui-sliding-panel-header__right-block">
+          {
+            this.props.rightBlock
+              ? this.props.rightBlock
+              : rightBlock(renderRightBlock)
+          }
+        </div>
       </div>
-
-      <h3 className="ui-sliding-panel-header__title">
-        {children}
-      </h3>
-
-      <div className="ui-sliding-panel-header__right-block">
-        {rightBlock(renderRightBlock)}
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 SlidingPanelHeader.propTypes = {
   /**
@@ -126,6 +141,12 @@ SlidingPanelHeader.propTypes = {
   renderLeftBlock: PropTypes.func,
 
   /**
+   * Deprecated!
+   * use `renderLeftBlock` instead
+   */
+  leftBlock: PropTypes.node,
+
+  /**
    * Callback for back button
    */
   onBackButtonClick: PropTypes.func,
@@ -138,6 +159,12 @@ SlidingPanelHeader.propTypes = {
    * @param 'data-rel' {String}
    */
   renderRightBlock: PropTypes.func,
+
+  /**
+   * Deprecated!
+   * use `renderRightBlock` instead
+   */
+  rightBlock: PropTypes.node,
 
   /**
    * When true, it will show the block with arrow icon and passed text (optional).
