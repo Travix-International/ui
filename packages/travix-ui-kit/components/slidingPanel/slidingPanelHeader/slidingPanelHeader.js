@@ -61,7 +61,11 @@ class SlidingPanelHeader extends Component {
   componentWillMount() {
     warnAboutDeprecatedProp(this.props.rightBlock, 'rightBlock', 'renderRightBlock property');
     warnAboutDeprecatedProp(this.props.leftBlock, 'leftBlock', 'renderLeftBlock property');
-    warnAboutDeprecatedProp(this.props.useDefaultLeftBlock, 'useDefaultLeftBlock', 'renderLeftBlock property and () => null');
+    warnAboutDeprecatedProp(
+      this.props.useDefaultLeftBlock,
+      'useDefaultLeftBlock',
+      'renderLeftBlock property and () => null'
+    );
   }
 
   render() {
