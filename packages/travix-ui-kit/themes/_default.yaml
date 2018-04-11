@@ -121,6 +121,12 @@ badge:
     right-left: 8px
     top-bottom: 6px
     corner-side: 12px
+  s:
+    font-size: 13px
+    padding:
+      left: 13px
+      right: 8px
+      top-bottom: 4px
 ui-button:
   default:
     normal:
