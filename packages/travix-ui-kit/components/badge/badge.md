@@ -109,7 +109,7 @@ Position top:
             name="default"
             onChange={() => setState({ size: 'm' })}
           >
-            M size
+            Medium size
           </RadioButton>
           <RadioButton
             checked={state.size === 's'}
@@ -117,7 +117,7 @@ Position top:
             name="small"
             onChange={() => setState({ size: 's' })}
           >
-            S size
+            Small size
           </RadioButton>
         </div>
       </div>      
