@@ -177,6 +177,9 @@ SlidingPanelHeader.propTypes = {
   rightBlock: PropTypes.node,
 
   /**
+   * Deprecated!
+   * Use renderLeftBlock={() => null} instead
+   *
    * When true, it will show the block with arrow icon and passed text (optional).
    * You can either enable it, or use leftBlock property to have more customization.
    */
