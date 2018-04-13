@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SlidingPanel #render() render noscript without children 1`] = `
-<SlidingPanelHeader
-  useDefaultLeftBlock={false}
-/>
-`;
+exports[`SlidingPanel #render() render noscript without children 1`] = `<SlidingPanelHeader />`;
 
 exports[`SlidingPanel #render() render with children 1`] = `
-<SlidingPanelHeader
-  useDefaultLeftBlock={false}
->
+<SlidingPanelHeader>
   <div
     className="ui-sliding-panel-header"
   >
@@ -39,7 +33,6 @@ exports[`SlidingPanel #render() render with custom left and right blocks 1`] = `
 <SlidingPanelHeader
   renderLeftBlock={[Function]}
   renderRightBlock={[Function]}
-  useDefaultLeftBlock={false}
 >
   <div
     className="ui-sliding-panel-header"
@@ -139,7 +132,6 @@ exports[`SlidingPanel #render() should render with dataAttr and className 1`] = 
       "foo": "bar",
     }
   }
-  useDefaultLeftBlock={false}
 >
   <div
     className="ui-sliding-panel-header foo"
@@ -199,7 +191,6 @@ exports[`SlidingPanel #render() should render with deprecated rightBlock and lef
        close me! 
     </button>
   }
-  useDefaultLeftBlock={false}
 >
   <div
     className="ui-sliding-panel-header"
