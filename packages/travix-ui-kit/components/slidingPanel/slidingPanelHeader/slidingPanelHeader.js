@@ -186,8 +186,4 @@ SlidingPanelHeader.propTypes = {
   useDefaultLeftBlock: PropTypes.bool,
 };
 
-SlidingPanelHeader.defaultProps = {
-  useDefaultLeftBlock: false,
-};
-
 export default SlidingPanelHeader;

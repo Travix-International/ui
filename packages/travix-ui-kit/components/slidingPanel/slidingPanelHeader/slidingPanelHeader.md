@@ -29,7 +29,7 @@ Sliding Panel Header with custom left and right blocks:
       </SlidingPanel>
     </div>
 
-Sliding Panel Header withhout default left block
+Sliding Panel Header without default left block
 
     <div>
       <button
