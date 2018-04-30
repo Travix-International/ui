@@ -240,6 +240,10 @@ $ui-badge__arrow-border-fix: calc(var(--tx-badge-border-bottom-width) * var(--tx
         border: none;
       }
     }
+
+    &.ui-badge-badge_small {
+      padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-right) var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-left);
+    }
   }
 
   &.ui-badge-badge_arrow-right {
@@ -284,6 +288,15 @@ $ui-badge__arrow-border-fix: calc(var(--tx-badge-border-bottom-width) * var(--tx
         border: none;
       }
     }
+
+    &.ui-badge-badge_s {
+      padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-right) var(--tx-badge-s-padding-top-bottom) var(--tx-badge-s-padding-left);
+    }
+  }
+
+  &.ui-badge-badge_s {
+    font-size: var(--tx-badge-s-font-size);
+    padding: var(--tx-badge-s-padding-top-bottom) var(--tx-badge-padding-right-left);
   }
 }
 
