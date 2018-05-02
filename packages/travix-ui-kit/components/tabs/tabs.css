@@ -10,7 +10,6 @@
   border: none;
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
 }
 
 .ui-tabs__content-item {
