@@ -438,11 +438,16 @@ exports[`Modal: render should render modal with provided dataAttrs 1`] = `
 >
   <Global
     className="ui-modal ui-modal_active"
-    data-gtm="id"
+    dataAttrs={
+      Object {
+        "gtm": "id",
+      }
+    }
     noscroll={false}
   >
     <div
       className="ui-modal ui-modal_active"
+      data-gtm="id"
       onClick={[Function]}
     >
       <div

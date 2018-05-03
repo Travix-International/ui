@@ -4,6 +4,8 @@ import {
   createPortal,
 } from 'react-dom';
 
+import { getDataAttributes } from '../_helpers';
+
 /**
  * Global component
  * React component for transportation of modals, lightboxes, loading bars... to document.body
@@ -57,12 +59,19 @@ class Global extends Component {
   }
 
   render() {
+    const {
+      children,
+      className,
+      dataAttrs,
+    } = this.props;
+
     return createPortal((
       <div
-        className={this.props.className}
+        {...getDataAttributes(dataAttrs)}
+        className={className}
         onClick={this.handleClick}
       >
-        {this.props.children}
+        {children}
       </div>
     ), this.target);
   }
@@ -81,6 +90,13 @@ Global.propTypes = {
    * The modal dialog's body
    */
   children: PropTypes.node,
+  /**
+   * Data attribute. You can use it to set up GTM key or any custom data-* attribute
+   */
+  dataAttrs: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.object,
+  ]),
   /**
    * Determine whether a body is scrollable or not
    */

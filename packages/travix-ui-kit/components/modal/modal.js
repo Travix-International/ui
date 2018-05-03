@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import Global from '../global/global';
 import KEY_CODE from '../constants/keyCode';
-import { getClassNamesWithMods, getDataAttributes, warnAboutDeprecatedProp } from '../_helpers';
+import { getClassNamesWithMods, warnAboutDeprecatedProp } from '../_helpers';
 
 /**
  * Modal component
@@ -192,7 +192,7 @@ class Modal extends Component {
     const classes = classnames(className, classNameWithMods);
 
     return (
-      <Global className={classes} {...getDataAttributes(dataAttrs)} noscroll={isOpen}>
+      <Global className={classes} dataAttrs={dataAttrs} noscroll={isOpen}>
         {this.renderOverlay()}
         <div className={'ui-modal__container'}>
           {this.renderHeader()}
