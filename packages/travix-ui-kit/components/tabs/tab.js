@@ -20,25 +20,6 @@ class Tab extends Component {
     }
   };
 
-  renderTabContent() {
-    const {
-      active,
-      title,
-    } = this.props;
-
-    const contentClasses = classnames({
-      'ui-tab__content': true,
-      'ui-tab__content_active': active,
-      'ui-tab__content-paddings': typeof title === 'string',
-    });
-
-    return (
-      <div className={contentClasses}>
-        {title}
-      </div>
-    );
-  }
-
   render() {
     const {
       active,
@@ -67,9 +48,7 @@ class Tab extends Component {
         tabIndex="0"
         title={typeof title === 'string' ? title : ''}
       >
-        <div className="ui-tab__shadow-wrapper">
-          {this.renderTabContent()}
-        </div>
+        {title}
       </div>
     );
   }
