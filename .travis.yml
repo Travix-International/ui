@@ -8,12 +8,16 @@ install:
 
 env:
   - TEST_DIR=packages/travix-ui-kit
+  - TEST_DIR=packages/css-themes-polyfill
+  - TEST_DIR=packages/theme-builder
 
 script:
   - cd $TEST_DIR
   - npm ci
-  - npm run ci:lint
-  - npm run ci:test
+  - npm run ci:script
+
+after_success:
+  - npm run ci:after_success
 
 notifications:
   email: false

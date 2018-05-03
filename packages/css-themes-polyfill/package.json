@@ -6,7 +6,9 @@
   "scripts": {
     "build": "mkdir -p lib && uglifyjs --compress --mangle --output lib/index.js src/index.js",
     "test": "node test/index.spec.js",
-    "lint": "eslint --color src/index.js"
+    "lint": "eslint --color src/index.js",
+    "ci:script": "echo 'Running CI Scripts';",
+    "ci:after_success": "echo 'Running CI After Sucess';"
   },
   "repository": {
     "type": "git",

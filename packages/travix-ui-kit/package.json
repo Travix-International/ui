@@ -6,6 +6,8 @@
   "scripts": {
     "build:watch": "node ./builder/program -w",
     "build": "node ./builder/program",
+    "ci:script": "echo 'Running CI Scripts';",
+    "ci:after_success": "echo 'Running CI After Sucess';",
     "ci:comment-url": "curl https://api.github.com/repos/$TRAVIS_REPO_SLUG/issues/$TRAVIS_PULL_REQUEST/comments -u \"$TRAVIX_SERVICE_ACCOUNT:$TRAVIX_SERVICE_ACCOUNT_TOKEN\" --data \"{ \\\"body\\\": \\\"A new acceptance URL has been deployed: [$ACCP_URL]($ACCP_URL)\\\" }\"",
     "ci:lint": "eslint --color --max-warnings 0 --quiet '{components,tests,utils,scripts}/**/*.js'",
     "ci:send-coverage": "codecov",

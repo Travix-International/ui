@@ -12,7 +12,9 @@
     "test:update": "jest -u",
     "test": "jest",
     "version": "npm run build",
-    "transpile": "npm run build"
+    "transpile": "npm run build",
+    "ci:script": "echo 'Running CI Scripts';",
+    "ci:after_success": "echo 'Running CI After Sucess';"
   },
   "repository": {
     "type": "git",
