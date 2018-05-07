@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.9.6](https://github.com/Travix-International/ui/tree/v0.9.6) (2018-04-19)
+
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.9.5...v0.9.6)
+
+**Implemented enhancements:**
+
+- Rendered props for SlidingPanelHeader [\#13](https://github.com/Travix-International/ui/pull/13) ([zanovski](https://github.com/zanovski))
+
+**Merged pull requests:**
+
+- CFE-18221: add new property size for badge component [\#14](https://github.com/Travix-International/ui/pull/14) ([DzmitryKukharuk](https://github.com/DzmitryKukharuk))
+
 ## [v0.9.4](https://github.com/Travix-International/travix-ui-kit/tree/v0.9.4) (2018-03-15)
 
 [Full Changelog](https://github.com/Travix-International/travix-ui-kit/compare/v0.9.3...v0.9.4)
