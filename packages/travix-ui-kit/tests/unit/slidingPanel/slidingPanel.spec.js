@@ -2,6 +2,8 @@ import { mount } from 'enzyme';
 import React from 'react';
 import SlidingPanel from '../../../components/slidingPanel/slidingPanel';
 import SlidingPanelContent from '../../../components/slidingPanel/slidingPanelContent/slidingPanelContent';
+import SlidingPanelHeader from '../../../components/slidingPanel/slidingPanelHeader/slidingPanelHeader';
+import SlidingPanelFooter from '../../../components/slidingPanel/slidingPanelFooter/slidingPanelFooter';
 
 jest.useFakeTimers();
 
@@ -351,12 +353,44 @@ describe('SlidingPanel', () => {
       expect(panelElement.hasClass(className)).toEqual(true);
     });
 
-    it('render with global mode', () => {
+    it('should render with global mode', () => {
       const renderTree = mount(
         <SlidingPanel
           global
         >
           <SlidingPanelContent>Test</SlidingPanelContent>
+        </SlidingPanel>
+      );
+
+      expect(renderTree).toMatchSnapshot();
+    });
+
+    it('should render slidingPanelHeader', () => {
+      const renderTree = mount(
+        <SlidingPanel>
+          <SlidingPanelHeader>Title</SlidingPanelHeader>
+          <SlidingPanelContent>Content</SlidingPanelContent>
+        </SlidingPanel>
+      );
+
+      expect(renderTree).toMatchSnapshot();
+    });
+
+    it('should render slidingPanelFooter', () => {
+      const renderTree = mount(
+        <SlidingPanel>
+          <SlidingPanelContent>Content</SlidingPanelContent>
+          <SlidingPanelFooter>Footer</SlidingPanelFooter>
+        </SlidingPanel>
+      );
+
+      expect(renderTree).toMatchSnapshot();
+    });
+
+    it('should render slidingPanelContent as fallback if the child is not one', () => {
+      const renderTree = mount(
+        <SlidingPanel>
+          Test
         </SlidingPanel>
       );
 
