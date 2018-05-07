@@ -163,8 +163,8 @@ export default class SlidingPanel extends Component {
     ** parameters and will support SlidingPanelHeader and SlidingPanelFooter. React components
     ** will overides any property definition.
     **
-    ** We also will encapsulate all components using SlidingPanelContent as an temporary solution.
-    ** After the migration process it will be removed and every child will have to define it, if needed.
+    ** We also will encapsulate all components using SlidingPanelContent as a temporary solution.
+    ** After the migration process ends it will be removed and every child will have to define it if needed.
     */
 
     Children.forEach(children, (child) => {
