@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
-import React, { Component } from 'react';
+import React, { Children, Component } from 'react';
 import classnames from 'classnames';
 
+import SlidingPanelContent from './slidingPanelContent/slidingPanelContent';
 import SlidingPanelHeader from './slidingPanelHeader/slidingPanelHeader';
 import SlidingPanelFooter from './slidingPanelFooter/slidingPanelFooter';
 import Global from '../global/global';
@@ -132,6 +133,62 @@ export default class SlidingPanel extends Component {
     const panelClassName = classnames(getClassNamesWithMods('ui-sliding-panel', panelMods), className);
     const overlayClassName = getClassNamesWithMods('ui-sliding-panel-overlay', overlayMods);
 
+    let titleContent = title ? (
+      <SlidingPanelHeader
+        leftBlock={leftBlock}
+        onBackButtonClick={onBackButtonClick}
+        rightBlock={rightBlock}
+        useDefaultLeftBlock={useDefaultLeftBlock}
+      >
+        {title}
+      </SlidingPanelHeader>
+    ) : null;
+
+    let subheaderContent = subheader ? (
+      <div className="ui-sliding-panel__subheader">
+        {subheader}
+      </div>
+    ) : null;
+
+    let footerContent = footer ? (
+      <SlidingPanelFooter>
+        {footer}
+      </SlidingPanelFooter>
+    ) : null;
+
+    const mainContent = [];
+
+    /*
+    ** SlidingPanel migration state. This validation will handle title, subheader and footer
+    ** parameters and will support SlidingPanelHeader and SlidingPanelFooter. React components
+    ** will overides any property definition.
+    **
+    ** We also will encapsulate all components using SlidingPanelContent as a temporary solution.
+    ** After the migration process ends it will be removed and every child will have to define it if needed.
+    */
+
+    Children.forEach(children, (child) => {
+      switch (child.type) {
+        case SlidingPanelHeader:
+          titleContent = child;
+          break;
+        case SlidingPanelFooter:
+          footerContent = child;
+          break;
+        case SlidingPanelContent:
+          mainContent.push(child);
+          break;
+        default:
+          mainContent.push(
+            <SlidingPanelContent>
+              { child }
+            </SlidingPanelContent>
+          );
+          break;
+      }
+    });
+
+
     const content = (
       <div className={overlayClassName} onClick={this.handleClickOverlay}>
         <div
@@ -140,30 +197,15 @@ export default class SlidingPanel extends Component {
           style={{ width }}
           {...getDataAttributes(dataAttrs)}
         >
-          {title && (
-            <SlidingPanelHeader
-              leftBlock={leftBlock}
-              onBackButtonClick={onBackButtonClick}
-              rightBlock={rightBlock}
-              useDefaultLeftBlock={useDefaultLeftBlock}
-            >
-              {title}
-            </SlidingPanelHeader>
-          )}
+          {titleContent}
 
-          {subheader && (
-            <div className="ui-sliding-panel__subheader">
-              {subheader}
-            </div>
-          )}
+          {subheaderContent}
 
-          {children}
+          <div className="ui-sliding-panel-content-wrapper">
+            {mainContent}
+          </div>
 
-          {footer && (
-            <SlidingPanelFooter>
-              {footer}
-            </SlidingPanelFooter>
-          )}
+          {footerContent}
         </div>
       </div>
     );
