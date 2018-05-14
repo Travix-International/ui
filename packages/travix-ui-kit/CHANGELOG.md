@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.10.0](https://github.com/Travix-International/ui/tree/v0.10.0) (2018-05-14)
+
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.9.6...v0.10.0)
+
+**Fixed bugs:**
+
+- Fix sliding panel migration state [\#18](https://github.com/Travix-International/ui/pull/18) ([leandrooriente](https://github.com/leandrooriente))
+- \[travix-ui-kit\] Properly forward Modal data attributes to Global component [\#17](https://github.com/Travix-International/ui/pull/17) ([rbardini](https://github.com/rbardini))
+
+**Merged pull requests:**
+
+- changed design for tabs component [\#15](https://github.com/Travix-International/ui/pull/15) ([maximuk](https://github.com/maximuk))
+
 ## [v0.9.6](https://github.com/Travix-International/ui/tree/v0.9.6) (2018-04-19)
 
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.9.5...v0.9.6)
