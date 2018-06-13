@@ -46,14 +46,6 @@
   stroke: var(--tx-spinner-color-lighter);
 }
 
-@keyframes uiKitSpinnerBouncedelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-  } 40% {
-    transform: scale(1.0);
-  }
-}
-
 @keyframes uiKitSpinnerRotation {
   0% {
     animation-timing-function: steps(1, end);
