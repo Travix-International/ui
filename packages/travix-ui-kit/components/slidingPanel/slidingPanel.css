@@ -45,7 +45,7 @@
 }
 
 .ui-sliding-panel_left {
-  animation: uiKitsidePanelLeftClose 195ms ease-in-out 0s 1 both;
+  animation: uiKitSidePanelLeftClose 195ms ease-in-out 0s 1 both;
   left: var(--tx-sliding-panel-left-direction-left);
   right: var(--tx-sliding-panel-left-direction-right);
 }
@@ -87,7 +87,7 @@
   }
 }
 
-@keyframes uiKitsidePanelLeftClose {
+@keyframes uiKitSidePanelLeftClose {
   0% {
     transform: translateX(0);
   }
