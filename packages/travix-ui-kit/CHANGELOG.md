@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.10.1](https://github.com/Travix-International/ui/tree/v0.10.1) (2018-06-15)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.10.0...v0.10.1)
+
+**Fixed bugs:**
+
+- Use specific keyframes names for sliding panel [\#20](https://github.com/Travix-International/ui/pull/20) ([RumataDeEstor](https://github.com/RumataDeEstor))
+
+**Merged pull requests:**
+
+- \[travix-ui-kit\] Update style guide URL in README [\#19](https://github.com/Travix-International/ui/pull/19) ([rbardini](https://github.com/rbardini))
+
 ## [v0.10.0](https://github.com/Travix-International/ui/tree/v0.10.0) (2018-05-14)
 
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.9.6...v0.10.0)
