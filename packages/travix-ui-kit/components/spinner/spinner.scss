@@ -1,6 +1,6 @@
 
 .ui-spinner {
-  animation: rotation infinite 0.7s;
+  animation: uiKitSpinnerRotation infinite 0.7s;
   display: inline-block;
 }
 
@@ -46,15 +46,7 @@
   stroke: var(--tx-spinner-color-lighter);
 }
 
-@keyframes bouncedelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-  } 40% {
-    transform: scale(1.0);
-  }
-}
-
-@keyframes rotation {
+@keyframes uiKitSpinnerRotation {
   0% {
     animation-timing-function: steps(1, end);
     transform: rotate(0deg);
