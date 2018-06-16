@@ -15,6 +15,7 @@
     "lint": "eslint --color '{components,tests,utils,scripts}/**/*.js'",
     "prebuild:watch": "npm run transpile -- -w &",
     "prebuild": "npm run transpile -- &",
+    "prestyleguide:build": "npm run build",
     "styleguide:build": "styleguidist build",
     "styleguide:server": "styleguidist server",
     "styleguide:dev": "npm run styleguide:build && npm run styleguide:server",
