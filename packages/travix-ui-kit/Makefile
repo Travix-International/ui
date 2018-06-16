@@ -27,10 +27,8 @@ push-changelog:
 prepare-site:
 	rm -rf ./styleguide
 	npm run styleguide:build
-	ls -la ./styleguide/
 	# copy directly from the library
 	cp ../css-themes-polyfill/src/index.js ./styleguide/css-themes-polyfill.js
-	cp .gitignore ./styleguide/.gitignore
 
 publish-site-only:
 	(cd ./styleguide && git init)
