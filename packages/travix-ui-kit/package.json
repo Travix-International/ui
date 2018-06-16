@@ -19,7 +19,6 @@
     "styleguide:server": "styleguidist server",
     "styleguide:dev": "npm run styleguide:build && npm run styleguide:server",
     "test": "TZ=utc jest -c ./tests/jest.config.json",
-    "transpile": "npm run build",
     "update-snapshots": "TZ=utc jest -c ./tests/jest.config.json -u"
   },
   "repository": {

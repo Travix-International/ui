@@ -7,7 +7,7 @@ release:
 	git pull origin master
 	npm run lint
 	npm run test
-	npm run transpile
+	npm run build
 	npm version $(VERSION)
 	npm publish
 	make publish-site
