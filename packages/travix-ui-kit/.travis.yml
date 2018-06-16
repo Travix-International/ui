@@ -13,10 +13,6 @@ script:
 
 after_success:
   - 'npm run ci:send-coverage'
-  - 'npm run build'
-  - 'make prepare-site'
-  - 'export ACCP_URL=`npm run deploy:accp:ci | grep "https://" | tr -d "[:space:]"`'
-  - 'npm run ci:comment-url'
 
 notifications:
   email: false
