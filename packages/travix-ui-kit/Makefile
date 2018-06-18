@@ -10,6 +10,8 @@ release:
 	npm run build
 	npm version $(VERSION)
 	npm publish
+	git add package.json package-lock.json
+	git commit -v
 
 changelog:
 	git checkout master
