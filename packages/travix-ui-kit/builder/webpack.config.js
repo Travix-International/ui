@@ -1,7 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
-const webpack = require('webpack');
 
 const outputDir = path.join(__dirname, '..', 'dist');
 
