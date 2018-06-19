@@ -6,7 +6,7 @@ release:
 	git checkout master
 	git pull origin master
 	npm run lint
-	npm run test
+	npm test
 	npm run build
 	npm version $(VERSION)
 	npm publish

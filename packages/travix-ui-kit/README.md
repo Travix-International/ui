@@ -128,7 +128,7 @@ use file `node_modules/travix-ui-kit/dist/ui-bundle.css`
 
 #### Testing
 
-- `npm run test` to run unit test
+- `npm test` to run unit test
 - `npm run update-snapshots` to update current unit test snapshots
 - `npm run lint` to check ES-lint errors
 

@@ -8,7 +8,7 @@
     "build": "node ./builder/program",
     "ci:lint": "npm run lint -- --max-warnings 0 --quiet",
     "ci:send-coverage": "codecov",
-    "ci:test": "npm run test -- --bail --ci --coverage --maxWorkers=2 --no-cache --silent",
+    "ci:test": "npm test -- --bail --ci --coverage --maxWorkers=2 --no-cache --silent",
     "lint": "eslint --color '{components,tests,utils,scripts}/**/*.js'",
     "prebuild:watch": "npm run transpile -- -w &",
     "prebuild": "npm run transpile -- &",
@@ -18,7 +18,7 @@
     "styleguide:dev": "npm run styleguide:build && npm run styleguide:server",
     "test": "TZ=utc jest -c ./tests/jest.config.json",
     "transpile": "babel --copy-files ./components --out-dir lib --ignore *.scss,*.md",
-    "update-snapshots": "npm run test -- -u"
+    "update-snapshots": "npm test -- -u"
   },
   "repository": {
     "type": "git",
