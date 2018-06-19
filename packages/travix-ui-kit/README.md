@@ -1,10 +1,9 @@
 # Travix UI-kit
 
 [![npm](https://img.shields.io/npm/v/travix-ui-kit.svg)](https://www.npmjs.com/package/travix-ui-kit)
-[![Build Status](https://img.shields.io/travis/Travix-International/travix-ui-kit/master.svg)](http://travis-ci.org/Travix-International/travix-ui-kit)
-[![coverage](https://codecov.io/gh/Travix-International/travix-ui-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/Travix-International/travix-ui-kit)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Travix-International/travix-ui-kit.svg)](https://greenkeeper.io/)
-[![NSP Status](https://nodesecurity.io/orgs/travix-international-bv/projects/4757808e-0ffc-47dd-9c82-c48e782631dd/badge)](https://nodesecurity.io/orgs/travix-international-bv/projects/4757808e-0ffc-47dd-9c82-c48e782631dd)
+[![Build Status](https://img.shields.io/travis/Travix-International/ui/master.svg)](http://travis-ci.org/Travix-International/ui)
+[![coverage](https://codecov.io/gh/Travix-International/ui/branch/master/graph/badge.svg)](https://codecov.io/gh/Travix-International/ui)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Travix-International/ui.svg)](https://greenkeeper.io/)
 
 Travix UI Components' repository.
 
@@ -109,7 +108,7 @@ use file `node_modules/travix-ui-kit/dist/ui-bundle.css`
 
 #### Installing
 - `git clone` this repo
-- `npm i` to install dependencies
+- `npm ci` to install dependencies
 - `npm run build` to build theme, styles and javascript
 
 ### How to run living style guide
