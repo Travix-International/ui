@@ -28,6 +28,7 @@ import SlidingPanelContent from './slidingPanel/slidingPanelContent/slidingPanel
 import SlidingPanelFooter from './slidingPanel/slidingPanelFooter/slidingPanelFooter';
 import SlidingPanelHeader from './slidingPanel/slidingPanelHeader/slidingPanelHeader';
 import Spinner from './spinner/spinner';
+import Stepper from './stepper/stepper';
 import Tab from './tabs/tab';
 import Tabs from './tabs/tabs';
 import ToggleButton from './toggleButton/toggleButton';
@@ -65,6 +66,7 @@ export default {
   SlidingPanelFooter,
   SlidingPanelHeader,
   Spinner,
+  Stepper,
   Tab,
   Tabs,
   ToggleButton,
