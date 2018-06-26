@@ -8,7 +8,7 @@
 Travix UI Components' repository.
 
 ## UI-Kit
-Take a look at: https://travix-international.github.io/ui/
+Take a look at: https://travix-ui-kit.netlify.com/
 
 ### How to install and setup
 - `npm i react travix-ui-kit -S` install as a dependency
