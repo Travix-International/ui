@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stepper #render() should render 1`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    id="input"
+    name="input"
+    type="hidden"
+    value={2}
+  />
+  <div
+    className="ui-stepper-content"
+  >
+    <button
+      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper-value"
+    >
+      2
+    </div>
+    <div
+      className="ui-stepper-shadow"
+    />
+    <button
+      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper-button ui-stepper-button_increase"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should render with disabled decrement button 1`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    id="input"
+    name="input"
+    type="hidden"
+    value={1}
+  />
+  <div
+    className="ui-stepper-content"
+  >
+    <button
+      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease disabled"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper-value"
+    >
+      1
+    </div>
+    <div
+      className="ui-stepper-shadow"
+    />
+    <button
+      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper-button ui-stepper-button_increase"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should render with disabled increment button 1`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    id="input"
+    name="input"
+    type="hidden"
+    value={3}
+  />
+  <div
+    className="ui-stepper-content"
+  >
+    <button
+      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper-value"
+    >
+      3
+    </div>
+    <div
+      className="ui-stepper-shadow"
+    />
+    <button
+      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper-button ui-stepper-button_increase disabled"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
