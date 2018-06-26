@@ -10,7 +10,9 @@ class Stepper extends Component {
     super(props);
 
     this.validationFn = (stepper, triedValue) => stepper.setValue(triedValue);
-    this.state = { currentValue: Math.max(Math.min(props.initValue, props.maxValue), props.minValue) };
+    this.state = {
+      currentValue: Math.max(Math.min(props.initValue, props.maxValue), props.minValue),
+    };
 
     if (typeof props.validationFn === 'function') {
       this.validationFn = props.validationFn;
@@ -53,7 +55,7 @@ class Stepper extends Component {
     event.preventDefault();
   }
 
-  renderHorizontal() {
+  renderContent() {
     const buttonDecreaseClasses = classnames({
       'icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease': true,
       'disabled': this.state.currentValue === this.props.minValue,
@@ -92,7 +94,7 @@ class Stepper extends Component {
           type="hidden"
           value={this.state.currentValue}
         />
-        {this.renderHorizontal()}
+        {this.renderContent()}
       </div>
     );
   }
