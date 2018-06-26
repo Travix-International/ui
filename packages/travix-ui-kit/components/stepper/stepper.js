@@ -41,7 +41,9 @@ class Stepper extends Component {
     this.setState({
       currentValue: newStateValue,
     }, () => {
-      if (cb) cb(newStateValue);
+      if (cb) {
+        cb(newStateValue);
+      }
     });
   }
 
