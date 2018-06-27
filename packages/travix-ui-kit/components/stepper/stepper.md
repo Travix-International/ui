@@ -1,6 +1,6 @@
 Basic input:
 
-    <div style={{ background: '#D5E8F8', padding: '10px' }}>
+    <div>
       <style dangerouslySetInnerHTML={{__html: `
         .ui-stepper .ui-stepper-button.ui-stepper-button_decrease:before {
           content: '-';
@@ -16,7 +16,7 @@ Basic input:
 
 Range 1 - 4 input:
 
-    <div style={{ background: '#D5E8F8', padding: '10px' }}>
+    <div>
       <style dangerouslySetInnerHTML={{__html: `
         .ui-stepper .ui-stepper-button.ui-stepper-button_decrease:before {
           content: '-';
