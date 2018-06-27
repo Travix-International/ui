@@ -61,13 +61,13 @@ class Stepper extends Component {
     const { currentValue } = this.state;
 
     const buttonDecreaseClasses = classnames({
-      'icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease': true,
-      'disabled': currentValue === minValue,
+      'icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease': true,
+      'ui-stepper__button-disabled': currentValue === minValue,
     });
 
     const buttonIncreaseClasses = classnames({
-      'icon icon-100 icon-Buttons_arrowPlus ui-stepper-button ui-stepper-button_increase': true,
-      'disabled': currentValue === maxValue,
+      'icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase': true,
+      'ui-stepper__button-disabled': currentValue === maxValue,
     });
 
     return (
@@ -78,14 +78,14 @@ class Stepper extends Component {
           value={currentValue}
         />
 
-        <div className="ui-stepper-content">
+        <div className="ui-stepper__content">
           <button
             className={buttonDecreaseClasses}
             onClick={this.tryDecreaseValue}
             type="button"
           />
-          <div className="ui-stepper-value">{currentValue}</div>
-          <div className="ui-stepper-shadow" />
+          <div className="ui-stepper__value">{currentValue}</div>
+          <div className="ui-stepper__shadow" />
           <button
             className={buttonIncreaseClasses}
             onClick={this.tryIncreaseValue}

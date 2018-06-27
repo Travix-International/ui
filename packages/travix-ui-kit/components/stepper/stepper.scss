@@ -3,8 +3,7 @@
   height: 39px;
   justify-content: space-between;
 
-  .ui-stepper-button.ui-stepper-button_increase,
-  .ui-stepper-button.ui-stepper-button_decrease {
+  .ui-stepper__button {
     background: linear-gradient(to bottom,  var(--tx-generic-color-accent-top) 0%, var(--tx-generic-color-accent-bottom) 100%); /* W3C */
     background: var(--tx-generic-color-accent-bottom); /* Old browsers */
     border: none;
@@ -46,7 +45,7 @@
       width: 36px;
     }
 
-    &.disabled {
+    &-disabled {
       background: linear-gradient(to bottom, var(--tx-generic-color-secondary-dark) 0%, var(--tx-generic-color-secondary-darker) 100%);
       border-bottom: solid 3px var(--tx-generic-color-secondary-darkest);
       box-shadow: none;
@@ -55,7 +54,7 @@
     }
   }
 
-  .ui-stepper-button.ui-stepper-button_increase {
+  .ui-stepper__button-increase {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 
@@ -64,7 +63,7 @@
     }
   }
 
-  .ui-stepper-button.ui-stepper-button_decrease {
+  .ui-stepper__button-decrease {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 
@@ -74,12 +73,12 @@
   }
 
 
-  .ui-stepper-content {
+  .ui-stepper__content {
     display: flex;
     position: relative;
   }
 
-  .ui-stepper-value {
+  .ui-stepper__value {
     background-color: var(--tx-generic-color-blank);
     color: var(--tx-generic-color-primary);
     font-family: var(--tx-generic-font-primary-font-family), var(--tx-generic-font-primary-generic-family);
@@ -90,7 +89,7 @@
     width: 48px;
   }
 
-  .ui-stepper-shadow {
+  .ui-stepper__shadow {
     border-bottom: 39px solid rgba(0, 0, 0, 0.1);
     border-left: 7px solid transparent;
     height: 0;
