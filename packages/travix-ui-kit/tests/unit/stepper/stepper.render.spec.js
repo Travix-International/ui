@@ -38,26 +38,26 @@ describe('Stepper', () => {
     });
 
     it('should change state after props update', () => {
-      const component = shallow(
+      const wrapper = shallow(
         <Stepper
           initValue={2}
         />
       );
-      expect(component.state().currentValue).toBe(2);
-      component.setProps({ initValue: 4 });
-      expect(component.state().currentValue).toBe(4);
+      expect(wrapper).toMatchSnapshot();
+      wrapper.setProps({ initValue: 4 });
+      expect(wrapper).toMatchSnapshot();
     });
 
-    it('should change state after props update', () => {
-      const component = shallow(
+    it('should keep state after props update', () => {
+      const wrapper = shallow(
         <Stepper
           initValue={2}
         />
       );
-      component.instance().setState = jest.fn();
-      component.setProps({ initValue: 2 });
 
-      expect(component.instance().setState).toHaveBeenCalledTimes(0);
+      expect(wrapper).toMatchSnapshot();
+      wrapper.setProps({ initValue: 2 });
+      expect(wrapper).toMatchSnapshot();
     });
   });
 });
