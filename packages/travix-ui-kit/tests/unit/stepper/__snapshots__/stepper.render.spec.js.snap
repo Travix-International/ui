@@ -13,7 +13,7 @@ exports[`Stepper #render() should change state after props update 1`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -26,7 +26,7 @@ exports[`Stepper #render() should change state after props update 1`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -47,7 +47,7 @@ exports[`Stepper #render() should change state after props update 2`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -60,7 +60,7 @@ exports[`Stepper #render() should change state after props update 2`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -81,7 +81,7 @@ exports[`Stepper #render() should keep state after props update 1`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -94,7 +94,7 @@ exports[`Stepper #render() should keep state after props update 1`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -115,7 +115,7 @@ exports[`Stepper #render() should keep state after props update 2`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -128,7 +128,7 @@ exports[`Stepper #render() should keep state after props update 2`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -149,7 +149,7 @@ exports[`Stepper #render() should render 1`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -162,7 +162,7 @@ exports[`Stepper #render() should render 1`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -183,7 +183,7 @@ exports[`Stepper #render() should render with disabled decrement button 1`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease ui-stepper__button-disabled"
+      className="ui-stepper__button ui-stepper__button-decrease ui-stepper__button-disabled"
       onClick={[Function]}
       type="button"
     />
@@ -196,7 +196,7 @@ exports[`Stepper #render() should render with disabled decrement button 1`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase"
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -217,7 +217,7 @@ exports[`Stepper #render() should render with disabled increment button 1`] = `
     className="ui-stepper__content"
   >
     <button
-      className="icon icon-100 icon-Buttons_arrowMinus ui-stepper__button ui-stepper__button-decrease"
+      className="ui-stepper__button ui-stepper__button-decrease"
       onClick={[Function]}
       type="button"
     />
@@ -230,7 +230,7 @@ exports[`Stepper #render() should render with disabled increment button 1`] = `
       className="ui-stepper__shadow"
     />
     <button
-      className="icon icon-100 icon-Buttons_arrowPlus ui-stepper__button ui-stepper__button-increase ui-stepper__button-disabled"
+      className="ui-stepper__button ui-stepper__button-increase ui-stepper__button-disabled"
       onClick={[Function]}
       type="button"
     />
