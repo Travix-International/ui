@@ -4,7 +4,7 @@ node_js:
   - '8'
 
 install:
-  - npm i -g npm@5.8
+  - npm i -g npm@5
 
 env:
   - TEST_DIR=packages/travix-ui-kit
