@@ -9,7 +9,7 @@ Basic input:
           content: '+';
         }
       `}} />
-      <div style={{ width: '50%' }}>
+      <div>
         <Stepper />
       </div>
     </div>
@@ -25,9 +25,9 @@ Range 1 - 4 input:
           content: '+';
         }
       `}} />
-      <div style={{ width: '50%' }}>
+      <div>
         <Stepper
-          initValue={1}
+          initValue={2}
           minValue={1}
           maxValue={4}
         />

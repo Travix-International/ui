@@ -9,94 +9,89 @@ class Stepper extends Component {
   constructor(props) {
     super(props);
 
-    this.validationFn = (stepper, triedValue) => stepper.setValue(triedValue);
     this.state = {
-      currentValue: Math.max(Math.min(props.initValue, props.maxValue), props.minValue),
+      currentValue: props.initValue,
     };
-
-    if (typeof props.validationFn === 'function') {
-      this.validationFn = props.validationFn;
-    }
-
-    this.tryIncreaseValue = this.tryIncreaseValue.bind(this);
-    this.tryDecreaseValue = this.tryDecreaseValue.bind(this);
-    this.setValue = this.setValue.bind(this);
-    this.getValue = this.getValue.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
     if (newProps.initValue !== this.state.currentValue) {
       this.setState({
-        currentValue: Math.max(Math.min(newProps.initValue, this.props.maxValue), this.props.minValue),
+        currentValue: newProps.initValue,
       });
     }
   }
 
-  getValue() {
-    return this.state.currentValue;
-  }
+  setValue = (newValue) => {
+    const { onChange } = this.props;
 
-  setValue(newValue, cb) {
-    const newStateValue = Math.max(Math.min(newValue, this.props.maxValue), this.props.minValue);
     this.setState({
-      currentValue: newStateValue,
+      currentValue: newValue,
     }, () => {
-      if (cb) {
-        cb(newStateValue);
+      if (onChange) {
+        onChange(newValue);
       }
     });
   }
 
-  tryDecreaseValue(event) {
-    this.validationFn(this, this.state.currentValue - 1);
-    event.preventDefault();
+  tryDecreaseValue = (e) => {
+    e.preventDefault();
+    const newValue = this.state.currentValue - 1;
+
+    if (newValue < this.props.minValue) {
+      return;
+    }
+
+    this.setValue(newValue);
   }
 
-  tryIncreaseValue(event) {
-    this.validationFn(this, this.state.currentValue + 1);
-    event.preventDefault();
+  tryIncreaseValue = (e) => {
+    e.preventDefault();
+    const newValue = this.state.currentValue + 1;
+
+    if (newValue > this.props.maxValue) {
+      return;
+    }
+
+    this.setValue(newValue);
   }
 
-  renderContent() {
+  render() {
+    const { inputName, minValue, maxValue } = this.props;
+    const { currentValue } = this.state;
+
     const buttonDecreaseClasses = classnames({
       'icon icon-100 icon-Buttons_arrowMinus ui-stepper-button ui-stepper-button_decrease': true,
-      'disabled': this.state.currentValue === this.props.minValue,
+      'disabled': currentValue === minValue,
     });
 
     const buttonIncreaseClasses = classnames({
       'icon icon-100 icon-Buttons_arrowPlus ui-stepper-button ui-stepper-button_increase': true,
-      'disabled': this.state.currentValue === this.props.maxValue,
+      'disabled': currentValue === maxValue,
     });
-    return (
-      <div className="ui-stepper-content">
-        <button
-          className={buttonDecreaseClasses}
-          onClick={this.tryDecreaseValue}
-          type="button"
-        />
-        <div className="ui-stepper-value">{this.state.currentValue}</div>
-        <div className="ui-stepper-shadow" />
-        <button
-          className={buttonIncreaseClasses}
-          onClick={this.tryIncreaseValue}
-          type="button"
-        />
-      </div>
-    );
-  }
-
-  render() {
-    const { key } = this.props;
 
     return (
       <div className="ui-stepper">
         <input
-          id={key}
-          name={key}
+          name={inputName}
           type="hidden"
-          value={this.state.currentValue}
+          value={currentValue}
         />
-        {this.renderContent()}
+
+        <div className="ui-stepper-content">
+          <button
+            className={buttonDecreaseClasses}
+            onClick={this.tryDecreaseValue}
+            type="button"
+          />
+          <div className="ui-stepper-value">{currentValue}</div>
+          <div className="ui-stepper-shadow" />
+          <button
+            className={buttonIncreaseClasses}
+            onClick={this.tryIncreaseValue}
+            type="button"
+          />
+        </div>
       </div>
     );
   }
@@ -104,7 +99,7 @@ class Stepper extends Component {
 
 Stepper.defaultProps = {
   initValue: 0,
-  key: 'input',
+  inputName: 'input',
   maxValue: 999,
   minValue: 0,
 };
@@ -117,7 +112,7 @@ Stepper.propTypes = {
   /**
    * Name for component's input
    */
-  key: PropTypes.string,
+  inputName: PropTypes.string,
   /**
    * Minimum value
    */
@@ -127,9 +122,9 @@ Stepper.propTypes = {
    */
   maxValue: PropTypes.number,
   /**
-   * Function to validate new value
+   * Callback for changes
    */
-  validationFn: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default Stepper;
