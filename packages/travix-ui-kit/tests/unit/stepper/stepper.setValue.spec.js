@@ -2,77 +2,45 @@ import Stepper from '../../../components/stepper/stepper';
 
 describe('Stepper: setValue', () => {
   it('should call setState with newValue', () => {
-    const prototype = {
-      setState: jest.fn(),
-      props: {
-        minValue: 1,
-        maxValue: 10,
-      },
+    const props = {
     };
 
-    Stepper.prototype.setValue.call(prototype, 2);
-    expect(prototype.setState).toHaveBeenCalledTimes(1);
-    expect(prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
-  });
+    Stepper.prototype.setState = jest.fn();
+    const instance = new Stepper(props);
+    instance.setValue(2);
 
-  it('should call setState with minValue', () => {
-    const prototype = {
-      setState: jest.fn(),
-      props: {
-        minValue: 1,
-        maxValue: 10,
-      },
-    };
-
-    Stepper.prototype.setValue.call(prototype, 0);
-    expect(prototype.setState).toHaveBeenCalledTimes(1);
-    expect(prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 1 });
-  });
-
-  it('should call setState with maxValue', () => {
-    const prototype = {
-      setState: jest.fn(),
-      props: {
-        minValue: 1,
-        maxValue: 10,
-      },
-    };
-
-    Stepper.prototype.setValue.call(prototype, 11);
-    expect(prototype.setState).toHaveBeenCalledTimes(1);
-    expect(prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 10 });
+    expect(Stepper.prototype.setState).toHaveBeenCalledTimes(1);
+    expect(Stepper.prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
   });
 
   it('should call setState and fire callback', () => {
-    const prototype = {
-      setState: jest.fn((state, cb) => cb()),
-      props: {
-        minValue: 1,
-        maxValue: 10,
-      },
-    };
     const callback = jest.fn();
+    const props = {
+      onChange: callback,
+    };
 
-    Stepper.prototype.setValue.call(prototype, 2, callback);
-    expect(prototype.setState).toHaveBeenCalledTimes(1);
-    expect(prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
+    Stepper.prototype.setState = jest.fn((state, cb) => cb());
+    const instance = new Stepper(props);
+    instance.setValue(2);
+
+    expect(Stepper.prototype.setState).toHaveBeenCalledTimes(1);
+    expect(Stepper.prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
     expect(callback).toHaveBeenCalledTimes(1);
     expect(callback).toHaveBeenCalledWith(2);
   });
 
-  it('should call setState and fire callback', () => {
-    const prototype = {
-      setState: jest.fn((state, cb) => cb()),
-      props: {
-        minValue: 1,
-        maxValue: 10,
-      },
-    };
+  it('should call setState and do not fire callback', () => {
     const callback = jest.fn();
+    const props = {
+      onChange: undefined,
+    };
 
-    Stepper.prototype.setValue.call(prototype, 2);
-    expect(prototype.setState).toHaveBeenCalledTimes(1);
-    expect(prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
+    Stepper.prototype.setState = jest.fn((state, cb) => cb());
+    const instance = new Stepper(props);
+    instance.setValue(2);
+
+    expect(Stepper.prototype.setState).toHaveBeenCalledTimes(1);
+    expect(Stepper.prototype.setState.mock.calls[0][0]).toEqual({ currentValue: 2 });
     expect(callback).toHaveBeenCalledTimes(0);
   });
 });

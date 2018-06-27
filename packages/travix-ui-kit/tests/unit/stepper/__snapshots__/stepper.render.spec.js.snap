@@ -5,7 +5,6 @@ exports[`Stepper #render() should render 1`] = `
   className="ui-stepper"
 >
   <input
-    id="input"
     name="input"
     type="hidden"
     value={2}
@@ -40,7 +39,6 @@ exports[`Stepper #render() should render with disabled decrement button 1`] = `
   className="ui-stepper"
 >
   <input
-    id="input"
     name="input"
     type="hidden"
     value={1}
@@ -75,7 +73,6 @@ exports[`Stepper #render() should render with disabled increment button 1`] = `
   className="ui-stepper"
 >
   <input
-    id="input"
     name="input"
     type="hidden"
     value={3}
