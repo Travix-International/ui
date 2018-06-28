@@ -76,6 +76,7 @@ describe('Stepper', () => {
 
       wrapper.find('.ui-stepper__button-decrease').simulate('click', event);
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('1');
     });
 
     it('should not decrement value (1 -> 1)', () => {
@@ -89,6 +90,7 @@ describe('Stepper', () => {
 
       wrapper.find('.ui-stepper__button-decrease').simulate('click', event);
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('1');
     });
 
     it('should increment value (2 -> 3)', () => {
@@ -102,6 +104,7 @@ describe('Stepper', () => {
 
       wrapper.find('.ui-stepper__button-increase').simulate('click', event);
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('3');
     });
 
     it('should not increment value (5 -> 5)', () => {
@@ -115,6 +118,7 @@ describe('Stepper', () => {
 
       wrapper.find('.ui-stepper__button-increase').simulate('click', event);
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('5');
     });
 
     it('should call callback after value changed', () => {
