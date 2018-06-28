@@ -1,5 +1,14 @@
 # Change Log
 
+## [v0.11.0](https://github.com/Travix-International/ui/tree/v0.11.0) (2018-06-28)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.10.1...v0.11.0)
+
+**Implemented enhancements:**
+
+- \[travix-ui-kit\] Add Stepper component [\#24](https://github.com/Travix-International/ui/pull/24) ([avg206](https://github.com/avg206))
+- Use Netlify for UI Kit styleguide deployment [\#23](https://github.com/Travix-International/ui/pull/23) ([rbardini](https://github.com/rbardini))
+- \[travix-ui-kit\] Improve build and deploy process [\#22](https://github.com/Travix-International/ui/pull/22) ([rbardini](https://github.com/rbardini))
+
 ## [v0.10.1](https://github.com/Travix-International/ui/tree/v0.10.1) (2018-06-15)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.10.0...v0.10.1)
 
