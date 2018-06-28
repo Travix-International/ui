@@ -15,9 +15,13 @@ class Stepper extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.initValue !== this.state.currentValue) {
+    const { currentValue } = this.state;
+    const { initValue } = this.props;
+    const { initValue: newInitValue } = newProps;
+
+    if (newInitValue !== currentValue && newInitValue !== initValue) {
       this.setState({
-        currentValue: newProps.initValue,
+        currentValue: newInitValue,
       });
     }
   }
