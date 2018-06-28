@@ -1,73 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stepper #render() should change state after props update 1`] = `
-<div
-  className="ui-stepper"
->
-  <input
-    name="input"
-    type="hidden"
-    value={2}
-  />
-  <div
-    className="ui-stepper__content"
-  >
-    <button
-      className="ui-stepper__button ui-stepper__button-decrease"
-      onClick={[Function]}
-      type="button"
-    />
-    <div
-      className="ui-stepper__value"
-    >
-      2
-    </div>
-    <div
-      className="ui-stepper__shadow"
-    />
-    <button
-      className="ui-stepper__button ui-stepper__button-increase"
-      onClick={[Function]}
-      type="button"
-    />
-  </div>
-</div>
-`;
-
-exports[`Stepper #render() should change state after props update 2`] = `
-<div
-  className="ui-stepper"
->
-  <input
-    name="input"
-    type="hidden"
-    value={4}
-  />
-  <div
-    className="ui-stepper__content"
-  >
-    <button
-      className="ui-stepper__button ui-stepper__button-decrease"
-      onClick={[Function]}
-      type="button"
-    />
-    <div
-      className="ui-stepper__value"
-    >
-      4
-    </div>
-    <div
-      className="ui-stepper__shadow"
-    />
-    <button
-      className="ui-stepper__button ui-stepper__button-increase"
-      onClick={[Function]}
-      type="button"
-    />
-  </div>
-</div>
-`;
-
 exports[`Stepper #render() should decrement value (2 -> 1) 1`] = `
 <div
   className="ui-stepper"
@@ -123,74 +55,6 @@ exports[`Stepper #render() should increment value (2 -> 3) 1`] = `
       className="ui-stepper__value"
     >
       3
-    </div>
-    <div
-      className="ui-stepper__shadow"
-    />
-    <button
-      className="ui-stepper__button ui-stepper__button-increase"
-      onClick={[Function]}
-      type="button"
-    />
-  </div>
-</div>
-`;
-
-exports[`Stepper #render() should keep state after props update 1`] = `
-<div
-  className="ui-stepper"
->
-  <input
-    name="input"
-    type="hidden"
-    value={2}
-  />
-  <div
-    className="ui-stepper__content"
-  >
-    <button
-      className="ui-stepper__button ui-stepper__button-decrease"
-      onClick={[Function]}
-      type="button"
-    />
-    <div
-      className="ui-stepper__value"
-    >
-      2
-    </div>
-    <div
-      className="ui-stepper__shadow"
-    />
-    <button
-      className="ui-stepper__button ui-stepper__button-increase"
-      onClick={[Function]}
-      type="button"
-    />
-  </div>
-</div>
-`;
-
-exports[`Stepper #render() should keep state after props update 2`] = `
-<div
-  className="ui-stepper"
->
-  <input
-    name="input"
-    type="hidden"
-    value={2}
-  />
-  <div
-    className="ui-stepper__content"
-  >
-    <button
-      className="ui-stepper__button ui-stepper__button-decrease"
-      onClick={[Function]}
-      type="button"
-    />
-    <div
-      className="ui-stepper__value"
-    >
-      2
     </div>
     <div
       className="ui-stepper__shadow"
@@ -265,6 +129,74 @@ exports[`Stepper #render() should not increment value (5 -> 5) 1`] = `
     />
     <button
       className="ui-stepper__button ui-stepper__button-increase ui-stepper__button-disabled"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should not reset current value if props change but initValue stays the same (2 -> 2) 1`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    name="input"
+    type="hidden"
+    value={2}
+  />
+  <div
+    className="ui-stepper__content"
+  >
+    <button
+      className="ui-stepper__button ui-stepper__button-decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper__value"
+    >
+      2
+    </div>
+    <div
+      className="ui-stepper__shadow"
+    />
+    <button
+      className="ui-stepper__button ui-stepper__button-increase"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should not reset current value if props change but initValue stays the same (2 -> 2) 2`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    name="input"
+    type="hidden"
+    value={2}
+  />
+  <div
+    className="ui-stepper__content"
+  >
+    <button
+      className="ui-stepper__button ui-stepper__button-decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper__value"
+    >
+      2
+    </div>
+    <div
+      className="ui-stepper__shadow"
+    />
+    <button
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />
@@ -367,6 +299,74 @@ exports[`Stepper #render() should render with disabled increment button 1`] = `
     />
     <button
       className="ui-stepper__button ui-stepper__button-increase ui-stepper__button-disabled"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should reset current value if initValue prop changes (2 -> 4) 1`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    name="input"
+    type="hidden"
+    value={2}
+  />
+  <div
+    className="ui-stepper__content"
+  >
+    <button
+      className="ui-stepper__button ui-stepper__button-decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper__value"
+    >
+      2
+    </div>
+    <div
+      className="ui-stepper__shadow"
+    />
+    <button
+      className="ui-stepper__button ui-stepper__button-increase"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`Stepper #render() should reset current value if initValue prop changes (2 -> 4) 2`] = `
+<div
+  className="ui-stepper"
+>
+  <input
+    name="input"
+    type="hidden"
+    value={4}
+  />
+  <div
+    className="ui-stepper__content"
+  >
+    <button
+      className="ui-stepper__button ui-stepper__button-decrease"
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="ui-stepper__value"
+    >
+      4
+    </div>
+    <div
+      className="ui-stepper__shadow"
+    />
+    <button
+      className="ui-stepper__button ui-stepper__button-increase"
       onClick={[Function]}
       type="button"
     />

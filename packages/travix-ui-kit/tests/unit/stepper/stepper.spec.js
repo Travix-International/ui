@@ -28,6 +28,7 @@ describe('Stepper', () => {
       );
 
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__button-decrease').hasClass('ui-stepper__button-disabled')).toBe(true);
     });
 
     it('should render with disabled increment button', () => {
@@ -39,9 +40,10 @@ describe('Stepper', () => {
       );
 
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__button-increase').hasClass('ui-stepper__button-disabled')).toBe(true);
     });
 
-    it('should change state after props update', () => {
+    it('should reset current value if initValue prop changes (2 -> 4)', () => {
       const wrapper = shallow(
         <Stepper
           initValue={2}
@@ -49,11 +51,13 @@ describe('Stepper', () => {
       );
 
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('2');
       wrapper.setProps({ initValue: 4 });
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('4');
     });
 
-    it('should keep state after props update', () => {
+    it('should not reset current value if props change but initValue stays the same (2 -> 2)', () => {
       const wrapper = shallow(
         <Stepper
           initValue={2}
@@ -63,6 +67,7 @@ describe('Stepper', () => {
       expect(wrapper).toMatchSnapshot();
       wrapper.setProps({ initValue: 2 });
       expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find('.ui-stepper__value').text()).toEqual('2');
     });
 
     it('should decrement value (2 -> 1)', () => {
