@@ -50,10 +50,8 @@ describe('Stepper', () => {
         />
       );
 
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('2');
       wrapper.setProps({ initValue: 4 });
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('4');
     });
 
@@ -64,9 +62,7 @@ describe('Stepper', () => {
         />
       );
 
-      expect(wrapper).toMatchSnapshot();
       wrapper.setProps({ initValue: 2 });
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('2');
     });
 
@@ -80,7 +76,6 @@ describe('Stepper', () => {
       );
 
       wrapper.find('.ui-stepper__button-decrease').simulate('click', event);
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('1');
     });
 
@@ -94,7 +89,6 @@ describe('Stepper', () => {
       );
 
       wrapper.find('.ui-stepper__button-decrease').simulate('click', event);
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('1');
     });
 
@@ -108,7 +102,6 @@ describe('Stepper', () => {
       );
 
       wrapper.find('.ui-stepper__button-increase').simulate('click', event);
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('3');
     });
 
@@ -122,7 +115,6 @@ describe('Stepper', () => {
       );
 
       wrapper.find('.ui-stepper__button-increase').simulate('click', event);
-      expect(wrapper).toMatchSnapshot();
       expect(wrapper.find('.ui-stepper__value').text()).toEqual('5');
     });
 
