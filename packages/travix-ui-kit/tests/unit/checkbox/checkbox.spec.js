@@ -61,5 +61,13 @@ describe('Checkbox', () => {
 
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should render checkbox with dataAttrs', () => {
+      const wrapper = shallow(
+        <Checkbox className="test-class" dataAttrs={{ 'gtm-id': 'test-checkbox' }} onChange={onChange} />
+      );
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });

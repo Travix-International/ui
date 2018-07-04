@@ -27,11 +27,11 @@ function Checkbox(props) {
 
   return (
     <label
-      {...dataAttributes}
       className={classNames}
       htmlFor={name}
     >
       <input
+        {...dataAttributes}
         aria-checked={checked}
         checked={checked}
         disabled={disabled}
