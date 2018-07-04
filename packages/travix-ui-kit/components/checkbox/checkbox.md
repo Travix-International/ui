@@ -11,7 +11,11 @@ Basic checkbox:
           onChange={() => {setState({value: !state.value})}}>
           can toggle
         </Checkbox><br/>
-        <Checkbox checked dataAttrs={{'gtm-id': 'test-checkbox'}} name="checkboxTest5" onChange={() => {alert('checked')}}>
+        <Checkbox
+          checked
+          dataAttrs={{'gtm-id': 'test-checkbox'}}
+          name="checkboxTest5"
+          onChange={() => {alert('checked')}}>
           with data attrs
         </Checkbox><br/>
       </div>
