@@ -8,9 +8,11 @@ Basic checkbox:
         <Checkbox
           name="checkboxTest4"
           checked={state.value}
-          onChange={() => {setState({value: !state.value})}}
-          inputAttr={{role: "radio"}}>
+          onChange={() => {setState({value: !state.value})}}>
           can toggle
-        </Checkbox>
+        </Checkbox><br/>
+        <Checkbox checked dataAttrs={{'gtm-id': 'test-checkbox'}} name="checkboxTest5" onChange={() => {alert('checked')}}>
+          with data attrs
+        </Checkbox><br/>
       </div>
     </div>
