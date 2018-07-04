@@ -61,5 +61,25 @@ describe('Checkbox', () => {
 
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should render checkbox with dataAttrs for the label', () => {
+      const wrapper = shallow(
+        <Checkbox className="test-class" dataAttrs={{ 'my-attr': 'some-attr' }} onChange={onChange} />
+      );
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render checkbox with dataAttrs for the input', () => {
+      const wrapper = shallow(
+        <Checkbox
+          className="test-class"
+          inputDataAttrs={{ 'my-attr-for-input': 'some-attr-for-input' }}
+          onChange={onChange}
+        />
+      );
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });
