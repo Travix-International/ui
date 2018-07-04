@@ -85,7 +85,6 @@ Checkbox.propTypes = {
     PropTypes.object,
   ]),
 
-
   /**
    * Current activity state of the checkbox.
    */
