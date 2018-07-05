@@ -17,10 +17,13 @@ function Checkbox(props) {
     className,
     dataAttrs = {},
     disabled,
+    inputDataAttrs = {},
     name,
     onChange,
   } = props;
+
   const dataAttributes = getDataAttributes(dataAttrs);
+  const inputDataAttributes = getDataAttributes(inputDataAttrs);
   const mods = props.mods ? props.mods.slice() : [];
   disabled && mods.push('is-disabled');
   const classNames = classnames(getClassNamesWithMods('ui-checkbox', mods), className);
@@ -32,6 +35,7 @@ function Checkbox(props) {
       htmlFor={name}
     >
       <input
+        {...inputDataAttributes}
         aria-checked={checked}
         checked={checked}
         disabled={disabled}
@@ -74,7 +78,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
 
   /**
-   * Data attribute. You can use it to set up any custom data-* attribute.
+   * Data attribute. You can use it to set up any custom data-* attribute for label.
    */
   dataAttrs: PropTypes.oneOfType([
     PropTypes.bool,
@@ -85,6 +89,14 @@ Checkbox.propTypes = {
    * Current activity state of the checkbox.
    */
   disabled: PropTypes.bool,
+
+  /**
+   * Data attribute. You can use it to set up any custom data-* attribute for input.
+   */
+  inputDataAttrs: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.object,
+  ]),
 
   /**
    * You can provide set of custom modifications.
