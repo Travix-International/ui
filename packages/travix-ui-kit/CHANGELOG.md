@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.12.0](https://github.com/Travix-International/ui/tree/v0.12.0) (2018-07-06)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.11.0...v0.12.0)
+
+**Implemented enhancements:**
+
+- Checkbox, RadioButton: Extend data attrs to pass in root [\#26](https://github.com/Travix-International/ui/pull/26) ([RumataDeEstor](https://github.com/RumataDeEstor))
+
+**Fixed bugs:**
+
+- Dropdown: fix styles [\#27](https://github.com/Travix-International/ui/pull/27) ([RumataDeEstor](https://github.com/RumataDeEstor))
+
 ## [v0.11.0](https://github.com/Travix-International/ui/tree/v0.11.0) (2018-06-28)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.10.1...v0.11.0)
 
