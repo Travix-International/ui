@@ -11,6 +11,12 @@ $select-arrow-color: var(--tx-dropdown-arrow-color);
 .ui-dropdown {
   font-family: var(--tx-generic-font-primary-font-family), var(--tx-generic-font-primary-generic-family);
 
+  &.Select.is-open {
+    .Select-control {
+      border-color: var(--tx-dropdown-select-control-border-color);
+    }
+  }
+
   &:not(.is-disabled) {
     .Select-control {
       border-color: var(--tx-dropdown-input-border-color);
