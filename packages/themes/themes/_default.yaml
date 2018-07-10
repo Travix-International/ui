@@ -63,7 +63,7 @@ generic:
 
     text-darker: &text-darker                 "#2B4352"
     text-dark: &text-dark                     "#29425B"
-    text: &text                               "#597385"
+    text: &text                               "#00B250"
     text-light: &text-light                   "#9DB1C0"
     text-lighter: &text-lighter               "#998"
     text-lighter-rgb: &text-lighter-rgb       ${rgb(color["text-lighter"])}
