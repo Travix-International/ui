@@ -29,6 +29,10 @@ generic:
     text-light: &text-light                       "#9DB1C0"
 
     searchbox-tabs-border: &searchbox-tabs-border "#51216B"
+  image:
+    baggage-info:
+      suitcase: url(//s1.travix.com/budgetair/global/assets/images/icons/BUA_suitcase.png)
+      suitcase--2x: url(//s1.travix.com/budgetair/global/assets/images/icons/BUA_suitcase_@2x.png)
 spinner:
   color:
     light: "var(--tx-generic-color-blank)"
