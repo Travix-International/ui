@@ -40,7 +40,7 @@ generic:
 
     active: &active                           "#00B0FF"
     positive-dark: &positive-dark             "#3CB761"
-    positive: &positive                       "#17D478"
+    positive: &positive                       "#00B250"
     positive-light: &positive-light           "#9EDB97"
     negative: &negative                       "#D2373F"
     negative-light: &negative-light           "#F4CDCF"

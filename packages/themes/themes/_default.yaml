@@ -49,7 +49,7 @@ generic:
     secondary-lighter: &secondary-lighter     "#F7FBFE"
 
     active: &active                          "#00B0FF"
-    positive: &positive                      "#17D478"
+    positive: &positive                      "#00B250"
     positive-lighter: &positive-lighter      "#e5f7ed"
     positive-rgb: &positive-rgb              "23,212,120"
     negative: &negative                      "#D2373F"
@@ -63,7 +63,7 @@ generic:
 
     text-darker: &text-darker                 "#2B4352"
     text-dark: &text-dark                     "#29425B"
-    text: &text                               "#597385"
+    text: &text                               "#00B250"
     text-light: &text-light                   "#9DB1C0"
     text-lighter: &text-lighter               "#998"
     text-lighter-rgb: &text-lighter-rgb       ${rgb(color["text-lighter"])}
