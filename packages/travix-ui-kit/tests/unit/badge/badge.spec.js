@@ -136,4 +136,13 @@ describe('Badge', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render badge with main container class name', () => {
+    const wrapper = shallow(
+      <Badge containerClassName="my-container-class" title="Badge title">
+        <p>Children element</p>
+      </Badge>
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });
