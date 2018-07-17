@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.13.0](https://github.com/Travix-International/ui/tree/v0.13.0) (2018-07-17)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.12.0...v0.13.0)
+
+**Merged pull requests:**
+
+- Add class name prop for main container in Badge [\#31](https://github.com/Travix-International/ui/pull/31) ([yurist38](https://github.com/yurist38))
+- CFE-19508 last remarks for flight card 2 [\#29](https://github.com/Travix-International/ui/pull/29) ([HarrisSidiropoulos](https://github.com/HarrisSidiropoulos))
+
 ## [v0.12.0](https://github.com/Travix-International/ui/tree/v0.12.0) (2018-07-06)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.11.0...v0.12.0)
 
