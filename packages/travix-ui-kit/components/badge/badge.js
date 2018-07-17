@@ -15,6 +15,7 @@ const Badge = (props) => {
     border,
     children,
     className,
+    containerClassName,
     dataAttrs = {},
     mods = [],
     position,
@@ -64,7 +65,7 @@ const Badge = (props) => {
   }
 
   return (
-    <div className={getClassNamesWithMods('ui-badge', { visible }, mods)}>
+    <div className={classnames(containerClassName, getClassNamesWithMods('ui-badge', { visible }, mods))}>
       {children}
       {badge}
     </div>
@@ -93,6 +94,10 @@ Badge.propTypes = {
    * Specify a CSS class
    */
   className: PropTypes.string,
+  /**
+   * Class name for main container
+   */
+  containerClassName: PropTypes.string,
   /**
    * Data attribute. You can use it to set up any custom data-* attribute.
    */
