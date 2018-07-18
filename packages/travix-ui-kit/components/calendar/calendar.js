@@ -137,8 +137,9 @@ export default class Calendar extends Component {
     const { onNavNextMonth, onNavPreviousMonth } = this.props;
 
     this.setState(({ renderDate }) => {
-      renderDate.setMonth(renderDate.getMonth() + (direction === CALENDAR_MOVE_TO_PREVIOUS ? -1 : 1));
-      return { renderDate };
+      const newDate = new Date(renderDate);
+      newDate.setMonth(renderDate.getMonth() + (direction === CALENDAR_MOVE_TO_PREVIOUS ? -1 : 1));
+      return { renderDate: newDate };
     }, () => {
       if ((direction === CALENDAR_MOVE_TO_PREVIOUS) && onNavPreviousMonth) {
         onNavPreviousMonth(this.state.renderDate);
