@@ -429,18 +429,20 @@ describe('Calendar (normal mode)', () => {
         <Calendar initialDates={['2017-01-01']} />
       );
 
-      const daysView = wrapper.find('Days').at(1);
       const nextBtn = wrapper.find('.ui-calendar-days__next-month');
       const previousBtn = wrapper.find('.ui-calendar-days__previous-month');
 
       previousBtn.simulate('click');
-      expect(daysView.props().renderDate.getMonth()).toEqual(11);
+      wrapper.update();
+      expect(wrapper.find('Days').at(1).props().renderDate.getMonth()).toEqual(11);
 
       nextBtn.simulate('click');
-      expect(daysView.props().renderDate.getMonth()).toEqual(0);
+      wrapper.update();
+      expect(wrapper.find('Days').at(1).props().renderDate.getMonth()).toEqual(0);
 
       nextBtn.simulate('click');
-      expect(daysView.props().renderDate.getMonth()).toEqual(1);
+      wrapper.update();
+      expect(wrapper.find('Days').at(1).props().renderDate.getMonth()).toEqual(1);
     });
   });
 });
