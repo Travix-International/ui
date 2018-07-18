@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.13.1](https://github.com/Travix-International/ui/tree/v0.13.1) (2018-07-18)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.13.0...v0.13.1)
+
+**Fixed bugs:**
+
+- \[travix-ui-kit\] Fix moveToMonth method in Calendar [\#32](https://github.com/Travix-International/ui/pull/32) ([avg206](https://github.com/avg206))
+
 ## [v0.13.0](https://github.com/Travix-International/ui/tree/v0.13.0) (2018-07-17)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.12.0...v0.13.0)
 
