@@ -83,5 +83,20 @@ describe('Radio Button', () => {
 
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should render radio button with dataAttrs for label', () => {
+      const wrapper = shallow(
+        <RadioButton
+          className="test-class"
+          id="radio1"
+          labelDataAttrs={{ 'my-attr-for-label': 'some-attr-for-label' }}
+          onChange={onChange}
+        >
+          Radio 1
+        </RadioButton>
+      );
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });

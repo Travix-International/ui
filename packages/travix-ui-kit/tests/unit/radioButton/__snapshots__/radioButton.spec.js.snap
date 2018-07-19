@@ -121,6 +121,31 @@ exports[`Radio Button #render() should render radio button with dataAttrs for in
 </div>
 `;
 
+exports[`Radio Button #render() should render radio button with dataAttrs for label 1`] = `
+<div
+  className="ui-radio test-class"
+>
+  <input
+    checked={false}
+    className="ui-radio__input-radio"
+    disabled={false}
+    id="radio1"
+    onChange={[Function]}
+    readOnly={false}
+    type="radio"
+  />
+  <label
+    aria-checked={false}
+    className="ui-radio__label"
+    data-my-attr-for-label="some-attr-for-label"
+    htmlFor="radio1"
+    role="radio"
+  >
+    Radio 1
+  </label>
+</div>
+`;
+
 exports[`Radio Button #render() should render radio button with dataAttrs for root element 1`] = `
 <div
   className="ui-radio test-class"
