@@ -35,7 +35,7 @@ function RadioButton(props) {
   const classNames = classnames(getClassNamesWithMods('ui-radio', mods), className);
 
   return (
-    <div className={classNames} {...dataAttributes}>
+    <div {...dataAttributes} className={classNames}>
       <input
         {...inputDataAttributes}
         checked={checked}
@@ -47,7 +47,13 @@ function RadioButton(props) {
         readOnly={!onChange}
         type="radio"
       />
-      <label aria-checked={checked} className="ui-radio__label" htmlFor={id} role="radio" {...labelDataAttributes}>
+      <label
+        {...labelDataAttributes}
+        aria-checked={checked}
+        className="ui-radio__label"
+        htmlFor={id}
+        role="radio"
+      >
         {children}
       </label>
     </div>
