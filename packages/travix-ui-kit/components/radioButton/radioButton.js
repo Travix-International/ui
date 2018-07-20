@@ -19,11 +19,13 @@ function RadioButton(props) {
     disabled,
     id,
     inputDataAttrs,
+    labelDataAttrs,
     name,
     onChange,
   } = props;
   const dataAttributes = getDataAttributes(dataAttrs);
   const inputDataAttributes = getDataAttributes(inputDataAttrs);
+  const labelDataAttributes = getDataAttributes(labelDataAttrs);
   const mods = props.mods ? props.mods.slice() : [];
 
   if (disabled) {
@@ -33,7 +35,7 @@ function RadioButton(props) {
   const classNames = classnames(getClassNamesWithMods('ui-radio', mods), className);
 
   return (
-    <div className={classNames} {...dataAttributes}>
+    <div {...dataAttributes} className={classNames}>
       <input
         {...inputDataAttributes}
         checked={checked}
@@ -45,7 +47,13 @@ function RadioButton(props) {
         readOnly={!onChange}
         type="radio"
       />
-      <label aria-checked={checked} className="ui-radio__label" htmlFor={id} role="radio">
+      <label
+        {...labelDataAttributes}
+        aria-checked={checked}
+        className="ui-radio__label"
+        htmlFor={id}
+        role="radio"
+      >
         {children}
       </label>
     </div>
@@ -99,6 +107,14 @@ RadioButton.propTypes = {
    * Data attribute. You can use it to set up any custom data-* attribute for input.
    */
   inputDataAttrs: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.object,
+  ]),
+
+  /**
+   * Data attribute. You can use it to set up any custom data-* attribute for label.
+   */
+  labelDataAttrs: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.object,
   ]),
