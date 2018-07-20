@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.14.0](https://github.com/Travix-International/ui/tree/v0.14.0) (2018-07-20)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.13.1...v0.14.0)
+
+**Implemented enhancements:**
+
+- Added data attrs for label [\#33](https://github.com/Travix-International/ui/pull/33) ([alpi-wiz](https://github.com/alpi-wiz))
+
 ## [v0.13.1](https://github.com/Travix-International/ui/tree/v0.13.1) (2018-07-18)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.13.0...v0.13.1)
 
