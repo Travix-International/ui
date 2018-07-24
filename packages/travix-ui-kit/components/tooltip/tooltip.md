@@ -32,7 +32,7 @@ Also check OverlayTrigger specification.
             <RadioButton
               checked={pos === state.position}
               children={pos}
-              id={pos}
+              id={`tooltip-${pos}`}
               key={pos}
               name="pos"
               onChange={onChange = e => setState({ position: pos })}
