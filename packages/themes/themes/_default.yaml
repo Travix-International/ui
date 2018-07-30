@@ -85,6 +85,12 @@ generic:
   size:
     border-radius: &border-radius             "8px"
     border-radius-small: &border-radius-small "6px"
+  image:
+    baggage-info:
+      suitcase: url(//s1.travix.com/cheaptickets/global/assets/images/icons/CT_suitcase.png)
+      suitcase--2x: url(//s1.travix.com/cheaptickets/global/assets/images/icons/CT_suitcase_@2x.png)
+  animation:
+    ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95)
 ui-button:
   default:
     normal:

@@ -40,6 +40,10 @@ generic:
     searchbox-tabs-border: &searchbox-tabs-border "#51216B"
   separator:
     color: &separator-color "var(--tx-generic-color-secondary-darker)"
+  image:
+    baggage-info:
+      suitcase: url(//s1.travix.com/budgetair/global/assets/images/icons/BUA_suitcase.png)
+      suitcase--2x: url(//s1.travix.com/budgetair/global/assets/images/icons/BUA_suitcase_@2x.png)
 badge:
   before:
     border:

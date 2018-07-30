@@ -44,6 +44,10 @@ generic:
     searchbox-tabs-border: &searchbox-tabs-border "#212C7C"
   separator:
     color: &separator-color "var(--tx-generic-color-secondary-dark)"
+  image:
+    baggage-info:
+      suitcase: url(//s1.travix.com/vliegwinkel/global/assets/images/icons/VW_suitcase.png)
+      suitcase--2x: url(//s1.travix.com/vliegwinkel/global/assets/images/icons/VW_suitcase_@2x.png)
 ui-button:
   default:
     normal:
