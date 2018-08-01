@@ -137,24 +137,48 @@
 
 .ui-tooltip__close-button-section {
   position: absolute;
-  top: 4px;
+  top: 8px;
   right: 7px;
+}
+
+.ui-tooltip__close-button {
+
 }
 
 .ui-tooltip__close-button {
   background: transparent;
   border: 0;
   cursor: pointer;
+  height: var(--tx-tooltip-close-button-size);
   outline: 0;
   padding: 0;
-}
+  width: var(--tx-tooltip-close-button-size);
 
-.ui-tooltip__close-button::before {
-  color: var(--tx-tooltip-close-button-color);
-  content: '❌';
-  font-size: var(--tx-tooltip-font-size);;
-}
+  &::before,
+  &::after {
+    background: var(--tx-tooltip-close-button-color);
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: var(--tx-tooltip-close-button-size);
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: var(--tx-tooltip-close-button-weight);
+  }
 
-.ui-tooltip__close-button:hover::before {
-  color: var(--tx-tooltip-close-button-hover-color);
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background: var(--tx-tooltip-close-button-hover-color);
+    }
+  }
 }
