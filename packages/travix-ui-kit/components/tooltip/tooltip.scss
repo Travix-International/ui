@@ -137,8 +137,8 @@
 
 .ui-tooltip__close-button-section {
   position: absolute;
-  top: 5px;
-  right: 8px;
+  top: 4px;
+  right: 7px;
 }
 
 .ui-tooltip__close-button {
@@ -151,7 +151,7 @@
 
 .ui-tooltip__close-button::before {
   color: var(--tx-tooltip-close-button-color);
-  content: '✖';
+  content: '❌';
   font-size: var(--tx-tooltip-font-size);;
 }
 
