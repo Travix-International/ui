@@ -96,15 +96,15 @@ SelectionBlock.propTypes = {
   /**
    * The logo label.
    */
-  logoLabel: PropTypes.string,
+  logoLabel: PropTypes.node,
   /**
    * The selection block subtitle.
    */
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   /**
    * The selection block title.
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
   /**
    * The selection block type.
    */
