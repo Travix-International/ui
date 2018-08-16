@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.15.0](https://github.com/Travix-International/ui/tree/v0.15.0) (2018-08-16)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.14.0...v0.15.0)
+
+**Merged pull requests:**
+
+- Return 597385 color for text [\#36](https://github.com/Travix-International/ui/pull/36) ([DzmitryKukharuk](https://github.com/DzmitryKukharuk))
+- Change proptypes for title, subtitle and logoLabel props in selectionblock [\#35](https://github.com/Travix-International/ui/pull/35) ([JutIgor](https://github.com/JutIgor))
+- Change tooltip styles [\#34](https://github.com/Travix-International/ui/pull/34) ([svetlanamorozko](https://github.com/svetlanamorozko))
+- added images for BaggageInfo component [\#30](https://github.com/Travix-International/ui/pull/30) ([maximuk](https://github.com/maximuk))
+
 ## [v0.14.0](https://github.com/Travix-International/ui/tree/v0.14.0) (2018-07-20)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.13.1...v0.14.0)
 
@@ -27,11 +37,11 @@
 
 **Implemented enhancements:**
 
-- Checkbox, RadioButton: Extend data attrs to pass in root [\#26](https://github.com/Travix-International/ui/pull/26) ([RumataDeEstor](https://github.com/RumataDeEstor))
+- Checkbox, RadioButton: Extend data attrs to pass in root [\#26](https://github.com/Travix-International/ui/pull/26) ([alpi-wiz](https://github.com/alpi-wiz))
 
 **Fixed bugs:**
 
-- Dropdown: fix styles [\#27](https://github.com/Travix-International/ui/pull/27) ([RumataDeEstor](https://github.com/RumataDeEstor))
+- Dropdown: fix styles [\#27](https://github.com/Travix-International/ui/pull/27) ([alpi-wiz](https://github.com/alpi-wiz))
 
 ## [v0.11.0](https://github.com/Travix-International/ui/tree/v0.11.0) (2018-06-28)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.10.1...v0.11.0)
@@ -47,14 +57,13 @@
 
 **Fixed bugs:**
 
-- Use specific keyframes names for sliding panel [\#20](https://github.com/Travix-International/ui/pull/20) ([RumataDeEstor](https://github.com/RumataDeEstor))
+- Use specific keyframes names for sliding panel [\#20](https://github.com/Travix-International/ui/pull/20) ([alpi-wiz](https://github.com/alpi-wiz))
 
 **Merged pull requests:**
 
 - \[travix-ui-kit\] Update style guide URL in README [\#19](https://github.com/Travix-International/ui/pull/19) ([rbardini](https://github.com/rbardini))
 
 ## [v0.10.0](https://github.com/Travix-International/ui/tree/v0.10.0) (2018-05-14)
-
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.9.6...v0.10.0)
 
 **Fixed bugs:**
