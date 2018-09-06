@@ -29,6 +29,10 @@ const MessageBox = (props) => {
     </div>
   );
 
+  if (!(header || children)) {
+    return null;
+  }
+
   return (
     <div {...getDataAttributes(dataAttrs)} className={classNames}>
       {logo}

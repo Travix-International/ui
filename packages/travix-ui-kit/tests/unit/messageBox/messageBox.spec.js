@@ -4,6 +4,16 @@ import MessageBox from '../../../components/messageBox/messageBox';
 
 describe('MessageBox', () => {
   describe('#render()', () => {
+    it('should render null if title or body is not provided', () => {
+      const text = null;
+      const title = null;
+      const wrapper = shallow(
+        <MessageBox title={title}>{text}</MessageBox>
+      );
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should render info message box with test modifications', () => {
       const mods = ['test'];
       const dataAttr = {

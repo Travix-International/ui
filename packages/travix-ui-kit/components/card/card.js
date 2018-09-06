@@ -51,7 +51,7 @@ Card.propTypes = {
   /**
    * Determine whether a card is checked or not
    */
-  checked: PropTypes.bool.isRequired,
+  checked: PropTypes.bool,
   /**
    * Specify a CSS class
    */
@@ -94,12 +94,13 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
+  checked: false,
   className: null,
   dataAttrs: null,
   hovering: false,
   onClick: null,
+  showIcon: false,
   tag: 'div',
   transparent: false,
-  showIcon: false,
 };
 export default Card;
