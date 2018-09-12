@@ -57,7 +57,7 @@ class Global extends Component {
     this.toggleGlobalNoscroll(false);
 
     const body = global.window.document.body;
-    body && removeChild(this.target);
+    body && body.removeChild(this.target);
   }
 
   render() {
