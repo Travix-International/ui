@@ -49,7 +49,7 @@ class Global extends Component {
     }
   }
 
-  handleClick = (e) => { 
+  handleClick = (e) => {
     e.stopPropagation();
   }
 
