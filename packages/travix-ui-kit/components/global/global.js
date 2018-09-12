@@ -49,13 +49,15 @@ class Global extends Component {
     }
   }
 
-  handleClick = (e) => {
+  handleClick = (e) => { 
     e.stopPropagation();
   }
 
   componentWillUnmount() {
     this.toggleGlobalNoscroll(false);
-    global.window.document.body.removeChild(this.target);
+
+    const body = global.window.document.body;
+    body && removeChild(this.target);
   }
 
   render() {
