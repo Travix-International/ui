@@ -39,6 +39,24 @@ exports[`MessageBox #render() should render info message box with test modificat
 </div>
 `;
 
+exports[`MessageBox #render() should render message box with provided className 1`] = `
+<div
+  className="ui-messageBox ui-messageBox_info test-cls"
+>
+  <div
+    className="ui-messageBox__content"
+  >
+    <div
+      className="ui-messageBox__content-body"
+    >
+      Message box
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MessageBox #render() should render null if title or body is not provided 1`] = `""`;
+
 exports[`MessageBox #render() should render success message box with title 1`] = `
 <div
   className="ui-messageBox ui-messageBox_success"
@@ -55,22 +73,6 @@ exports[`MessageBox #render() should render success message box with title 1`] =
       className="ui-messageBox__content-body"
     >
       Success message box
-    </div>
-  </div>
-</div>
-`;
-
-exports[`MessageBox #render() should render message box with provided className 1`] = `
-<div
-  className="ui-messageBox ui-messageBox_info test-cls"
->
-  <div
-    className="ui-messageBox__content"
-  >
-    <div
-      className="ui-messageBox__content-body"
-    >
-      Message box
     </div>
   </div>
 </div>
