@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.15.1](https://github.com/Travix-International/ui/tree/v0.15.1) (2018-09-13)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.0...v0.15.1)
+
+**Fixed bugs:**
+
+- fix remove child for global [\#38](https://github.com/Travix-International/ui/pull/38) ([AlleeX](https://github.com/AlleeX))
+- Hide MessageBox if title and body is not provided [\#37](https://github.com/Travix-International/ui/pull/37) ([EduardTrutsyk](https://github.com/EduardTrutsyk))
+
 ## [v0.15.0](https://github.com/Travix-International/ui/tree/v0.15.0) (2018-08-16)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.14.0...v0.15.0)
 
