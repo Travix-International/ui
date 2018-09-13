@@ -55,7 +55,9 @@ class Global extends Component {
 
   componentWillUnmount() {
     this.toggleGlobalNoscroll(false);
-    global.window.document.body.removeChild(this.target);
+
+    const body = global.window.document.body;
+    body && body.removeChild(this.target);
   }
 
   render() {
