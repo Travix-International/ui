@@ -2,7 +2,7 @@
 
 exports[`SelectionBlock #render() should render base selection block 1`] = `
 <div
-  className="ui-selection-block ui-selection-block_align-center"
+  className="ui-selection-block ui-selection-block_horizontal ui-selection-block_align-center"
 >
   <div
     className="ui-selection-block__section"
@@ -38,7 +38,7 @@ exports[`SelectionBlock #render() should render base selection block 1`] = `
 
 exports[`SelectionBlock #render() should render selection block with logo and icon 1`] = `
 <div
-  className="ui-selection-block ui-selection-block_align-center"
+  className="ui-selection-block ui-selection-block_horizontal ui-selection-block_align-center"
 >
   <div
     className="ui-selection-block__section"
@@ -101,7 +101,7 @@ exports[`SelectionBlock #render() should render selection block with logo and ic
 
 exports[`SelectionBlock #render() should render selection block with logoLabel as a node 1`] = `
 <div
-  className="ui-selection-block ui-selection-block_align-center"
+  className="ui-selection-block ui-selection-block_horizontal ui-selection-block_align-center"
 >
   <div
     className="ui-selection-block__section"
