@@ -1,13 +1,21 @@
 SelectionBlock:
 
     initialState = {
+      align: 'center',
       iconColor: '#ccc',
       selectedCard: null,
+      subtitle: "Subtitle Example",
+      title: 'Title Example',
       type: 'horizontal',
-      align: 'center',
     };
 
     <div>
+      <style dangerouslySetInnerHTML={{__html: `
+        .ui-input.custom-input {
+          box-sizing: border-box;
+          width: 200px
+        }
+      `}} />
       <div style={{ paddingBottom: '20px', display: 'flex' }}>
         <div>
           <RadioButton
@@ -56,14 +64,22 @@ SelectionBlock:
             align: end
           </RadioButton>
         </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ paddingRight: '10px' }}>Title:</span>
+            <Input className="custom-input" value={state.title} onChange={(e) => setState({ title: e.target.value })} />
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ padding: '0 10px' }}>SubTitle:</span>
+            <Input className="custom-input" value={state.subtitle} onChange={(e) => setState({ subtitle: e.target.value })} />
+        </div>
       </div>
       <SelectionBlock
         align={state.align}
         icon=<span style={{ fontSize: '60px', color: state.iconColor }}>{!state.selectedCard ? '☻' : '☺'}</span>
         logo=<img style={{ height: '30px' }} src="https://www.travix.com/wp-content/uploads/2015/09/travix-logo_blue.png" />
         logoLabel={<span>Powered by</span>}
-        subtitle="Subtitle Example"
-        title="Title Example"
+        subtitle={state.subtitle}
+        title={state.title}
         type={state.type}
       >
         <div style={{ display: state.type === 'horizontal' ? 'block' : 'flex' }} >

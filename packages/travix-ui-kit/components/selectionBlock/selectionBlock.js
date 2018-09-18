@@ -34,7 +34,7 @@ const SelectionBlock = (props) => {
   );
 
   const classes = classnames(className, 'ui-selection-block', {
-    'ui-selection-block_vertical': type === 'vertical',
+    [`ui-selection-block_${type}`]: true,
     [`ui-selection-block_align-${align}`]: true,
   });
 
