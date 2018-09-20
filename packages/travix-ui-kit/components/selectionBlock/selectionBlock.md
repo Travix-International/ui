@@ -4,7 +4,7 @@ SelectionBlock:
       align: 'center',
       iconColor: '#ccc',
       selectedCard: null,
-      subtitle: "Subtitle Example",
+      subtitle: 'Subtitle Example',
       title: 'Title Example',
       type: 'horizontal',
     };
