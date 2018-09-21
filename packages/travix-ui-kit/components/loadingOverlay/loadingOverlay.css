@@ -1,8 +1,6 @@
 @value messageMargin: 8px;
 
 .ui-loading-overlay {
-  border-radius: 8px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -58,6 +56,7 @@
 .ui-loading-overlay_loading .ui-loading-overlay__content:before {
   background: var(--tx-generic-color-secondary-light);
   bottom: 0;
+  border-radius: 8px;
   content: "";
   left: 0;
   position: absolute;
