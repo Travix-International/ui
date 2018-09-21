@@ -2,7 +2,6 @@
 
 .ui-loading-overlay {
   border-radius: 8px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -11,6 +10,7 @@
   display: flex;
   height: 100%;
   justify-content: center;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   z-index: 100;
