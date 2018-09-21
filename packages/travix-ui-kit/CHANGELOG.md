@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.15.2](https://github.com/Travix-International/ui/tree/v0.15.2) (2018-09-21)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.1...v0.15.2)
+
+**Fixed bugs:**
+
+- \[CFE-20096\] Fix \<LoadingOverlay /\> overflow prop. [\#40](https://github.com/Travix-International/ui/pull/40) ([enrique-ramirez](https://github.com/enrique-ramirez))
+- Fix long title in selectionblock [\#39](https://github.com/Travix-International/ui/pull/39) ([JutIgor](https://github.com/JutIgor))
+
 ## [v0.15.1](https://github.com/Travix-International/ui/tree/v0.15.1) (2018-09-13)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.0...v0.15.1)
 
