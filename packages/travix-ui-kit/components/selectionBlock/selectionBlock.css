@@ -30,6 +30,7 @@
   font-weight: var(--tx-generic-font-primary-weight-medium);
   line-height: 40px;
   margin: 0;
+  max-width: 100%;
 }
 
 .ui-selection-block__subtitle {
@@ -91,6 +92,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.ui-selection-block_horizontal
+.ui-selection-block__titles {
+  width: 100%;
 }
 
 .ui-selection-block_vertical
