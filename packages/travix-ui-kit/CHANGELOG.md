@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.15.3](https://github.com/Travix-International/ui/tree/v0.15.3) (2018-09-25)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.2...v0.15.3)
+
+**Fixed bugs:**
+
+- fix calendar nav-buttons disabled behaviour, allow to use nodes as di… [\#41](https://github.com/Travix-International/ui/pull/41) ([IvanPresmytsky](https://github.com/IvanPresmytsky))
+
 ## [v0.15.2](https://github.com/Travix-International/ui/tree/v0.15.2) (2018-09-21)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.1...v0.15.2)
 
