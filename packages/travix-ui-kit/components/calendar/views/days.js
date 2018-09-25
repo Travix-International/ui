@@ -209,8 +209,13 @@ class Days extends Component {
     const nextMonth = renderDate.getMonth() === 11 ? 0 : (renderDate.getMonth() + 1);
     const previousMonth = renderDate.getMonth() === 0 ? 11 : (renderDate.getMonth() - 1);
 
-    const isPreviousMonthDisabled = minDate && (minDate.getMonth() >= renderDate.getMonth());
-    const isNextMonthDisabled = maxDate && (maxDate.getMonth() <= renderDate.getMonth());
+    const isPreviousMonthDisabled = minDate
+      && renderDate.getFullYear() === minDate.getFullYear()
+      && minDate.getMonth() >= renderDate.getMonth();
+
+    const isNextMonthDisabled = maxDate
+      && renderDate.getFullYear() === maxDate.getFullYear()
+      && renderDate.getMonth() >= maxDate.getMonth();
 
     return (
       <nav className="ui-calendar-days__nav">

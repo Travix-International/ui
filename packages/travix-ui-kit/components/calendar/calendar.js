@@ -321,11 +321,11 @@ Calendar.propTypes = {
     days: PropTypes.shape({
       next: PropTypes.shape({
         ariaLabel: PropTypes.string,
-        displayValue: PropTypes.string,
+        displayValue: PropTypes.node,
       }),
       previous: PropTypes.shape({
         ariaLabel: PropTypes.string,
-        displayValue: PropTypes.string,
+        displayValue: PropTypes.node,
       }),
     }),
   }),

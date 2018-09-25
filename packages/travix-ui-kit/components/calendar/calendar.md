@@ -30,14 +30,14 @@
           ],
         }}
         minDate="2017-04-01"
-        maxDate="2017-06-01"
+        maxDate="2018-06-01"
         navButtons={{
           days: {
             next: {
-              displayValue: '›'
+              displayValue: <span>›</span>
             },
             previous: {
-              displayValue: '‹'
+              displayValue: <span>‹</span>
             },
           }
         }}
@@ -56,7 +56,7 @@
         initialDates={["2017-05-05", "2017-05-15"]}
         isDaySelectableFn={dt => ((dt.getDay() > 0) && (dt.getDay() < 6))}
         minDate="2017-04-01"
-        maxDate="2017-06-01"
+        maxDate="2018-06-01"
         navButtons={{
           days: {
             next: {
