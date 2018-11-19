@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.15.6](https://github.com/Travix-International/ui/tree/HEAD)
+
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.3...HEAD)
+
+**Fixed bugs:**
+
+- Fix colors vars for stepper and calendar [\#42](https://github.com/Travix-International/ui/pull/42) ([avg206](https://github.com/avg206))
+
 ## [v0.15.3](https://github.com/Travix-International/ui/tree/v0.15.3) (2018-09-25)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.2...v0.15.3)
 
