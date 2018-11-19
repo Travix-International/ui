@@ -1,6 +1,6 @@
 # Change Log
 
-## [v0.15.6](https://github.com/Travix-International/ui/tree/HEAD)
+## [v0.15.7](https://github.com/Travix-International/ui/tree/HEAD)
 
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.3...HEAD)
 
