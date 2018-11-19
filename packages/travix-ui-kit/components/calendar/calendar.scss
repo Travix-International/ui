@@ -42,8 +42,8 @@
 .ui-calendar-days__previous-month,
 .ui-calendar-days__next-month {
   align-self: center;
-  background: linear-gradient(to bottom,var(--tx-calendar-nav-button-background-color-start) 0,var(--tx-calendar-nav-button-background-color-end) 100%);
-  background: var(--tx-calendar-nav-button-background-color-end);
+  background: linear-gradient(to bottom, var(--tx-ui-button-default-normal-bg-top) 0, var(--tx-ui-button-default-normal-bg-bottom) 100%); /* W3C */
+  background: var(--tx-ui-button-default-normal-bg-top); /* Old browsers */
   border-radius: var(--tx-calendar-nav-button-border-radius);
   border: none;
   box-shadow: 0 2px var(--tx-calendar-nav-button-box-shadow-color);
