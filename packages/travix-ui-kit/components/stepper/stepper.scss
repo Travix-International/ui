@@ -5,8 +5,8 @@
 }
 
 .ui-stepper__button {
-  background: linear-gradient(to bottom,  var(--tx-generic-color-accent-top) 0%, var(--tx-generic-color-accent-bottom) 100%); /* W3C */
-  background: var(--tx-generic-color-accent-bottom); /* Old browsers */
+  background: var(--tx-ui-button-default-normal-bg-top); /* Old browsers */
+  background: linear-gradient(to bottom, var(--tx-ui-button-default-normal-bg-top) 0, var(--tx-ui-button-default-normal-bg-bottom) 100%); /* W3C */
   border: none;
   border-bottom: 3px solid var(--tx-generic-color-accent-border);
   border-radius: 5px;
@@ -28,7 +28,7 @@
   cursor: pointer;
 
   &:hover {
-    border-bottom: solid 3px var(--tx-generic-color-accent-border);
+    border-bottom: 3px solid var(--tx-generic-color-accent-border);
     box-shadow: none;
     color: var(--tx-generic-color-active);
     margin: 0;
@@ -48,11 +48,19 @@
 }
 
 .ui-stepper__button-disabled {
+  background: var(--tx-generic-color-secondary-dark); /* Old browsers */
   background: linear-gradient(to bottom, var(--tx-generic-color-secondary-dark) 0%, var(--tx-generic-color-secondary-darker) 100%);
   border-bottom: solid 3px var(--tx-generic-color-secondary-darkest);
   box-shadow: none;
   color: var(--tx-generic-color-secondary-darkest);
   cursor: default;
+
+  &:hover, &:active {
+    background: var(--tx-generic-color-secondary-dark); /* Old browsers */
+    background: linear-gradient(to bottom, var(--tx-generic-color-secondary-dark) 0%, var(--tx-generic-color-secondary-darker) 100%);
+    border-bottom: solid 3px var(--tx-generic-color-secondary-darkest);
+    color: var(--tx-generic-color-secondary-darkest);
+  }
 }
 
 .ui-stepper__button-increase {
