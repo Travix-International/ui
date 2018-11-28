@@ -71,16 +71,28 @@ function processProps(props) {
   }
 
   /** If the renderDate is not between any of the minLimit and/or maxDate, we need to redefine it. */
-  if (minLimit &&
-    (renderDate.getFullYear() <= minLimit.getFullYear()) &&
-    (renderDate.getMonth() < minLimit.getMonth())
-  ) {
-    renderDate.setMonth(minLimit.getMonth());
-  } else if (maxLimit &&
-      (renderDate.getFullYear() <= maxLimit.getFullYear()) &&
-      (renderDate.getMonth() > maxLimit.getMonth())
-  ) {
-    renderDate.setMonth(maxLimit.getMonth());
+  if (minLimit) {
+    const renderDateYear = renderDate.getFullYear();
+    const minLimitYear = minLimit.getFullYear();
+
+    if (renderDateYear < minLimitYear) {
+      renderDate.setFullYear(minLimitYear);
+    }
+
+    if (renderDateYear === minLimitYear && renderDate.getMonth() < minLimit.getMonth()) {
+      renderDate.setMonth(minLimit.getMonth());
+    }
+  } else if (maxLimit) {
+    const renderDateYear = renderDate.getFullYear();
+    const maxLimitYear = maxLimit.getFullYear();
+
+    if (renderDateYear > maxLimitYear) {
+      renderDate.setFullYear(maxLimitYear);
+    }
+
+    if (renderDateYear === maxLimitYear && renderDate.getMonth() > maxLimit.getMonth()) {
+      renderDate.setMonth(maxLimit.getMonth());
+    }
   }
 
   return {
