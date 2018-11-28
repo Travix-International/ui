@@ -100,7 +100,6 @@ describe('Calendar (normal mode)', () => {
 
     it('should set minLimit, with a given "minDate" attribute', () => {
       const minDate = '2017-03-20';
-      const todayDate = normalizeDate(new Date());
       const minDateObject = normalizeDate(new Date(minDate));
 
       const wrapper = mount(
@@ -115,7 +114,7 @@ describe('Calendar (normal mode)', () => {
       expect(wrapper.state()).toEqual({
         maxLimit: null,
         minLimit: minDateObject,
-        renderDate: todayDate,
+        renderDate: minDateObject,
         selectedDates: [null, null],
       });
     });
@@ -144,7 +143,7 @@ describe('Calendar (normal mode)', () => {
       expect(wrapper.state()).toEqual({
         maxLimit: maxDateObject,
         minLimit: minDateObject,
-        renderDate: expectedRenderDate,
+        renderDate: minDateObject,
         selectedDates: [null, null],
       });
 
@@ -166,7 +165,7 @@ describe('Calendar (normal mode)', () => {
       expect(wrapper2.state()).toEqual({
         maxLimit: maxDateObject,
         minLimit: minDateObject,
-        renderDate: expectedRenderDate2,
+        renderDate: maxDateObject,
         selectedDates: [null, null],
       });
     });
