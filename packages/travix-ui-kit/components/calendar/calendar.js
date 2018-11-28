@@ -31,7 +31,7 @@ function processProps(props) {
   const { initialDates, maxDate, minDate, selectionType, multiplemode } = props;
   const maxLimit = maxDate ? normalizeDate(new Date(maxDate), 23, 59, 59, 999) : null;
 
-  const renderDate = (initialDates && initialDates.length && initialDates[0]) ? new Date(initialDates[0]) : new Date();
+  let renderDate = (initialDates && initialDates.length && initialDates[0]) ? new Date(initialDates[0]) : new Date();
   normalizeDate(renderDate);
 
   let minLimit = minDate ? normalizeDate(new Date(minDate)) : null;
@@ -71,28 +71,10 @@ function processProps(props) {
   }
 
   /** If the renderDate is not between any of the minLimit and/or maxDate, we need to redefine it. */
-  if (minLimit) {
-    const renderDateYear = renderDate.getFullYear();
-    const minLimitYear = minLimit.getFullYear();
-
-    if (renderDateYear < minLimitYear) {
-      renderDate.setFullYear(minLimitYear);
-    }
-
-    if (renderDateYear === minLimitYear && renderDate.getMonth() < minLimit.getMonth()) {
-      renderDate.setMonth(minLimit.getMonth());
-    }
-  } else if (maxLimit) {
-    const renderDateYear = renderDate.getFullYear();
-    const maxLimitYear = maxLimit.getFullYear();
-
-    if (renderDateYear > maxLimitYear) {
-      renderDate.setFullYear(maxLimitYear);
-    }
-
-    if (renderDateYear === maxLimitYear && renderDate.getMonth() > maxLimit.getMonth()) {
-      renderDate.setMonth(maxLimit.getMonth());
-    }
+  if (minLimit && (renderDate.getTime() < minLimit.getTime())) {
+    renderDate = minLimit;
+  } else if (maxLimit && (renderDate.getTime() > maxLimit.getTime())) {
+    renderDate = maxLimit;
   }
 
   return {
