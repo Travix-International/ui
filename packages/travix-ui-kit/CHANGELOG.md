@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.15.11](https://github.com/Travix-International/ui/tree/v0.15.11) (2019-01-15)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.10...v0.15.11)
+
+**Fixed bugs:**
+
+- fix selected date in calendar for different timezones [\#45](https://github.com/Travix-International/ui/pull/45) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
+
 ## [v0.15.10](https://github.com/Travix-International/ui/tree/v0.15.10) (2018-11-28)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.7...v0.15.10)
 
