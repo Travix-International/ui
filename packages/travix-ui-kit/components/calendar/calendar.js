@@ -155,10 +155,15 @@ export default class Calendar extends Component {
    * passing the selectedDates array to it.
    *
    * @method onSelectDay
-   * @param {Date} dateSelected Date selected by the user.
+   * @param {String} dateStr Date selected by the user.
    */
-  onSelectDay(dateSelected) {
+  onSelectDay(dateStr) {
     const { onSelectDay, selectionType, minDate, multiplemode } = this.props;
+    const currentDate = new Date(dateStr);
+    const yearSelected = currentDate.getUTCFullYear();
+    const monthSelected = currentDate.getUTCMonth();
+    const daySelected = currentDate.getUTCDate();
+    const dateSelected = new Date(yearSelected, monthSelected, daySelected);
 
     this.setState((prevState) => {
       let { minLimit, renderDate, selectedDates } = prevState;
@@ -246,7 +251,7 @@ export default class Calendar extends Component {
           onMouseDown={this.handleItemMouseDown}
           onNavNextMonth={() => this.moveToMonth(CALENDAR_MOVE_TO_NEXT)}
           onNavPreviousMonth={() => this.moveToMonth(CALENDAR_MOVE_TO_PREVIOUS)}
-          onSelectDay={e => this.onSelectDay(new Date(e.currentTarget.getAttribute('data-date')))}
+          onSelectDay={e => this.onSelectDay(e.currentTarget.getAttribute('data-date'))}
           renderDate={renderDate}
           selectedDates={selectedDates}
           selectionType={selectionType}
