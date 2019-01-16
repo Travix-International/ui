@@ -32,7 +32,7 @@ function processProps(props) {
   const { initialDates, maxDate, minDate, selectionType, multiplemode } = props;
   const maxLimit = maxDate ? normalizeDate(getUTCDate(maxDate), 23, 59, 59, 999) : null;
 
-  const renderDate = (initialDates && initialDates.length && initialDates[0]) ? getUTCDate(initialDates[0]) : new Date();
+  let renderDate = (initialDates && initialDates.length && initialDates[0]) ? getUTCDate(initialDates[0]) : new Date();
   normalizeDate(renderDate);
 
   let minLimit = minDate ? normalizeDate(getUTCDate(minDate)) : null;

@@ -108,7 +108,6 @@ function warnAboutDeprecatedProp(propValue, oldPropName, newPropName) {
  * @function getUTCDate
  * @param {String} dateStr Props to base the new state on.
  * @return {Date} new date
- * @static
  */
 function getUTCDate(dateStr) {
   const dateParams = dateStr.split('-');

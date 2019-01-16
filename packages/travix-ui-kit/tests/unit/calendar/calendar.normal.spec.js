@@ -100,7 +100,6 @@ describe('Calendar (normal mode)', () => {
 
     it('should set minLimit, with a given "minDate" attribute', () => {
       const minDate = '2017-03-20';
-      const todayDate = normalizeDate(new Date());
       const minDateObject = normalizeDate(getUTCDate(minDate));
 
       const wrapper = mount(
