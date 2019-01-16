@@ -203,6 +203,18 @@ describe('Calendar (normal mode)', () => {
       expect(previousMock.mock.calls[0][0]).toEqual(wrapper.state().renderDate);
     });
 
+    it('should return null if onSelected is called with empty string', () => {
+      const onSelectDay = jest.fn();
+
+      const component = shallow(
+        <Calendar
+          onSelectDay={onSelectDay}
+        />
+      );
+
+      expect(component.instance().onSelectDay('')).toEqual(null);
+    });
+
     it('should set selectedDate to the date of the button pressed', () => {
       const initialDate = '2017-03-05';
 
