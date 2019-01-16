@@ -158,13 +158,15 @@ export default class Calendar extends Component {
    * @param {String} dateStr Date selected by the user.
    */
   onSelectDay(dateStr) {
+    if (!dateStr) {
+      return null;
+    }
+
     const { onSelectDay, selectionType, minDate, multiplemode } = this.props;
     const dateParams = dateStr.split('-');
-    const [year, , day] = dateParams;
-    const month = dateParams[1] - 1;
-    const dateSelected = new Date(year, month, day);
+    const dateSelected = new Date(dateParams[0], dateParams[1] - 1, dateParams[2]);
 
-    this.setState((prevState) => {
+    return this.setState((prevState) => {
       let { minLimit, renderDate, selectedDates } = prevState;
 
       /**
