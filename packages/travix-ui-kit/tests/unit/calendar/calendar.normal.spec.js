@@ -2,7 +2,7 @@ import { mount, shallow } from 'enzyme';
 import React from 'react';
 import Calendar from '../../../components/calendar/calendar';
 import CalendarWrapper from './calendarWrapper.mock';
-import { leftPad, normalizeDate } from '../../../components/_helpers';
+import { getUTCDate, leftPad, normalizeDate } from '../../../components/_helpers';
 
 describe('Calendar (normal mode)', () => {
   let RealDate;
@@ -49,7 +49,7 @@ describe('Calendar (normal mode)', () => {
 
     it('should set renderDate and not minLimit, with a given "initalDates" attribute', () => {
       const initialDate = '2017-03-20';
-      const initialDateObject = normalizeDate(new Date(initialDate));
+      const initialDateObject = normalizeDate(getUTCDate(initialDate));
 
       const wrapper = mount(
         <Calendar initialDates={[initialDate]} />
@@ -70,7 +70,7 @@ describe('Calendar (normal mode)', () => {
 
     it('should set maxLimit, with a given "maxDate" attribute', () => {
       const maxDate = '2017-03-20';
-      const maxDateObject = normalizeDate(new Date(maxDate), 23, 59, 59, 999);
+      const maxDateObject = normalizeDate(getUTCDate(maxDate), 23, 59, 59, 999);
 
       const todayDate = new Date();
       const renderDateYYYYMMDD = [
@@ -79,7 +79,7 @@ describe('Calendar (normal mode)', () => {
         leftPad(todayDate.getDate()),
       ].join('-');
 
-      const renderDate = normalizeDate(new Date(renderDateYYYYMMDD));
+      const renderDate = normalizeDate(getUTCDate(renderDateYYYYMMDD));
 
       const wrapper = mount(
         <Calendar maxDate={maxDate} />
@@ -101,7 +101,7 @@ describe('Calendar (normal mode)', () => {
     it('should set minLimit, with a given "minDate" attribute', () => {
       const minDate = '2017-03-20';
       const todayDate = normalizeDate(new Date());
-      const minDateObject = normalizeDate(new Date(minDate));
+      const minDateObject = normalizeDate(getUTCDate(minDate));
 
       const wrapper = mount(
         <Calendar minDate={minDate} />
@@ -123,15 +123,15 @@ describe('Calendar (normal mode)', () => {
     it('should reset selectedDates, when at least one of the initialDates are outside min/max limit', () => {
       const initialDates = ['2017-02-23', '2017-03-29'];
       const maxDate = '2017-03-25';
-      const maxDateObject = normalizeDate(new Date(maxDate), 23, 59, 59, 999);
+      const maxDateObject = normalizeDate(getUTCDate(maxDate), 23, 59, 59, 999);
       const minDate = '2017-03-20';
-      const minDateObject = normalizeDate(new Date(minDate));
+      const minDateObject = normalizeDate(getUTCDate(minDate));
 
       const wrapper = mount(
         <Calendar initialDates={initialDates} maxDate={maxDate} minDate={minDate} />
       );
 
-      const expectedRenderDate = normalizeDate(new Date(initialDates[0]));
+      const expectedRenderDate = normalizeDate(getUTCDate(initialDates[0]));
       expectedRenderDate.setMonth(minDateObject.getMonth());
 
       expect(wrapper.props()).toEqual({
@@ -150,7 +150,7 @@ describe('Calendar (normal mode)', () => {
 
 
       const initialDates2 = ['2017-04-21', '2017-04-24'];
-      const expectedRenderDate2 = normalizeDate(new Date(initialDates2[0]));
+      const expectedRenderDate2 = normalizeDate(getUTCDate(initialDates2[0]));
       expectedRenderDate2.setMonth(maxDateObject.getMonth());
       const wrapper2 = mount(
         <Calendar initialDates={initialDates2} maxDate={maxDate} minDate={minDate} />
@@ -173,8 +173,8 @@ describe('Calendar (normal mode)', () => {
 
     it('should set renderDate to next/previous months when the next/previous btns are pressed', () => {
       const initialDate = '2017-03-05';
-      const initialDateObject = normalizeDate(new Date(initialDate));
-      const nextMonthDateObj = normalizeDate(new Date(initialDate));
+      const initialDateObject = normalizeDate(getUTCDate(initialDate));
+      const nextMonthDateObj = normalizeDate(getUTCDate(initialDate));
 
       const nextMock = jest.fn();
       const previousMock = jest.fn();
@@ -202,6 +202,18 @@ describe('Calendar (normal mode)', () => {
       expect(wrapper.state().renderDate).toEqual(initialDateObject);
       expect(previousMock.mock.calls.length).toEqual(1);
       expect(previousMock.mock.calls[0][0]).toEqual(wrapper.state().renderDate);
+    });
+
+    it('should return null if onSelected is called with empty string', () => {
+      const onSelectDay = jest.fn();
+
+      const component = shallow(
+        <Calendar
+          onSelectDay={onSelectDay}
+        />
+      );
+
+      expect(component.instance().onSelectDay('')).toEqual(null);
     });
 
     it('should set selectedDate to the date of the button pressed', () => {
@@ -238,8 +250,8 @@ describe('Calendar (normal mode)', () => {
 
     it('should only change the renderDate and do nothing else if nav callbacks are not defined', () => {
       const initialDate = '2017-03-05';
-      const initialDateObject = normalizeDate(new Date(initialDate));
-      const nextMonthDateObj = normalizeDate(new Date(initialDate));
+      const initialDateObject = normalizeDate(getUTCDate(initialDate));
+      const nextMonthDateObj = normalizeDate(getUTCDate(initialDate));
 
       const wrapper = mount(
         <Calendar initialDates={[initialDate]} />
@@ -261,7 +273,7 @@ describe('Calendar (normal mode)', () => {
     it('should only change the selectedDate and do nothing else if selection callbacks are not defined', () => {
       const initialDate = '2017-03-05';
       const selectedDate = '2017-03-20';
-      const expectedSelectedDate = normalizeDate(new Date(selectedDate));
+      const expectedSelectedDate = normalizeDate(getUTCDate(selectedDate));
 
       const wrapper = mount(
         <Calendar initialDates={[initialDate]} />
@@ -282,8 +294,8 @@ describe('Calendar (normal mode)', () => {
       const isDaySelectableFn = dt => dt.getDate() === 21;
       const onSelectDayMock = jest.fn();
 
-      const initialDateObject = normalizeDate(new Date(initialDate));
-      const selectableDateObject = normalizeDate(new Date(selectableDate));
+      const initialDateObject = normalizeDate(getUTCDate(initialDate));
+      const selectableDateObject = normalizeDate(getUTCDate(selectableDate));
 
       const wrapper = mount(
         <Calendar initialDates={[initialDate]} isDaySelectableFn={isDaySelectableFn} onSelectDay={onSelectDayMock} />

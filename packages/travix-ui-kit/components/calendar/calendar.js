@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import {
   getClassNamesWithMods,
   getDataAttributes,
+  getUTCDate,
   normalizeDate,
   warnAboutDeprecatedProp,
 } from '../_helpers';
@@ -29,12 +30,12 @@ const {
  */
 function processProps(props) {
   const { initialDates, maxDate, minDate, selectionType, multiplemode } = props;
-  const maxLimit = maxDate ? normalizeDate(new Date(maxDate), 23, 59, 59, 999) : null;
+  const maxLimit = maxDate ? normalizeDate(getUTCDate(maxDate), 23, 59, 59, 999) : null;
 
-  const renderDate = (initialDates && initialDates.length && initialDates[0]) ? new Date(initialDates[0]) : new Date();
+  const renderDate = (initialDates && initialDates.length && initialDates[0]) ? getUTCDate(initialDates[0]) : new Date();
   normalizeDate(renderDate);
 
-  let minLimit = minDate ? normalizeDate(new Date(minDate)) : null;
+  let minLimit = minDate ? normalizeDate(getUTCDate(minDate)) : null;
   let selectedDates = [null, null];
 
   if (initialDates) {
@@ -43,7 +44,7 @@ function processProps(props) {
         return null;
       }
 
-      return normalizeDate(new Date(initialDates[idx]));
+      return normalizeDate(getUTCDate(initialDates[idx]));
     });
   }
 
@@ -155,12 +156,17 @@ export default class Calendar extends Component {
    * passing the selectedDates array to it.
    *
    * @method onSelectDay
-   * @param {Date} dateSelected Date selected by the user.
+   * @param {String} dateStr Date selected by the user.
    */
-  onSelectDay(dateSelected) {
-    const { onSelectDay, selectionType, minDate, multiplemode } = this.props;
+  onSelectDay(dateStr) {
+    if (!dateStr) {
+      return null;
+    }
 
-    this.setState((prevState) => {
+    const { onSelectDay, selectionType, minDate, multiplemode } = this.props;
+    const dateSelected = getUTCDate(dateStr);
+
+    return this.setState((prevState) => {
       let { minLimit, renderDate, selectedDates } = prevState;
 
       /**
@@ -185,11 +191,11 @@ export default class Calendar extends Component {
           if (!selectedDates[1]) {
             selectedDates[1] = dateSelected;
             if (selectedDates[0].toDateString() === selectedDates[1].toDateString()) {
-              minLimit = minDate ? normalizeDate(new Date(minDate)) : null;
+              minLimit = minDate ? normalizeDate(getUTCDate(minDate)) : null;
             }
           } else {
             selectedDates = [null, null];
-            minLimit = minDate ? normalizeDate(new Date(minDate)) : null;
+            minLimit = minDate ? normalizeDate(getUTCDate(minDate)) : null;
           }
         } else {
           selectedDates[0] = dateSelected;
@@ -205,7 +211,7 @@ export default class Calendar extends Component {
        * the one of the selected date.
        */
       if (dateSelected.getMonth() !== renderDate.getMonth()) {
-        renderDate = new Date(dateSelected.toDateString());
+        renderDate = getUTCDate(dateStr);
       }
 
       return {
@@ -246,7 +252,7 @@ export default class Calendar extends Component {
           onMouseDown={this.handleItemMouseDown}
           onNavNextMonth={() => this.moveToMonth(CALENDAR_MOVE_TO_NEXT)}
           onNavPreviousMonth={() => this.moveToMonth(CALENDAR_MOVE_TO_PREVIOUS)}
-          onSelectDay={e => this.onSelectDay(new Date(e.currentTarget.getAttribute('data-date')))}
+          onSelectDay={e => this.onSelectDay(e.currentTarget.getAttribute('data-date'))}
           renderDate={renderDate}
           selectedDates={selectedDates}
           selectionType={selectionType}

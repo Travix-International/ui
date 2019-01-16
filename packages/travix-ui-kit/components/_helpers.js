@@ -102,11 +102,25 @@ function warnAboutDeprecatedProp(propValue, oldPropName, newPropName) {
   }
 }
 
+/**
+ * Parse date string to UTC date.
+ *
+ * @function getUTCDate
+ * @param {String} dateStr Props to base the new state on.
+ * @return {Date} new date
+ * @static
+ */
+function getUTCDate(dateStr) {
+  const dateParams = dateStr.split('-');
+  return new Date(dateParams[0], dateParams[1] - 1, dateParams[2]);
+}
+
 // Exports
 export default {
   ejectOtherProps,
   getClassNamesWithMods,
   getDataAttributes,
+  getUTCDate,
   leftPad,
   normalizeDate,
   warnAboutDeprecatedProp,
