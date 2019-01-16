@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.15.12](https://github.com/Travix-International/ui/tree/v0.15.12) (2019-01-16)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.11...v0.15.12)
+
+**Fixed bugs:**
+
+- fix a calendar for different timezones [\#46](https://github.com/Travix-International/ui/pull/46) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
+
 ## [v0.15.11](https://github.com/Travix-International/ui/tree/v0.15.11) (2019-01-15)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.10...v0.15.11)
 
@@ -8,17 +15,17 @@
 - fix selected date in calendar for different timezones [\#45](https://github.com/Travix-International/ui/pull/45) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
 
 ## [v0.15.10](https://github.com/Travix-International/ui/tree/v0.15.10) (2018-11-28)
-[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.7...v0.15.10)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.8...v0.15.10)
 
 **Merged pull requests:**
 
 - Update check for value of renderDate with minLimit and maxLimit [\#43](https://github.com/Travix-International/ui/pull/43) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
 
-## [v0.15.7](https://github.com/Travix-International/ui/tree/v0.15.7) (2018-11-19)
-[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.8...v0.15.7)
-
 ## [v0.15.8](https://github.com/Travix-International/ui/tree/v0.15.8) (2018-11-19)
-[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.6...v0.15.8)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.7...v0.15.8)
+
+## [v0.15.7](https://github.com/Travix-International/ui/tree/v0.15.7) (2018-11-19)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.6...v0.15.7)
 
 ## [v0.15.6](https://github.com/Travix-International/ui/tree/v0.15.6) (2018-11-19)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.3...v0.15.6)
