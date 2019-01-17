@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.15.13](https://github.com/Travix-International/ui/tree/v0.15.13) (2019-01-17)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.12...v0.15.13)
+
+**Fixed bugs:**
+
+- Fix dates in calendar [\#47](https://github.com/Travix-International/ui/pull/47) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
+
 ## [v0.15.12](https://github.com/Travix-International/ui/tree/v0.15.12) (2019-01-16)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.11...v0.15.12)
 
