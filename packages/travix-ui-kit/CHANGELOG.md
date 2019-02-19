@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.15.14](https://github.com/Travix-International/ui/tree/v0.15.14) (2019-02-19)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.13...v0.15.14)
+
+**Implemented enhancements:**
+
+- \[travix-ui-kit\] Improve publishing process and documentation [\#48](https://github.com/Travix-International/ui/pull/48) ([rbardini](https://github.com/rbardini))
+
+**Fixed bugs:**
+
+- Set default date for changing month in calendar [\#49](https://github.com/Travix-International/ui/pull/49) ([IgorOmelyaniuk](https://github.com/IgorOmelyaniuk))
+
 ## [v0.15.13](https://github.com/Travix-International/ui/tree/v0.15.13) (2019-01-17)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.12...v0.15.13)
 
