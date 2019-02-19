@@ -139,7 +139,7 @@ export default class Calendar extends Component {
 
     this.setState(({ renderDate }) => {
       const newDate = new Date(renderDate);
-      newDate.setMonth(renderDate.getMonth() + (direction === CALENDAR_MOVE_TO_PREVIOUS ? -1 : 1));
+      newDate.setMonth(renderDate.getMonth() + (direction === CALENDAR_MOVE_TO_PREVIOUS ? -1 : 1), 1);
       return { renderDate: newDate };
     }, () => {
       if ((direction === CALENDAR_MOVE_TO_PREVIOUS) && onNavPreviousMonth) {

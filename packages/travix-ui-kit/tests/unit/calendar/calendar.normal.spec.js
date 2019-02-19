@@ -172,8 +172,8 @@ describe('Calendar (normal mode)', () => {
 
     it('should set renderDate to next/previous months when the next/previous btns are pressed', () => {
       const initialDate = '2017-03-05';
-      const initialDateObject = normalizeDate(getUTCDate(initialDate));
-      const nextMonthDateObj = normalizeDate(getUTCDate(initialDate));
+      const prevMonthDateObject = normalizeDate(getUTCDate('2017-03-01'));
+      const nextMonthDateObj = normalizeDate(getUTCDate('2017-04-01'));
 
       const nextMock = jest.fn();
       const previousMock = jest.fn();
@@ -189,16 +189,14 @@ describe('Calendar (normal mode)', () => {
       /** Clicks to go next month */
       wrapper.find('.ui-calendar-days__next-month').simulate('click');
 
-      nextMonthDateObj.setMonth(nextMonthDateObj.getMonth() + 1);
-
       expect(wrapper.state().renderDate).toEqual(nextMonthDateObj);
       expect(nextMock.mock.calls.length).toEqual(1);
       expect(nextMock.mock.calls[0][0]).toEqual(wrapper.state().renderDate);
 
-      /** Clicks to go next month */
+      /** Clicks to go previous month */
       wrapper.find('.ui-calendar-days__previous-month').simulate('click');
 
-      expect(wrapper.state().renderDate).toEqual(initialDateObject);
+      expect(wrapper.state().renderDate).toEqual(prevMonthDateObject);
       expect(previousMock.mock.calls.length).toEqual(1);
       expect(previousMock.mock.calls[0][0]).toEqual(wrapper.state().renderDate);
     });
@@ -249,8 +247,8 @@ describe('Calendar (normal mode)', () => {
 
     it('should only change the renderDate and do nothing else if nav callbacks are not defined', () => {
       const initialDate = '2017-03-05';
-      const initialDateObject = normalizeDate(getUTCDate(initialDate));
-      const nextMonthDateObj = normalizeDate(getUTCDate(initialDate));
+      const prevMonthDateObject = normalizeDate(getUTCDate('2017-03-01'));
+      const nextMonthDateObj = normalizeDate(getUTCDate('2017-04-01'));
 
       const wrapper = mount(
         <Calendar initialDates={[initialDate]} />
@@ -258,15 +256,11 @@ describe('Calendar (normal mode)', () => {
 
       /** Clicks to go next month */
       wrapper.find('.ui-calendar-days__next-month').simulate('click');
-
-      nextMonthDateObj.setMonth(nextMonthDateObj.getMonth() + 1);
-
       expect(wrapper.state().renderDate).toEqual(nextMonthDateObj);
 
-      /** Clicks to go next month */
+      /** Clicks to go previous month */
       wrapper.find('.ui-calendar-days__previous-month').simulate('click');
-
-      expect(wrapper.state().renderDate).toEqual(initialDateObject);
+      expect(wrapper.state().renderDate).toEqual(prevMonthDateObject);
     });
 
     it('should only change the selectedDate and do nothing else if selection callbacks are not defined', () => {
