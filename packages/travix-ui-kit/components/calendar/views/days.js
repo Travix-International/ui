@@ -8,6 +8,7 @@ import {
   warnAboutDeprecatedProp,
 } from '../../_helpers';
 import calendarConstants from '../constants/calendar';
+import dateOrders from '../constants/dateOrders';
 
 const { CALENDAR_SELECTION_TYPE_RANGE } = calendarConstants;
 
@@ -19,6 +20,7 @@ class Days extends Component {
     this.isOptionEnabled = this.isOptionEnabled.bind(this);
     this.renderDays = this.renderDays.bind(this);
     this.renderNav = this.renderNav.bind(this);
+    this.renderNavHeader = this.renderNavHeader.bind(this);
     this.renderWeekDays = this.renderWeekDays.bind(this);
 
     this.locale = this.getLocale();
@@ -39,6 +41,7 @@ class Days extends Component {
     const { locale } = this.props;
 
     const defaultLocale = {
+      dateOrder: dateOrders.MY,
       months: [
         { name: 'January', short: 'Jan' },
         { name: 'February', short: 'Feb' },
@@ -63,6 +66,7 @@ class Days extends Component {
         { name: 'Friday', short: 'Fri' },
         { name: 'Saturday', short: 'Sat' },
       ],
+      yearSymbol: '',
     };
 
     return locale ? Object.assign(defaultLocale, locale) : defaultLocale;
@@ -196,6 +200,25 @@ class Days extends Component {
   }
 
   /**
+   * Renders the header for navigation of the days' calendar.
+   * Method defines date order for the header date. (Some Asian markets have 'YM' date order.)
+   *
+   * @method renderNavHeader
+   * @return {String}
+   */
+  renderNavHeader() {
+    const { renderDate } = this.props;
+    const locale = this.locale;
+    const { months, yearSymbol, dateOrder } = locale;
+
+    if (dateOrder === dateOrders.YM) {
+      return `${renderDate.getFullYear()}${yearSymbol} ${months[renderDate.getMonth()].short}`;
+    }
+
+    return `${months[renderDate.getMonth()].short} ${renderDate.getFullYear()}${yearSymbol}`;
+  }
+
+  /**
    * Renders the navigation of the days' calendar.
    *
    * @method renderNav
@@ -227,7 +250,7 @@ class Days extends Component {
           className="ui-calendar-days__rendered-month"
           role="heading"
         >
-          {locale.months[renderDate.getMonth()].short} {renderDate.getFullYear()}
+          {this.renderNavHeader()}
         </label>
         <button
           aria-label={next.ariaLabel || locale.months[nextMonth].name}
@@ -303,12 +326,15 @@ Days.propTypes = {
 
   /**
    * Locale definitions, with the calendar's months and weekdays in the right language.
-   * Also contains the startWeekDay which defines in which week day starts the week.
+   * It also contains the startWeekDay which defines in which week day starts the week,
+   * dateOrder which defines date order and specific year symbol which used in date for some Asian markets.
    */
   locale: PropTypes.shape({
+    dateOrder: PropTypes.object,
     months: PropTypes.array,
     weekDays: PropTypes.array,
     startWeekDay: PropTypes.number,
+    yearSymbol: PropTypes.string,
   }),
 
   /**
