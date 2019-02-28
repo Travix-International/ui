@@ -330,7 +330,7 @@ Days.propTypes = {
    * dateOrder which defines date order and specific year symbol which used in date for some Asian markets.
    */
   locale: PropTypes.shape({
-    dateOrder: PropTypes.object,
+    dateOrder: PropTypes.string,
     months: PropTypes.array,
     weekDays: PropTypes.array,
     startWeekDay: PropTypes.number,
