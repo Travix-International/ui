@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.16.0](https://github.com/Travix-International/ui/tree/v0.16.0) (2019-03-01)
+[Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.14...v0.16.0)
+
+**Implemented enhancements:**
+
+- make date order for Calendar configurable [\#50](https://github.com/Travix-International/ui/pull/50) ([IvanPresmytsky](https://github.com/IvanPresmytsky))
+
 ## [v0.15.14](https://github.com/Travix-International/ui/tree/v0.15.14) (2019-02-19)
 [Full Changelog](https://github.com/Travix-International/ui/compare/v0.15.13...v0.15.14)
 
