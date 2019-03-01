@@ -295,12 +295,15 @@ Calendar.propTypes = {
 
   /**
    * Locale definitions, with the calendar's months and weekdays in the right language.
-   * Also contains the startWeekDay which defines in which week day starts the week.
+   * It also contains the startWeekDay which defines in which week day starts the week,
+   * dateOrder which defines date order and specific year symbol which used in date for some Asian markets.
    */
   locale: PropTypes.shape({
+    dateOrder: PropTypes.string,
     months: PropTypes.array,
     weekDays: PropTypes.array,
     startWeekDay: PropTypes.number,
+    yearSymbol: PropTypes.string,
   }),
 
   /**

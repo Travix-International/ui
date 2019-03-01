@@ -329,13 +329,18 @@ describe('Calendar (normal mode)', () => {
     });
 
     it('should merge the locale definition with the default one', () => {
-      const myLocale = { startWeekDay: 0 };
+      const myLocale = {
+        startWeekDay: 0,
+        dateOrder: 'YM',
+        yearSymbol: '$',
+      };
 
       const wrapper = mount(
-        <Calendar locale={myLocale} />
+        <Calendar initialDates={["2017-03-05"]} locale={myLocale} />
       );
-
+      const result = `2017${myLocale.yearSymbol} Mar`;
       expect(wrapper.find('.ui-calendar-days__weekday').first().text()).toEqual('Sun');
+      expect(wrapper.find('.ui-calendar-days__rendered-month').first().text()).toEqual(result);
     });
 
     it('should apply the new initialDates on Calendar even when changed in runtime by the parent component', () => {
