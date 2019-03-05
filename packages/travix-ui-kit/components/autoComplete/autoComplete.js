@@ -103,6 +103,10 @@ class AutoComplete extends Component {
   handleInputBlur = (e) => {
     if (this.state.open) {
       this.applyActiveKey(e);
+      !this.items.find(item => e.nativeEvent
+          && e.nativeEvent.relatedTarget
+          && e.nativeEvent.relatedTarget.innerText === item.props.value
+      ) && this.close()
     }
 
     if (typeof this.props.onBlur === 'function') {
@@ -180,6 +184,10 @@ class AutoComplete extends Component {
 
   applyActiveKey(e) {
     e.preventDefault();
+
+    if (!e.keyCode) {
+      return;
+    }
 
     const activeKey = this.state.activeKey !== undefined
       ? this.state.activeKey
