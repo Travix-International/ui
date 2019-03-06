@@ -59,12 +59,12 @@ describe('AutoComplete: applyActiveKey', () => {
     instance.close = jest.fn();
     instance.render = jest.fn();
     instance.items = [
-      { getValue: jest.fn(() => data), props: { value: 'item' } },
+      { props: { value: 'item' } },
     ];
 
     const e = {
       preventDefault: jest.fn(),
-      nativeEvent: { relatedTarget: { innerText: 'itemEvent' } }
+      nativeEvent: { relatedTarget: { innerText: 'itemEvent' } },
     };
 
     const component = shallow(

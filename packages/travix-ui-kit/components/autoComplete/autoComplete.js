@@ -201,11 +201,10 @@ class AutoComplete extends Component {
 
     if (!item || (!value && e.keyCode !== KEY_CODE.ENTER)) {
       if (!this.state.selectedValue && !value) {
-        this.close();
-        return;
+        return this.close();
       }
 
-      this.setState({
+      return this.setState({
         activeKey: undefined,
         inputValue: value,
         selectedValue: undefined,
@@ -216,11 +215,10 @@ class AutoComplete extends Component {
         this.change(undefined);
         this.blurInput();
       });
-      return;
     }
 
     if (!isPreviousValue) {
-      this.setState({
+      return this.setState({
         activeKey: undefined,
         inputValue: item.value,
         open: false,
@@ -230,7 +228,6 @@ class AutoComplete extends Component {
         this.change(item);
         this.blurInput();
       });
-      return;
     } else if (value !== item.value) {
       this.setState({
         inputValue: item.value,
@@ -239,7 +236,7 @@ class AutoComplete extends Component {
       });
     }
 
-    this.close();
+    return this.close();
   }
 
   close() {
