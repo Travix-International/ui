@@ -5,9 +5,11 @@ import AutoCompleteItem from '../../../components/autoComplete/autoCompleteItem'
 
 describe('AutoComplete: handleInputBlur', () => {
   it('should call passed onBlur and applyActiveKey handler with correct data', () => {
-    AutoComplete.prototype.applyActiveKey = jest.fn();
+    const instance = AutoComplete.prototype;
+    instance.applyActiveKey = jest.fn();
+    instance.items = [{ props: { value: 'item' } }];
     const onBlur = jest.fn();
-    const e = { target: {} };
+    const e = { nativeEvent: { relatedTarget: { innerText: 'itemEvent' } } };
 
     const component = shallow(
       <AutoComplete
@@ -29,9 +31,11 @@ describe('AutoComplete: handleInputBlur', () => {
   });
 
   it('should not call passed methods when list not open or onBlur is not a function', () => {
-    AutoComplete.prototype.applyActiveKey = jest.fn();
+    const instance = AutoComplete.prototype;
+    instance.applyActiveKey = jest.fn();
+    instance.items = [{ props: { value: 'item' } }];
     const onBlur = jest.fn();
-    const e = { target: {} };
+    const e = { nativeEvent: { relatedTarget: { innerText: 'itemEvent' } } };
 
     const component = shallow(
       <AutoComplete

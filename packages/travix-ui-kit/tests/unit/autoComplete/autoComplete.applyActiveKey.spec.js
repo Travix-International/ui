@@ -17,7 +17,7 @@ describe('AutoComplete: applyActiveKey', () => {
     instance.close = jest.fn();
     instance.render = jest.fn();
     instance.items = [
-      { getValue: jest.fn(() => data) },
+      { getValue: jest.fn(() => data), props: { value: 'item' } },
     ];
 
     const e = {
@@ -51,7 +51,40 @@ describe('AutoComplete: applyActiveKey', () => {
     expect(component.instance().blurInput).toBeCalled();
   });
 
-  it('should call close methods is we have the same value', () => {
+  it('should call close if no key is pressed', () => {
+    const instance = AutoComplete.prototype;
+    instance.updateInput = jest.fn();
+    instance.change = jest.fn();
+    instance.blurInput = jest.fn();
+    instance.close = jest.fn();
+    instance.render = jest.fn();
+    instance.items = [
+      { getValue: jest.fn(() => data), props: { value: 'item' } },
+    ];
+
+    const e = {
+      preventDefault: jest.fn(),
+      nativeEvent: { relatedTarget: { innerText: 'itemEvent' } }
+    };
+
+    const component = shallow(
+      <AutoComplete
+        name="autocomplete"
+      >
+        <AutoCompleteItem
+          value="value"
+        >
+          item
+        </AutoCompleteItem>
+      </AutoComplete>
+    );
+
+    component.instance().applyActiveKey(e);
+    expect(e.preventDefault).toBeCalled();
+    expect(component.instance().close).toBeCalled();
+  });
+
+  it('should call close methods if we have the same value', () => {
     const data = {
       index: 1,
       value: 'test',
@@ -64,7 +97,7 @@ describe('AutoComplete: applyActiveKey', () => {
     instance.close = jest.fn();
     instance.render = jest.fn();
     instance.items = [
-      { getValue: jest.fn(() => data) },
+      { getValue: jest.fn(() => data), props: { value: 'item' } },
     ];
 
     const e = {
@@ -110,7 +143,7 @@ describe('AutoComplete: applyActiveKey', () => {
     instance.close = jest.fn();
     instance.render = jest.fn();
     instance.initActiveKey = 2;
-    instance.items = [{}, {}, { getValue: jest.fn(() => data) }];
+    instance.items = [{}, {}, { getValue: jest.fn(() => data), props: { value: 'item' } }];
 
     const e = {
       preventDefault: jest.fn(),
@@ -231,7 +264,7 @@ describe('AutoComplete: applyActiveKey', () => {
     instance.close = jest.fn();
     instance.render = jest.fn();
     instance.items = [
-      { getValue: jest.fn(() => data) },
+      { getValue: jest.fn(() => data), props: { value: 'item' } },
     ];
 
     const e = {
