@@ -106,7 +106,7 @@ class AutoComplete extends Component {
       !this.items.find(item => e.nativeEvent
           && e.nativeEvent.relatedTarget
           && e.nativeEvent.relatedTarget.innerText === item.props.value
-      ) && this.close()
+      ) && this.close();
     }
 
     if (typeof this.props.onBlur === 'function') {
