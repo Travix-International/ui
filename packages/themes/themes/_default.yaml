@@ -33,6 +33,7 @@ generic:
     accent: &accent                           "#F6E41F"
 
     primary-darker: &primary-darker           "#003F7F"
+    primary-darker-rgb: &primary-darker-rgb   ${rgb(color["primary-darker"])}
     primary-dark: &primary-dark               "#004B94"
     primary: &primary                         "#0056A9"
     primary-light: &primary-light             "#005FBB"
