@@ -33,7 +33,6 @@ generic:
     accent-top: &accent-top                     "#FFD97C"
 
     primary-darker: &primary-darker             "#979ea3"
-    primary-darker-rgb: &primary-darker-rgb     "151,158,163"
     primary-dark: &primary-dark                 "#283A8E"
     primary-dark-rgb: &primary-dark-rgb         "40,58,142"
     primary: &primary                           "#3F52A9"
