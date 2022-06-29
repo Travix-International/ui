@@ -1,6 +1,6 @@
 {
-  "name": "ui-themes",
-  "version": "0.1.0",
+  "name": "@travix/ui-themes",
+  "version": "1.1.4",
   "description": "Collection of UI Themes for Travix websites",
   "main": "index.js",
   "scripts": {
