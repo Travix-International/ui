@@ -82,7 +82,7 @@
     "raf": "^3.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-styleguidist": "^7.0.3",
+    "react-styleguidist": "^11.2.0",
     "sass-loader": "~6.0.4",
     "style-loader": "~0.20.1",
     "theme-builder": "~0.5.0",
